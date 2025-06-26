@@ -42,7 +42,7 @@ export default function AboutPage() {
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-4 sm:mb-6">Our Mission & Values</h2>
             <p className="text-muted-foreground text-base sm:text-lg text-center mb-8 sm:mb-10">
               At GenX Secure, we're driven by a commitment to excellence and innovation in security solutions.
-            </p>
+              </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
               {[
                 { icon: Target, title: "Client-Focused", description: "Tailoring solutions to meet your unique needs." },
@@ -71,7 +71,7 @@ export default function AboutPage() {
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-            {teamMembers.map((member) => (
+              {teamMembers.map((member) => (
               <Card key={member.name} className="text-center hover:border-primary/50 transition-colors">
                 <CardHeader>
                   <div className="relative w-24 h-24 sm:w-32 sm:h-32 mx-auto mb-4">
@@ -91,8 +91,8 @@ export default function AboutPage() {
                   <p className="text-xs sm:text-sm text-muted-foreground">{member.bio}</p>
                 </CardContent>
               </Card>
-            ))}
-          </div>
+              ))}
+            </div>
         </div>
       </section>
     </div>

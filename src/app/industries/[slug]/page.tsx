@@ -1,4 +1,3 @@
-
 import { getIndustryBySlug, industries, products } from '@/lib/data';
 import type { Industry, Product } from '@/types';
 import { notFound } from 'next/navigation';
@@ -56,8 +55,7 @@ const getRelevantProducts = (industryName: string): Product[] => {
   return filtered.map(({icon, ...rest}) => rest); // Remove icon before passing to ProductCard
 };
 
-
-export default function IndustryPage({ params }: IndustryPageProps) {
+export default async function IndustryPage({ params }: IndustryPageProps) {
   const industry = getIndustryBySlug(params.slug);
 
   if (!industry) {
@@ -74,9 +72,8 @@ export default function IndustryPage({ params }: IndustryPageProps) {
           <Image
             src={industry.representativeImage || 'https://placehold.co/1920x1080.png'}
             alt={`Solutions for ${industry.name}`}
-            fill // Changed layout to fill
-            objectFit="cover"
-            className="opacity-20"
+            fill
+            className="object-cover opacity-20"
             priority
             data-ai-hint={industry.dataAiHint || 'industry specific banner'}
           />

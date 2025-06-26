@@ -1,6 +1,7 @@
 
+import { Alert } from '@/components/ui/alert';
 import type { Product, CaseStudy, Industry, NavItem, MegaMenuCardItem, WhyChooseUsItem, Testimonial, TeamMember, ClientLogo, CoreOfferingItem, FAQItem, SolutionCategory } from '@/types';
-import { ShieldCheck,Wifi, Layers, KeyRound, Network,Lock, Building2,Fingerprint,House, Landmark, Factory, Users, TrendingUp, Award, Video, HardDrive, Route, Mail, Home, Info, Star, ThumbsUp, Lightbulb, Users2, Briefcase, Palette, MessageSquare, Bell, Settings, HelpCircle, Rss, CheckCircle, Grid, ArrowRight, Camera, Eye, Mic, Cpu, Flame, Siren, SignalZero, ScreenShare, AlertTriangle, DoorOpen, Pen, Volume, Server, Phone } from 'lucide-react';
+import { ShieldCheck,Wifi, Layers, KeyRound, Network,Lock, Building2,Fingerprint,House, Landmark, Factory, Users, TrendingUp, Award, Video, HardDrive, Route, Mail, Home, Info, Star, ThumbsUp, Lightbulb, Users2, Briefcase, Palette, MessageSquare, Bell, Settings, HelpCircle, Rss, CheckCircle, Grid, ArrowRight, Camera, Eye, Mic, Cpu, Flame, Siren, SignalZero, ScreenShare, AlertTriangle, DoorOpen, Pen, Volume, Server, Phone, AlarmCheck, Monitor } from 'lucide-react';
 
 export const products: Product[] = [
   // --- CCTV Cameras ---
@@ -126,6 +127,307 @@ export const products: Product[] = [
     ],
     icon: Video,
   },
+  {
+    id: '97',
+    slug: 'ptz-cameras-pan-tilt-zoom',
+    name: 'PTZ Cameras (Pan-Tilt-Zoom)',
+    category: 'CCTV Cameras',
+
+  
+    shortDescription: 'High-performance PTZ surveillance cameras with pan, tilt, and optical zoom for large-area monitoring.',
+    longDescription: 'PTZ (Pan-Tilt-Zoom) cameras offer flexible and dynamic surveillance by enabling remote or automated movement across wide areas. These cameras support powerful optical and digital zoom capabilities, making them ideal for monitoring expansive zones like campuses, stadiums, industrial areas, or city intersections. Equipped with night vision, smart tracking, and high-resolution imaging, PTZ cameras integrate easily with NVRs and VMS platforms for comprehensive video surveillance.',
+    
+    images: [
+      '/Solutions/Surveillance/CCTV/ptz4.png',
+
+    ],
+  
+    dataAiHints: [
+      'ptz surveillance camera',
+      'pan tilt zoom cctv',
+      'high zoom ip camera',
+      '4k ptz security cam',
+      'night vision ptz camera'
+    ],
+  
+    specifications: [
+      { key: 'Image Sensor', value: '2MP (1080p), 4MP, 8MP (4K) or higher' },
+      { key: 'Video Resolution', value: '1920×1080, 2560×1440, 3840×2160 (4K)' },
+      { key: 'Optical Zoom', value: '10x to 40x (optical clarity)' },
+      { key: 'Digital Zoom', value: '4x–16x (software-based)' },
+      { key: 'Pan Range', value: '0°–360° continuous' },
+      { key: 'Tilt Range', value: '-15° to 90° (some up to 180°)' },
+      { key: 'Pan/Tilt Speed', value: '0.1° to 300°/sec' },
+      { key: 'Focal Length', value: '4.7–94mm (varies by model)' },
+      { key: 'Aperture', value: 'F1.6–F4.0 for low-light performance' },
+      { key: 'IR Range', value: '30m to 250m night vision' },
+      { key: 'Low Light Support', value: 'True WDR, 3D DNR' },
+      { key: 'Local Storage', value: 'microSD/SDHC/SDXC slot up to 256GB' },
+      { key: 'Cloud/NVR Support', value: 'ONVIF compatible' },
+      { key: 'Power Source', value: '12V DC, PoE, PoE+, AC24V' }
+    ],
+  
+    benefits: [
+      'Covers large surveillance zones with pan and tilt control',
+      'Zoom in on distant objects without losing clarity',
+      'Night vision support up to 250 meters',
+      'Flexible storage options: local, cloud, or NVR',
+      'Remote control and automated tracking support'
+    ],
+  
+    icon: Video
+  }
+,
+
+{
+  id: '98',
+  slug: 'infrared-night-vision-cameras',
+  name: 'Infrared (IR) / Night Vision Cameras',
+  category: 'CCTV Cameras',
+
+
+  shortDescription: 'Infrared surveillance cameras for clear video in low-light or no-light environments.',
+  longDescription: 'Infrared (IR) or Night Vision Cameras are designed to capture high-quality video in low-light or complete darkness. They utilize infrared LEDs to illuminate scenes invisible to the human eye but visible to the camera sensor. Featuring automatic IR cut filters and smart motion detection, these cameras provide reliable 24/7 surveillance for both indoor and outdoor applications.',
+
+  images: [
+    '/Solutions/Surveillance/CCTV/ir1.png',
+
+  ],
+
+  dataAiHints: [
+    'infrared security camera',
+    'night vision cctv',
+    'no light surveillance camera',
+    'starlight camera for dark areas',
+    'low light ir camera'
+  ],
+
+  specifications: [
+    { key: 'Image Sensor Type', value: 'CMOS or CCD' },
+    { key: 'Resolution', value: '2MP (1080p), 4MP, 5MP, 8MP (4K)' },
+    { key: 'IR Range', value: '10–100 meters' },
+    { key: 'IR LED Wavelength', value: '850nm (slight glow) / 940nm (invisible)' },
+    { key: 'Night Vision Mode', value: 'Black & white with IR / Color with Starlight sensor' },
+    { key: 'IR Cut Filter', value: 'Automatic ICR day/night switch' },
+    { key: 'Lens Type', value: 'Fixed or Varifocal' },
+    { key: 'Focal Length', value: '2.8mm – 12mm (varifocal)' },
+    { key: 'Field of View (FoV)', value: '30° to 120° depending on lens' },
+    { key: 'Frame Rate', value: '15–30 fps @ full resolution' },
+    { key: 'Compression', value: 'H.265 / H.264 / MJPEG' },
+    { key: 'Input Voltage', value: '12V DC or PoE' },
+    { key: 'Local Storage', value: 'microSD slot (up to 256GB), NVR/Cloud compatible' },
+    { key: 'Smart Features', value: 'Motion detection, alerts, night schedule (IP models)' }
+  ],
+
+  benefits: [
+    'Capture clear footage in darkness using infrared illumination',
+    'Automatic day/night switching with IR cut filter',
+    'Supports long-range IR (up to 100 meters)',
+    'Compatible with cloud/NVR for continuous recording',
+    'Smart motion detection for enhanced alerts and automation'
+  ],
+
+  icon: Camera
+}
+,
+{
+  id: '99',
+  slug: 'ip-cameras-internet-protocol',
+  name: 'IP Cameras (Internet Protocol)',
+  category: 'CCTV Cameras',
+
+
+  shortDescription: 'High-definition IP cameras with remote access, real-time alerts, and cloud/local recording.',
+  longDescription: 'IP Cameras, or Internet Protocol Cameras, are modern digital surveillance devices that transmit video data over Ethernet or Wi-Fi networks. Offering HD to 4K video resolution, they support real-time monitoring, AI-powered motion detection, and remote access from mobile and desktop devices. Ideal for both residential and enterprise use, IP cameras work standalone or as part of NVR-based systems.',
+
+  images: [
+    '/Solutions/Surveillance/CCTV/ip1.png',
+
+  ],
+
+  dataAiHints: [
+    'ip cctv camera',
+    'wifi surveillance camera',
+    'ethernet camera with hd recording',
+    'onvif supported ip camera',
+    'remote access security camera'
+  ],
+
+  specifications: [
+    { key: 'Image Quality', value: '2MP (1080p), 4MP, 5MP, 8MP (4K)' },
+    { key: 'Lens Type', value: 'Fixed (e.g. 2.8mm) or Varifocal (2.8–12mm)' },
+    { key: 'Field of View', value: '30°–120° depending on lens' },
+    { key: 'Video Compression', value: 'H.264, H.265, MJPEG' },
+    { key: 'Frame Rate', value: 'Up to 30 fps' },
+    { key: 'Input Voltage', value: '12V DC or PoE (Power over Ethernet)' },
+    { key: 'Network Support', value: 'Ethernet (RJ45), Wi-Fi (select models)' },
+    { key: 'Supported Protocols', value: 'ONVIF, RTSP, HTTP, TCP/IP' },
+    { key: 'IR Range', value: '10m to 100m with IR LEDs' },
+    { key: 'Infrared Cut Filter', value: 'Yes (for day/night switching)' }
+  ],
+
+  benefits: [
+    'Stream video over LAN or Wi-Fi with high clarity',
+    'Remote access via mobile apps or browsers',
+    'Real-time motion detection alerts and event logging',
+    'Supports cloud storage or integration with NVRs',
+    'Ideal for both indoor and outdoor environments'
+  ],
+
+  icon: Camera
+}
+,
+{
+  id: '100',
+  slug: 'wireless-cameras',
+  name: 'Wireless Cameras',
+  category: 'CCTV Cameras',
+
+
+  shortDescription: 'Wi-Fi-enabled wireless surveillance cameras with HD to 4K video, smart alerts, and flexible power options.',
+  longDescription: 'Wireless cameras offer cable-free video transmission using Wi-Fi (2.4GHz or 5GHz), enabling flexible placement and easy installation. Suitable for indoor and outdoor monitoring, they deliver HD to 4K video, night vision, and smart features like motion detection and mobile alerts. Powered by rechargeable batteries, solar panels, or DC adapters, they support cloud, SD card, or NVR-based storage.',
+
+  images: [
+    '/Solutions/Surveillance/CCTV/wireles1.png',
+
+  ],
+
+  dataAiHints: [
+    'wireless security camera',
+    'wifi surveillance camera',
+    'battery powered camera with night vision',
+    'cloud camera with motion detection',
+    'smart home wireless camera'
+  ],
+
+  specifications: [
+    { key: 'Image Quality', value: '2MP (1080p), 4MP, 5MP, 8MP (4K)' },
+    { key: 'Wireless Protocol', value: 'Wi-Fi (2.4GHz, dual-band on premium models)' },
+    { key: 'Network Range', value: '10–50 meters (depending on interference)' },
+    { key: 'Power Source', value: 'Rechargeable battery, solar panel, or 12V DC adapter' },
+    { key: 'Storage Options', value: 'microSD (up to 256GB), Cloud, or NVR' },
+    { key: 'IR Night Vision', value: '10–30 meters (some models offer color night vision)' },
+    { key: 'Lens Type', value: 'Fixed or Varifocal (2.8–4mm)' },
+    { key: 'Field of View', value: '80°–130°' },
+    { key: 'Smart Detection', value: 'Motion, person, vehicle, zone intrusion, line crossing' },
+    { key: 'Alerts', value: 'Mobile push, email, in-app notifications' },
+    { key: 'Battery Life', value: '1–6 months per charge (usage-dependent)' }
+  ],
+
+  benefits: [
+    'Cable-free installation and flexible placement',
+    'Remote access and smart motion alerts via mobile app',
+    'Supports SD card, cloud, or wireless NVR recording',
+    'Rechargeable battery and solar-powered options',
+    'Ideal for both indoor and outdoor surveillance'
+  ],
+
+  icon: Wifi
+}
+,
+{
+  id: '101',
+  slug: 'thermal-cameras',
+  name: 'Thermal Cameras',
+  category: 'CCTV Cameras',
+
+
+  shortDescription: 'Thermal imaging cameras that visualize heat signatures for security, industrial, and rescue applications—even in total darkness.',
+  longDescription: 'Thermal cameras capture infrared radiation emitted by objects, enabling visualization of temperature variations in complete darkness, smoke, fog, or dust. Using uncooled or cooled sensors, they provide high thermal resolution, wide temperature range detection, and are crucial in surveillance, maintenance diagnostics, wildlife monitoring, and search & rescue. Models often include built-in optical cameras for dual-view display and support USB, Wi-Fi, Ethernet, and PoE connectivity.',
+
+  images: [
+    '/Solutions/Surveillance/CCTV/thermal1.png',
+
+  ],
+
+  dataAiHints: [
+    'thermal surveillance camera',
+    'infrared heat detection camera',
+    'night vision thermal imaging',
+    'dual view thermal and optical camera',
+    'thermal camera for outdoor security'
+  ],
+
+  specifications: [
+    { key: 'Sensor Type', value: 'Uncooled microbolometer or cooled infrared sensor' },
+    { key: 'Thermal Resolution', value: '80×60, 160×120, 320×240, 640×512' },
+    { key: 'Temperature Range', value: '-40°C to +550°C' },
+    { key: 'Sensitivity (NETD)', value: '≤50 mK' },
+    { key: 'Frame Rate', value: '9Hz or 30Hz (export restricted)' },
+    { key: 'Field of View', value: '25° – 50°' },
+    { key: 'Image Display', value: 'Color palettes (Ironbow, Rainbow, White Hot, etc.)' },
+    { key: 'Visual Camera', value: 'Available in dual-lens models for blended image' },
+    { key: 'Connectivity', value: 'USB, Wi-Fi, Ethernet, SD card, HDMI, or mobile app' },
+    { key: 'Power Supply', value: 'Rechargeable battery or PoE' },
+    { key: 'Mounting Options', value: 'Handheld, tripod, or fixed housing' },
+    { key: 'Protection Rating', value: 'IP65 / IP67 (for outdoor use)' }
+  ],
+
+  benefits: [
+    'Detects temperature anomalies in total darkness or smoke',
+    'No visible light or IR LED required',
+    'Visual + thermal blending for improved analysis',
+    'Ideal for security, fire detection, and inspection',
+    'Weatherproof options for outdoor deployment'
+  ],
+
+  icon: Flame
+}
+,
+{
+  id: '102',
+  slug: 'fisheye-surveillance-camera',
+  name: 'Fisheye Cameras',
+  category: 'CCTV Cameras',
+
+
+  shortDescription: '360° fisheye surveillance cameras for panoramic area coverage with digital dewarping and smart analytics.',
+  longDescription: 'Fisheye cameras offer ultra-wide-angle monitoring with a single lens, providing 180° or 360° panoramic views. Ideal for large open areas, they reduce blind spots and eliminate the need for multiple cameras. Built-in dewarping features and smart functions like heatmaps and people counting make these cameras suitable for commercial, retail, and public surveillance applications.',
+
+  images: [
+    '/Solutions/Surveillance/CCTV/fish1.png',
+
+  ],
+
+  dataAiHints: [
+    '360 degree fisheye surveillance camera',
+    'ultra wide angle security camera',
+    'dewarping panoramic IP camera',
+    'fisheye cctv with heatmap and analytics',
+    'retail fisheye security monitoring'
+  ],
+
+  specifications: [
+    { key: 'Field of View', value: '180° (wall-mounted), 360° (ceiling-mounted)' },
+    { key: 'Resolution', value: '5MP, 6MP, 8MP, 12MP' },
+    { key: 'Lens Type', value: 'Fixed fisheye (1.05mm to 1.8mm)' },
+    { key: 'Image Modes', value: 'Full-view, panoramic, quad-view, ePTZ' },
+    { key: 'Dewarping Support', value: 'VMS, NVR, browser, or app' },
+    { key: 'IR/Night Vision', value: 'Yes, 10m–30m IR range' },
+    { key: 'Audio', value: 'Optional 2-way audio' },
+    { key: 'Power', value: 'PoE or 12V DC' },
+    { key: 'Smart Features', value: 'Motion detection, heatmap, people counting, line crossing' },
+    { key: 'Storage', value: 'microSD (up to 256GB), NVR, or cloud' },
+    { key: 'Installation', value: 'Ceiling, wall, or corner mount' },
+    { key: 'Durability', value: 'IP66 weatherproof, IK10 vandal-proof' },
+    { key: 'Integration', value: 'ONVIF compatible' }
+  ],
+
+  benefits: [
+    '360° view with one camera—eliminates blind spots',
+    'Digital dewarping for clearer, usable footage',
+    'Reduces number of cameras needed per location',
+    'Ideal for malls, offices, banks, and open areas',
+    'Smart analytics like people counting and heatmaps'
+  ],
+
+  icon: Camera
+},
+
+
+
+
+
   {
     id: '5',
     slug: 'mx-1080p-indoor-camera',
@@ -3523,6 +3825,438 @@ category: 'Fire Hydrant System',
 
   icon: Phone
 },
+{
+  "id": "107",
+  "slug": "tecmojo-12u-open-frame-network-rack",
+  "name": "Tecmojo 12U Open Frame Network Rack",
+  "category": "Conference room solutions",
+
+  "shortDescription": "12U open-frame network rack by Tecmojo for 19\" IT and AV equipment, floor standing or wall-mounted, includes 2x 1U rack shelves and mounting hardware.",
+  "longDescription": "The Tecmojo 12U Open Frame Network Rack is a durable, versatile rack designed to support 19-inch standard networking, AV, and server equipment. Made from robust alloy steel, it can be used as a floor-standing or wall-mounted unit. Ideal for IT rooms, studios, or telecom setups, the rack comes with two 1U shelves and all necessary mounting hardware. With a compact design and flexible mounting options, it's perfect for organizing patch panels, switches, and AV gear efficiently.",
+
+  "images": [
+    '/Solutions/Automation/Conference room solutions/rack10.png',
+    '/Solutions/Automation/Conference room solutions/rack11.png',
+    '/Solutions/Automation/Conference room solutions/rack12.png',
+ 
+
+  ],
+
+  "dataAiHints": [
+    "12u open frame rack for it gear",
+    "av network rack wall mount or floor standing",
+    "rack for 19 inch server switch",
+    "tecmojo network rack for server room",
+    "network cabinet with shelves included"
+  ],
+
+  "specifications": [
+    { "key": "Brand", "value": "Tecmojo" },
+    { "key": "Rack Size", "value": "12U" },
+    { "key": "Mount Type", "value": "Wall Mount / Floor Standing" },
+    { "key": "Form Factor", "value": "AT (19-inch standard)" },
+    { "key": "Material", "value": "Alloy Steel" },
+    { "key": "Included Accessories", "value": "2 x 1U Rack Shelves, Mounting Hardware" },
+    { "key": "Dimensions (L x W x H)", "value": "51.18 x 51.99 x 53.39 cm" },
+    { "key": "Weight", "value": "13 kg" },
+    { "key": "Compatible Devices", "value": "Server, AV, and Networking Equipment" },
+    { "key": "Batteries Included", "value": "No" },
+    { "key": "ASIN", "value": "B0CSJR2RZB" },
+    { "key": "Customer Rating", "value": "4.5 out of 5 stars (145 reviews)" },
+    { "key": "First Available", "value": "16 April 2024" }
+  ],
+
+  "benefits": [
+    "Strong alloy steel construction ensures durability and stability.",
+    "12U rack space ideal for organizing switches, routers, patch panels, and more.",
+    "Dual functionality: can be wall-mounted or placed as a floor-standing unit.",
+    "Includes 2 x 1U shelves for additional storage convenience.",
+    "Perfect for IT infrastructure, AV setups, and home networking.",
+    "Efficient airflow and cable management with open-frame design."
+  ],
+
+  icon: Server
+},
+{
+  "id": "108",
+  "slug": "star-work-5-shelf-metal-storage-rack",
+  "name": "STAR WORK 5-Shelf Adjustable Metal Storage Rack – 63\" Black Freestanding Utility Rack",
+  "category": "Conference room solutions",
+
+
+  "shortDescription": "Adjustable 5-shelf black metal storage rack by STAR WORK. Ideal for garage, bedroom, office or library with 800 lbs load capacity.",
+  "longDescription": "The STAR WORK 5-Shelf Adjustable Metal Storage Rack offers a durable and space-efficient solution for organizing your space. Constructed with engineered wood shelves and steel bootless rivets, this freestanding rack is designed for tool storage, home organization, or office use. With adjustable shelves, anti-slip foot mats, and easy DIY assembly, it provides both functionality and style in one package. With a maximum weight capacity of over 360 kg and sleek black finish, it's perfect for heavy-duty or aesthetic use in bedrooms, libraries, garages, and more.",
+
+  "images": [
+    '/Solutions/Automation/Conference room solutions/rack20.png',
+    '/Solutions/Automation/Conference room solutions/rack21.png',
+    '/Solutions/Automation/Conference room solutions/rack22.png',
+    '/Solutions/Automation/Conference room solutions/rack23.png',
+
+  
+  ],
+
+  "dataAiHints": [
+    "adjustable metal storage rack black",
+    "garage utility 5 shelf rack",
+    "steel bootless rivet rack 63 inches",
+    "star work display shelving unit",
+    "freestanding black rack for bedroom or office"
+  ],
+
+  "specifications": [
+    { "key": "Brand", "value": "STAR WORK" },
+    { "key": "Material", "value": "Engineered Wood & Steel Frame" },
+    { "key": "Number of Shelves", "value": "5" },
+    { "key": "Color", "value": "Black" },
+    { "key": "Dimensions (H x W x D)", "value": "92 x 33 x 7.5 cm (converted from inches: 63\" x 24\" x 12\")" },
+    { "key": "Weight Capacity", "value": "362.87 kg (800 lbs)" },
+    { "key": "Style", "value": "5 Shelf Premium" },
+    { "key": "Assembly Required", "value": "Yes (tool-free rivet system)" },
+    { "key": "Room Type", "value": "Bedroom, Library, Playroom, Office" },
+    { "key": "Special Features", "value": "Adjustable, Durable, Detachable, Non-Slip Foot Mats" },
+    { "key": "Installation Type", "value": "Freestanding" },
+    { "key": "Product Care", "value": "Wipe with Dry Cloth" },
+    { "key": "Furniture Finish", "value": "Black Coating" },
+    { "key": "Item Weight", "value": "6 kg" },
+    { "key": "Model Number", "value": "STRK6SET-25" },
+    { "key": "ASIN", "value": "B09SZGXHN3" },
+    { "key": "Customer Rating", "value": "4.0 out of 5 stars (6,752 reviews)" },
+    { "key": "Country of Origin", "value": "India" },
+    { "key": "Date First Available", "value": "9 November 2021" }
+  ],
+
+  "benefits": [
+    "Heavy-duty weight capacity supports up to 362.87 kg for reliable storage.",
+    "Adjustable shelving to fit items of various heights and sizes.",
+    "Steel rivet construction ensures stability and strength without tools.",
+    "Ideal for organizing tools, books, decor, or office supplies.",
+    "Sleek black finish blends with modern interiors.",
+    "Quick and easy installation – tool-free with detachable design."
+  ],
+
+  icon: Server
+},
+{
+  "id": "109",
+  "slug": "plantex-2u-wall-mount-cctv-dvr-nvr-rack",
+  "name": "Plantex 2U Wall Mount CCTV/DVR/NVR Rack with Power Socket & Glass Door – White",
+  "category": "Conference room solutions",
+
+
+  "shortDescription": "2U wall-mounted DVR/NVR rack by Plantex, made from rust-proof metal with lockable glass door, power socket, and cable management – ideal for CCTV and networking devices.",
+  "longDescription": "The Plantex 2U Wall Mount DVR/NVR Rack offers a durable, secure, and organized solution for housing your CCTV, server, or networking equipment. Made with high-quality 0.7 mm 24-gauge metal sheets and finished with 7-layer powder coating, this white metal cabinet is rust-proof and sturdy. It comes equipped with a transparent locking glass door, built-in 3-socket power board with a 6A plug, ventilation provision for fan installation, and two cable entry ports. Conforming to 19-inch standards, this rack is ideal for homes, offices, ATMs, shops, and server rooms.",
+
+  "images": [
+    '/Solutions/Automation/Conference room solutions/rack30.png',
+    '/Solutions/Automation/Conference room solutions/rack31.png',
+    '/Solutions/Automation/Conference room solutions/rack32.png',
+    '/Solutions/Automation/Conference room solutions/rack33.png',
+   
+  ],
+
+  "dataAiHints": [
+    "2U DVR wall mount rack",
+    "plantex network cabinet white",
+    "lockable glass door rack for CCTV",
+    "dvr box with power socket and ventilation",
+    "metal server rack 2U wall mount"
+  ],
+
+  "specifications": [
+    { "key": "Brand", "value": "Plantex" },
+    { "key": "Color", "value": "White" },
+    { "key": "Rack Size", "value": "2U" },
+    { "key": "Material", "value": "Metal (0.7 mm 24-gauge steel)" },
+    { "key": "Coating", "value": "7-layer powder coated for rust resistance" },
+    { "key": "Dimensions (L x W x H)", "value": "40 x 40.5 x 15.5 cm" },
+    { "key": "Mounting Type", "value": "Wall mount" },
+    { "key": "Front Door", "value": "Transparent glass door with keylock" },
+    { "key": "Sockets Included", "value": "3 power sockets + 6A plug" },
+    { "key": "Fan Mount Provision", "value": "Yes (fan not included)" },
+    { "key": "Cable Management", "value": "2 cable entry holes" },
+    { "key": "Compatibility", "value": "Fits 4/8 channel DVRs and 19” standard devices" },
+    { "key": "Use Case", "value": "Suitable for Home, Office, ATMs, Shops, Server rooms" },
+    { "key": "Country of Origin", "value": "India" },
+    { "key": "Assembly", "value": "Wall mounting materials included" }
+  ],
+
+  "benefits": [
+    "Secure and compact 2U rack for storing DVRs, routers, or servers.",
+    "Transparent locking door ensures both visibility and safety.",
+    "Built-in power sockets eliminate the need for extra power strips.",
+    "Ventilation-ready with fan mount option to prevent overheating.",
+    "Heavy-duty construction with rust-proof powder coating.",
+    "Ideal for multiple environments – homes, offices, ATMs, and more."
+  ],
+
+  icon: Lock
+},
+{
+  "id": "110",
+  "slug": "42u-floor-standing-network-server-rack",
+  "name": "42U Floor Standing Network Server Rack – 600mm x 1000mm",
+  "category": "Conference room solutions",
+
+
+  "shortDescription": "Heavy-duty 42U floor standing server/network rack made of powder-coated mild steel – ideal for data centers and network equipment installations.",
+  "longDescription": "This 42U Floor Standing Network Server Rack is built from durable mild steel and is ideal for organizing and securing IT equipment in data centers, network closets, or server rooms. The 600mm wide and 1000mm deep design allows for ample cable management and ventilation space. Powder-coated for rust resistance and designed for stability, this rack supports various 19-inch networking components including servers, switches, patch panels, and power distribution units (PDUs).",
+
+  "images": [
+    '/Solutions/Automation/Conference room solutions/rack40.png',
+    '/Solutions/Automation/Conference room solutions/rack41.png',
+
+  ],
+
+  "dataAiHints": [
+    "42U floor standing server rack",
+    "network equipment cabinet 600x1000mm",
+    "data center rack enclosure",
+    "mild steel server cabinet",
+    "floor mounted 19-inch rack"
+  ],
+
+  "specifications": [
+    { "key": "Model Number", "value": "PR-FS-27U-600" },
+    { "key": "Rack Size", "value": "42U" },
+    { "key": "Material", "value": "Mild Steel" },
+    { "key": "Finish", "value": "Powder Coated" },
+    { "key": "Width", "value": "600 mm" },
+    { "key": "Depth", "value": "1000 mm" },
+    { "key": "Installation Type", "value": "Floor Standing" },
+    { "key": "Rack Standard", "value": "Compatible with 19\" equipment" },
+    { "key": "Ventilation", "value": "Perforated panels or fan tray support (optional)" },
+    { "key": "Doors", "value": "Front and rear doors (optional glass or perforated)" },
+    { "key": "Cable Management", "value": "Side and rear cable entry points" }
+  ],
+
+  "benefits": [
+    "High-capacity 42U design accommodates multiple servers and network devices.",
+    "Built from mild steel for enhanced strength and longevity.",
+    "Powder-coated finish ensures rust resistance and sleek appearance.",
+    "Ideal for data centers, telecom rooms, and enterprise-grade setups.",
+    "Large depth (1000mm) allows for better airflow and cable routing."
+  ],
+
+
+
+  icon: Lock
+
+},
+
+{
+  "id": "111",
+  "slug": "22u-stainless-steel-floor-mounted-network-rack",
+  "name": "22U Stainless Steel Floor Mounted Network Rack with Standard Accessories",
+  "category": "Conference room solutions",
+
+
+  "shortDescription": "Durable 22U floor-mounted stainless steel network rack with curved ventilated doors, side locks, and standard accessories for small networking and telecom setups.",
+  "longDescription": "This 22U Stainless Steel Floor Mounted Network Rack is designed for compact IT setups, telecom, AV labs, and automation systems. Built with a premium stainless steel frame and finished with a high-quality powder coating, it offers durability, aesthetic appeal, and excellent ventilation. Side panels are independently lockable for ease of maintenance, and multifunction cable routing options are included. Curved front and double rear screen doors allow for optimal airflow. The rack supports simultaneous installation of casters and support feet, and optional pedestals enhance stability and routing flexibility. Certified under stringent ISO manufacturing standards.",
+
+  "images": [
+    '/Solutions/Automation/Conference room solutions/rack50.png',
+
+  ],
+
+  "dataAiHints": [
+    "22U stainless steel server rack",
+    "floor mounted AV/networking rack",
+    "telecom rack 600x600",
+    "network cabinet with cable routing",
+    "ISO certified electronics rack"
+  ],
+
+  "specifications": [
+    { "key": "Model Number", "value": "PR-FS-22U-600" },
+    { "key": "Rack Size", "value": "22U" },
+    { "key": "Material", "value": "Stainless Steel" },
+    { "key": "Finish", "value": "Powder Coated" },
+    { "key": "Dimensions (W x D x H)", "value": "600 x 600 x 1048 mm" },
+    { "key": "Installation Type", "value": "Floor Mounted" },
+    { "key": "Panel Access", "value": "Independently lockable side panels" },
+    { "key": "Cable Routing", "value": "Multi-functional rear routing panels" },
+    { "key": "Door Type", "value": "Curved front screen door and double rear screen door" },
+    { "key": "Accessories", "value": "Casters, support feet, optional pedestals" },
+    { "key": "Brand Compatibility", "value": "Netrack, Valrack, MRS, APW, D-Link, Rittal" },
+    { "key": "Certifications", "value": "ISO 9001, ISO 14001, ISO 27001, ISO 45001" }
+  ],
+
+  "benefits": [
+    "Strong stainless steel construction with precision design.",
+    "Side panels with individual locks for secure and easy maintenance.",
+    "Excellent airflow from screen doors to prevent overheating.",
+    "Supports both casters and support feet simultaneously.",
+    "Ideal for small network rooms, automation labs, and AV equipment."
+  ],
+
+
+
+  icon: Lock
+
+}
+,
+{
+  "id": "112",
+  "slug": "homemate-smart-home-control-panel",
+  "name": "HomeMate Smart Home Control Panel – WiFi, ZigBee, Bluetooth Smart Scene Wall Switch with LCD Touchscreen",
+  "category": "Wifi solutions",
+
+  "shortDescription": "4-inch LCD touch smart wall panel to control lights, temperature, and smart scenes via WiFi, ZigBee, or Bluetooth – compatible with HomeMate app for remote access.",
+  "longDescription": "The HomeMate Smart Home Control Panel offers an intuitive and powerful smart control interface for modern homes. With its 4-inch LCD touch screen, users can manage lighting, temperature, and customized smart scenes directly from the wall or remotely via smartphone. Compatible with ZigBee and Bluetooth for seamless integration into smart ecosystems, this panel includes real-time weather and temperature display, replacing traditional switches with intelligent control. Perfect for homes aiming to modernize their automation experience.",
+
+  "images": [
+    '/Solutions/Automation/Wifi solutions/switch10.png',
+    '/Solutions/Automation/Wifi solutions/switch11.png',
+    '/Solutions/Automation/Wifi solutions/switch12.png',
+
+  ],
+
+  "dataAiHints": [
+    "WiFi smart home panel with LCD screen",
+    "HomeMate ZigBee touch control switch",
+    "Bluetooth wall-mounted smart scene controller",
+    "Smart home switch with weather display",
+    "WiFi ZigBee LCD home controller with app support"
+  ],
+
+  "specifications": [
+    { "key": "Brand", "value": "HomeMate" },
+    { "key": "Model Number", "value": "HCP101" },
+    { "key": "Panel Size", "value": "4-inch LCD Touch Screen" },
+    { "key": "Operation Mode", "value": "Off" },
+    { "key": "Current Rating", "value": "6 Amps" },
+    { "key": "Operating Voltage", "value": "230 Volts" },
+    { "key": "Contact Type", "value": "Normally Open" },
+    { "key": "Mounting Type", "value": "Wall Mount" },
+    { "key": "Switch Type", "value": "Rocker" },
+    { "key": "Material", "value": "Glass" },
+    { "key": "Connectivity Protocol", "value": "Wi-Fi, ZigBee, Bluetooth" },
+    { "key": "Control Method", "value": "Remote via iOS, Android App" },
+    { "key": "Features", "value": "Clock, Date, Temperature & Weather Display, Smart Scene Customization" },
+    { "key": "Actuator Type", "value": "Touch Button" },
+    { "key": "Mounting Hardware", "value": "Included" },
+    { "key": "Country of Origin", "value": "India" }
+  ],
+
+  "benefits": [
+    "All-in-one control panel for lights, devices, and smart scenes.",
+    "4-inch LCD touch display with intuitive interface.",
+    "Real-time weather, date, and temperature display.",
+    "App-based remote access for control from anywhere.",
+    "Supports Wi-Fi, ZigBee, and Bluetooth connectivity for wide compatibility."
+  ],
+
+
+
+  icon: Lock
+
+},
+{
+  "id": "113",
+  "slug": "remote-touch-switch-board-18-module",
+  "name": "Remote Touch Switch Board – 8 Lights, 2 Fans, 2 Switches, 2 Sockets (18 Module, Black)",
+  "category": "Wifi solutions",
+
+
+  "shortDescription": "18-module remote touch switchboard to control 8 lights, 2 fans, 2 switches, and 2 sockets. Operable via touch and remote, supports home automation integration.",
+  "longDescription": "The Remote Touch Switch Board is a modern smart switch system designed for intuitive home control. With a sleek black 18-module design, it supports 8 lights, 2 fans, 2 switches, and 2 sockets. Operable by both touch and remote (up to 50 ft range), it combines elegance with functionality. Easy to install by any electrician, this board is perfect for smart home upgrades. It’s compatible with automation systems, offering potential voice/app control and programmable schedules for energy efficiency and convenience.",
+
+  "images": [    
+    '/Solutions/Automation/Wifi solutions/switch20.png',
+    '/Solutions/Automation/Wifi solutions/switch21.png',
+    '/Solutions/Automation/Wifi solutions/switch22.png',
+
+  ],
+
+  "dataAiHints": [
+    "touch remote switch board 18 module",
+    "smart modular switch panel for lights and fans",
+    "remote control light switchboard with sockets",
+    "black touch switch panel for home automation",
+    "18-module smart wall switch board"
+  ],
+
+  "specifications": [
+    { "key": "Module Size", "value": "18 Module" },
+    { "key": "Color", "value": "Black" },
+    { "key": "Material", "value": "Plastic" },
+    { "key": "Current Rating", "value": "6A" },
+    { "key": "Circuit Type", "value": "Two Way" },
+    { "key": "Switch Type", "value": "Modular Touch Switch" },
+    { "key": "LED Indicators", "value": "Blue & White" },
+    { "key": "Control Method", "value": "Touch & Remote" },
+    { "key": "Remote Range", "value": "50 feet" },
+    { "key": "Device Compatibility", "value": "8 Lights, 2 Fans, 2 Switches, 2 Sockets" },
+    { "key": "Installation", "value": "Wall-mount; electrician installable" },
+    { "key": "Home Automation", "value": "Compatible (Voice/App control optional)" },
+    { "key": "Included Components", "value": "1 Touch Switch Board, 1 Remote, 1 Remote Cell, 1 Installation Manual, 4 Screws" },
+    { "key": "Price (INR)", "value": "₹4,799" }
+  ],
+
+  "benefits": [
+    "Operate up to 14 electrical points with a single board.",
+    "Touch-sensitive and remote-controlled for easy access.",
+    "Stylish design enhances interior aesthetics.",
+    "Fast installation by any certified electrician.",
+    "Ideal for modern smart homes with automation compatibility."
+  ],
+
+},
+{
+  "id": "114",
+  "slug": "smarteefi-touch-5-port-wifi-smart-switch-board",
+  "name": "Smarteefi Touch 5 Port Modular WiFi Smart Switch Board – 3 Lights, 1 Fan, 1 Smart Plug (Black, 6M)",
+  "category": "Wifi solutions",
+
+
+  "shortDescription": "WiFi-enabled 5-port smart touch switchboard with 3 switch controls, 1 fan regulator, and 1 smart plug. Compatible with Alexa & Google Home, offers scheduling, timers, and manual override.",
+  "longDescription": "The Smarteefi Touch 5 Port Modular WiFi Smart Switch Board is a 6-module (6M) smart panel that replaces traditional switchboards. It includes 3 independent light switches, 1 fan speed regulator, and 1 smart plug, all controllable via the Smarteefi app, voice commands (Alexa & Google Home), and manual touch. The device supports daily/weekly scheduling, countdown timers, power state restoration, and notification alerts. Ideal for modern smart homes, the board enables seamless automation and remote access while supporting multiple user control.",
+  
+  "images": [
+    '/Solutions/Automation/Wifi solutions/switch30.png',
+    '/Solutions/Automation/Wifi solutions/switch31.png',
+
+  ],
+
+  "dataAiHints": [
+    "smarteefi wifi switchboard with fan control",
+    "smart modular switch panel for lights and plug",
+    "alexa compatible smart touch switch board",
+    "5 port smart switch board with app and timer",
+    "black 6M smart wifi switch panel"
+  ],
+
+  "specifications": [
+    { "key": "Size", "value": "6M (220mm x 90mm x 40mm)" },
+    { "key": "Color", "value": "Black" },
+    { "key": "Material", "value": "Plastic" },
+    { "key": "Current Rating", "value": "6A" },
+    { "key": "Operating Voltage", "value": "230V" },
+    { "key": "Switch Type", "value": "Touch Switch" },
+    { "key": "Mounting Type", "value": "Wall Mount" },
+    { "key": "Switches", "value": "3 Switches for Lights, 1 for Plug, 1 Fan Speed Regulator" },
+    { "key": "Connectivity", "value": "Wi-Fi (App Controlled)" },
+    { "key": "Voice Assistant Support", "value": "Alexa & Google Home" },
+    { "key": "Manual Control", "value": "Touch + Remote Override" },
+    { "key": "Scheduling", "value": "Daily/Weekly Schedule with Offline Execution" },
+    { "key": "Countdown Timer", "value": "Supported" },
+    { "key": "Last State Memory", "value": "Restore / Always ON / Always OFF options" },
+    { "key": "Notifications", "value": "Mobile alerts for switch ON/OFF activity" },
+    { "key": "Multiple User Access", "value": "Supported via shared access" },
+    { "key": "Product Dimensions", "value": "22 x 9 x 4 cm" },
+    { "key": "Item Weight", "value": "300 g" }
+  ],
+
+  "benefits": [
+    "Control lights, fan, and plug remotely or manually.",
+    "Works with Alexa and Google Home for voice automation.",
+    "Offline scheduling supported with inbuilt memory and clock.",
+    "Touch operation with sleek and modern design.",
+    "Ideal for home automation upgrades and energy-efficient routines."
+  ],
+  icon: Lock
+},
 
 
 
@@ -3530,6 +4264,817 @@ category: 'Fire Hydrant System',
 
 
 
+
+
+
+
+
+// --- Intruder Detection System ---
+
+
+{
+  id: '85',
+  slug: 'perimeter-security-intrusion-alarms',
+  name: 'Perimeter Security & Intrusion Alarms',
+  category: 'Perimeter Security',
+
+  shortDescription: 'Advanced intrusion detection and perimeter protection system supporting multiple sensor types and centralized alert management.',
+  longDescription: 'This Perimeter Security & Intrusion Alarm system combines advanced sensor technologies such as infrared, microwave, fiber optic, and seismic detection with multi-zone control and real-time alerting. The system supports up to 2,000 meters of fence coverage, offers >95% detection accuracy, and operates in harsh environments. Integrated alarm and control software enables real-time monitoring, logging, and remote management.',
+
+  images: [
+    '/Solutions/Intruder/Perimeter Security/intr1.png',
+
+  ],
+
+  dataAiHints: [
+    'perimeter intrusion detection system',
+    'multi-zone alarm and alert system',
+    'infrared and microwave sensor alarm',
+    'tamper detection intrusion alert',
+    'security system with remote control panel'
+  ],
+
+  specifications: [
+    { key: 'Sensor Types', value: 'Infrared (IR beam), Microwave, Fiber Optic, Seismic, Electrostatic, Vibration' },
+    { key: 'Detection Range', value: 'IR: 30–200m; Microwave: 10–300m; Fence sensors: up to 2,000m' },
+    { key: 'Detection Accuracy', value: '>95%, with adjustable sensitivity levels' },
+    { key: 'Operating Conditions', value: 'Weather-resistant (IP65+); -20°C to +60°C' },
+    { key: 'Installation', value: 'Pole-mounted, buried, wall/fence-mounted, or surface-mounted' },
+    { key: 'Tamper Detection', value: 'Built-in anti-tamper and sabotage alarms' },
+    { key: 'Alarm Types', value: 'Audible Sirens (≥110 dB), Flashing Lights, Remote Alerts' },
+    { key: 'Communication Protocols', value: 'GSM, LTE, Wi-Fi, Ethernet, RS485, Modbus' },
+    { key: 'Alert Outputs', value: 'SMS, App Notification, Control Room Interface, Auto-dialer' },
+    { key: 'Backup Battery', value: '12V/7Ah; ≥8 hours backup' },
+    { key: 'Central Controller', value: 'ARM-based microprocessor; multi-zone (4 to 64 zones)' },
+    { key: 'User Interface', value: 'LCD/Touchscreen, Web dashboard, Mobile app' },
+    { key: 'Event Logging', value: 'Stores 1000+ events with timestamps' },
+    { key: 'Remote Management', value: 'Via mobile app or desktop software' }
+  ],
+
+  benefits: [
+    'Supports diverse sensor technologies for reliable perimeter protection',
+    'High detection accuracy with anti-tamper and sabotage alarms',
+    'Multi-zone monitoring and centralized alert control',
+    'Real-time notifications via SMS, app, or auto-dial',
+    'Remote management and event logging enabled'
+  ],
+
+  icon: Server
+},
+{
+  id: '86',
+  slug: 'smart-sensor-unauthorized-access-alerts',
+  name: 'Smart Sensor for Unauthorized Access Alerts',
+  category: 'Smart Sensors',
+
+  shortDescription: 'Multi-sensor smart device for detecting unauthorized access via motion, magnetic field, or vibration.',
+  longDescription: 'The Smart Sensor for Unauthorized Access Alerts is a compact, intelligent device designed to detect intrusion through changes in magnetic fields, motion, vibrations, or beam interruptions. Supporting wireless connectivity and real-time alerts, it’s compatible with leading smart home platforms and suitable for both indoor and outdoor use. Ideal for homes, offices, and restricted areas requiring automated intrusion detection and notification.',
+
+  images: [
+    '/Solutions/Intruder/Smart Sensors/intr2.png',
+
+  ],
+
+  dataAiHints: [
+    'motion sensor with mobile alert',
+    'wireless magnetic contact alarm',
+    'smart home unauthorized access sensor',
+    'PIR motion sensor with Wi-Fi and Zigbee',
+    'remote intrusion detector with Alexa support'
+  ],
+
+  specifications: [
+    { key: 'Sensor Type', value: 'Magnetic contact sensor, PIR motion sensor, Vibration, IR beam, Ultrasonic' },
+    { key: 'Detection Method', value: 'Magnetic field change, motion detection, shock/vibration, beam interruption' },
+    { key: 'Detection Range', value: 'PIR: 6–12m; IR Beam: up to 200m; Magnetic: ≤25mm gap' },
+    { key: 'Detection Angle', value: 'PIR: 110° horizontal / 60° vertical' },
+    { key: 'Response Time', value: '<1 second' },
+    { key: 'Power Supply', value: '3V CR123A battery (1–2 years) or 5V USB-powered' },
+    { key: 'Communication', value: 'Wi-Fi (2.4 GHz), Zigbee, Z-Wave, LoRaWAN, GSM (optional SIM slot)' },
+    { key: 'Alert Modes', value: 'Mobile app notification, SMS, control panel, cloud alert' },
+    { key: 'Smart Features', value: 'Remote arming/disarming, user rules, real-time alerts, event logging' },
+    { key: 'Integration', value: 'Alexa, Google Home, Apple HomeKit, IFTTT' },
+    { key: 'Tamper Protection', value: 'Anti-tamper switch triggers alert if removed or opened' },
+    { key: 'Environmental Rating', value: 'IP65 weather-resistant' },
+    { key: 'Operating Temperature', value: '-10°C to +60°C' },
+    { key: 'Installation', value: 'Surface mount with adhesive or screws; plug-and-play' },
+    { key: 'Dimensions', value: '75mm x 30mm x 20mm' }
+  ],
+
+  benefits: [
+    'Real-time intrusion alerts via app or SMS',
+    'Supports various communication protocols including Zigbee and GSM',
+    'Easily integrates with smart home ecosystems like Alexa and Google Home',
+    'Quick response time and remote configuration features',
+    'Tamper-proof design with IP65 outdoor durability'
+  ],
+
+  icon: AlarmCheck
+},
+{
+  id: '87',
+  slug: 'door-sensor-magnetic-contact',
+  name: 'Door Sensor (Magnetic Contact)',
+  category: 'Smart Sensors',
+
+  shortDescription: 'Compact magnetic contact sensor for detecting open/close events on doors and windows.',
+  longDescription: 'The Door Sensor is a magnetic contact-based intrusion detection device designed to sense the opening and closing of doors or windows. Featuring surface or recessed mounting options, low power consumption, and optional wireless capabilities (Zigbee, Z-Wave, Wi-Fi, Bluetooth), it is ideal for residential, commercial, or industrial security systems. It provides real-time alerts and can integrate into smart home setups with tamper-proof, durable housing.',
+
+  images: [
+    '/Solutions/Intruder/Smart Sensors/intr3.png',
+
+  ],
+
+  dataAiHints: [
+    'magnetic door contact sensor',
+    'reed switch door sensor',
+    'smart door sensor with Wi-Fi',
+    'Zigbee door open detector',
+    'dry contact door switch'
+  ],
+
+  specifications: [
+    { key: 'Type', value: 'Magnetic Contact Sensor / Reed Switch' },
+    { key: 'Operating Principle', value: 'Magnetic field disruption' },
+    { key: 'Installation', value: 'Surface-mounted or recessed' },
+    { key: 'Material', value: 'ABS plastic / Polycarbonate housing' },
+    { key: 'Operating Voltage', value: '3V to 12V DC (commonly 5V or 12V)' },
+    { key: 'Current Consumption', value: '< 50 mA (passive sensors draw minimal or no current when idle)' },
+    { key: 'Contact Type', value: 'Normally Closed (NC) or Normally Open (NO)' },
+    { key: 'Switching Distance', value: '10–25 mm (varies by model)' },
+    { key: 'Output Type', value: 'Dry contact / Digital signal' },
+    { key: 'Wireless Option', value: 'Yes (Zigbee, Z-Wave, Wi-Fi, Bluetooth available in smart variants)' },
+    { key: 'Operating Temperature', value: '-10°C to +50°C (standard)' },
+    { key: 'Dimensions', value: '~50 x 15 x 10 mm per part (typical)' },
+    { key: 'Mounting', value: 'Adhesive backing or screw-mountable' }
+  ],
+
+  benefits: [
+    'Reliable open/close detection for doors and windows',
+    'Supports integration with various smart home systems',
+    'Low power consumption with long-lasting battery life in smart models',
+    'Flexible mounting options for easy installation',
+    'Available in wired and wireless variants'
+  ],
+
+  icon: Lock
+},
+
+{
+  id: '88',
+  slug: 'beam-sensor-photoelectric-infrared',
+  name: 'Beam Sensor (Photoelectric / Infrared)',
+  category: 'Smart Sensors',
+
+
+  shortDescription: 'Infrared beam sensor for intrusion detection using light beam interruption technology.',
+  longDescription: 'Beam sensors, also known as photoelectric or infrared sensors, detect the presence or movement of objects or individuals by monitoring interruptions in a light beam between a transmitter and receiver. Available in through-beam, retroreflective, and diffuse reflective types, these sensors offer reliable intrusion detection across a wide range of industrial and security applications. They feature robust weather-resistant housings, fast response time, and versatile mounting options for both indoor and outdoor setups.',
+
+  images: [
+    '/Solutions/Intruder/Smart Sensors/intr4.png',
+
+  ],
+
+  dataAiHints: [
+    'infrared beam sensor',
+    'photoelectric motion detector',
+    'through beam retroreflective sensor',
+    'IR beam security detector',
+    'industrial photoelectric sensor'
+  ],
+
+  specifications: [
+    { key: 'Sensor Type', value: 'Infrared Beam / Photoelectric Sensor' },
+    { key: 'Operation Type', value: 'Through-beam / Retroreflective / Diffuse reflective' },
+    { key: 'Detection Range', value: '1–100 meters (depending on model and type)' },
+    { key: 'Power Supply', value: '12–24V DC (some models support 110–240V AC)' },
+    { key: 'Output Type', value: 'Relay (NO/NC), NPN/PNP open collector, digital output' },
+    { key: 'Response Time', value: '<20 ms (typical)' },
+    { key: 'Beam Type', value: 'Infrared LED or Laser' },
+    { key: 'Alignment', value: 'Required for through-beam; easier with built-in indicators (LED)' },
+    { key: 'Current Consumption', value: 'Typically <100 mA' },
+    { key: 'Operating Temperature', value: '-20°C to +60°C (model dependent)' },
+    { key: 'Protection Rating', value: 'IP65 / IP66 (for outdoor/industrial models)' },
+    { key: 'Housing Material', value: 'ABS, polycarbonate, or aluminum alloy' },
+    { key: 'Dimensions', value: 'Varies – small compact to larger weatherproof units' },
+    { key: 'Mounting', value: 'Wall-mount or bracket mount' },
+    { key: 'Indicators', value: 'Power and signal LEDs' },
+    { key: 'Wavelength', value: 'Typically 850–950 nm (IR spectrum)' }
+  ],
+
+  benefits: [
+    'Accurate object or person detection using infrared beam interruption',
+    'Available in multiple operation modes for different use cases',
+    'Ideal for perimeter security, automation, and industrial sensing',
+    'High weather resistance for outdoor deployment',
+    'Fast response time with multiple output options for easy integration'
+  ],
+
+  icon: Lock
+},
+
+
+{
+  id: '89',
+  slug: 'vibration-sensor-accelerometer-detector',
+  name: 'Vibration Sensor (Accelerometer)',
+  category: 'Smart Sensors',
+
+  shortDescription: 'Sensor for detecting vibration, shock, or mechanical movement in security and industrial applications.',
+  longDescription: 'A vibration sensor, also known as a vibration detector or accelerometer, is designed to detect mechanical oscillations, shocks, or displacement in equipment, windows, doors, or structural surfaces. These sensors are widely used in security systems for tampering detection, as well as in industrial environments for machine condition monitoring. Available in piezoelectric, MEMS, capacitive, and resistive types, they support analog or digital outputs and are suited for a wide range of environmental conditions.',
+
+  images: [
+    '/Solutions/Intruder/Smart Sensors/intr5.png',
+
+  ],
+
+  dataAiHints: [
+    'vibration detector for window security',
+    'piezoelectric vibration sensor',
+    'accelerometer sensor for tamper detection',
+    'machine monitoring vibration sensor',
+    'shock and displacement sensor'
+  ],
+
+  specifications: [
+    { key: 'Sensor Type', value: 'Piezoelectric / MEMS / Capacitive / Resistive' },
+    { key: 'Measurement Types', value: 'Acceleration, Velocity, Displacement, Shock' },
+    { key: 'Output Type', value: 'Analog (voltage), Digital, or Switch-type (on/off)' },
+    { key: 'Frequency Range', value: '1 Hz – 10 kHz (varies by application)' },
+    { key: 'Sensitivity', value: '10–100 mV/g (for analog types)' },
+    { key: 'Range', value: '±2g to ±200g or more (depending on model)' },
+    { key: 'Power Supply', value: '3.3V to 24V DC (typical)' },
+    { key: 'Operating Temperature', value: '-40°C to +85°C (standard industrial grade)' },
+    { key: 'Output Signal', value: 'Analog Voltage / Digital Pulse / Alarm Signal' },
+    { key: 'Mounting', value: 'Screw-in, magnetic base, adhesive, or PCB mounted' },
+    { key: 'Housing Material', value: 'ABS plastic, stainless steel, aluminum, or ceramic' },
+    { key: 'Protection Level', value: 'IP65 / IP67 / ATEX (for hazardous environments)' },
+    { key: 'Response Time', value: '<1 ms (switch types), higher for signal-processing types' }
+  ],
+
+  benefits: [
+    'Detects vibration, shock, or tampering on windows, doors, or surfaces',
+    'Available in both analog and digital output variants',
+    'Can be integrated into security systems or industrial IoT platforms',
+    'Operates reliably in harsh industrial and outdoor environments',
+    'Flexible mounting options for various installation scenarios'
+  ],
+
+  icon: AlertTriangle
+},
+{
+  id: '90',
+  slug: 'animal-intrusion-detection-repellent-system',
+  name: 'Animal Intrusion Detection and Repellent System (AIDRS)',
+  category: 'ANIDERS',
+
+  shortDescription: 'Smart sensor-based system to detect and deter animal intrusion in farmlands, solar plants, and sensitive areas.',
+  longDescription: 'The Animal Intrusion Detection and Repellent System (AIDRS) is an intelligent, multi-sensor solution designed to detect, monitor, and repel animals from entering restricted zones. Ideal for agricultural fields, solar farms, airports, and industrial sites, it integrates PIR, radar, LiDAR, thermal imaging, and optional AI modules for animal recognition. The system issues real-time alerts and uses deterrents like ultrasonic sound, predator calls, or water jets to humanely repel animals without harm.',
+
+  images: [
+    '/Solutions/Intruder/aniders/intr6.png',
+
+  ],
+
+  dataAiHints: [
+    'animal detection and repellent system',
+    'wildlife intrusion prevention',
+    'AIDRS for farms and solar plants',
+    'AI-based animal detection system',
+    'smart repellent system for animal intrusion'
+  ],
+
+  specifications: [
+    { key: 'Detection Technologies', value: 'PIR, Radar, LiDAR, Thermal Imaging, IR cameras' },
+    { key: 'Detection Range', value: '10 – 100 meters (adjustable)' },
+    { key: 'Detection Angle', value: '90° – 180° depending on configuration' },
+    { key: 'Animal Type Detection', value: 'Small (rodents, birds), Medium (dogs, monkeys), Large (deer, elephants)' },
+    { key: 'Camera Integration', value: 'HD/IR camera (optional) for monitoring and recording' },
+    { key: 'AI/ML Capability', value: 'Optional module for animal recognition and behavior prediction' },
+    { key: 'Alert Mechanisms', value: 'Mobile app, SMS, Email, Local alarm, Control center integration' },
+    { key: 'Repellent Options', value: 'Ultrasonic sound, Strobe lights, Water jets, Predator calls' },
+    { key: 'Power Supply', value: '220V AC / Solar with 12V battery backup' },
+    { key: 'Connectivity', value: 'Wi-Fi / GSM / LoRa / Zigbee' },
+    { key: 'Weather Resistance', value: 'IP65 or higher for outdoor use' },
+    { key: 'Operating Temperature', value: '-10°C to +60°C' },
+    { key: 'Mounting Options', value: 'Pole mount, Wall mount, Ground stake' }
+  ],
+
+  benefits: [
+    'Detects and deters animals of various sizes without harm',
+    'Reduces crop damage and human-wildlife conflict',
+    'AI capabilities for intelligent animal classification',
+    'Multiple deterrent options ensure humane repulsion',
+    'Flexible power and connectivity options for remote locations'
+  ],
+
+  icon: AlertTriangle
+},
+{
+  id: '91',
+  slug: 'kynet-net-gun',
+  name: 'KyNet Net Gun',
+  category: 'KyNet Net Gun',
+
+  shortDescription: 'Handheld CO₂-powered net launcher for safe capture and relocation of wild animals.',
+  longDescription: 'KyNet is a handheld automatic net gun engineered for the humane capture and relocation of wild animals such as leopards, jackals, wild boars, deer, and more. Designed for forest departments, wildlife rescue teams, and conservationists, KyNet is effective in both urban and rural landscapes. Using a CO₂ propulsion system and a high-strength net, it ensures safe and non-lethal animal control for relocation or rehabilitation efforts. It is especially useful in human-wildlife conflict zones like highways, rail tracks, and forest fringes.',
+
+  images: [
+    '/Solutions/Intruder/kynet-net-gun/intr7.png',
+
+  ],
+
+  dataAiHints: [
+    'wildlife net gun',
+    'kynet animal capture tool',
+    'CO2 net launcher for wildlife rescue',
+    'net gun for leopards and wild boars',
+    'non-lethal animal control equipment'
+  ],
+
+  specifications: [
+    { key: 'Propulsion', value: 'CO₂-powered system' },
+    { key: 'Material', value: 'High-strength Dyneema or Polyethylene net' },
+    { key: 'Effective Range', value: '6–15 meters (20–50 ft)' },
+    { key: 'Launch Speed', value: '~15 m/s' },
+    { key: 'Net Size', value: '2–4 meters square (4–16 m²)' },
+    { key: 'CO₂ Cartridges', value: '16g, single-use; typically ~20 included' },
+    { key: 'Mesh Size', value: '5–20 cm depending on animal type' },
+    { key: 'Device Length', value: '~310 mm' },
+    { key: 'Weight (loaded)', value: '1.1 – 1.4 kg' }
+  ],
+
+  benefits: [
+    'Enables safe and humane capture of medium to large animals',
+    'Effective for rescue, rehabilitation, and relocation',
+    'Reduces human-wildlife conflict without harming animals',
+    'Usable in diverse environments including urban zones',
+    'Compact and lightweight for easy operation in the field'
+  ],
+
+  icon: AlertTriangle
+},
+{
+  id: '92',
+  slug: 'smart-stick-multipurpose-outdoor',
+  name: 'Smart Stick',
+  category: 'Smart Stick & Drone',
+
+  shortDescription: 'Multipurpose tech-enabled stick for safety, lighting, electroshock deterrence, and outdoor use.',
+  longDescription: 'The Smart Stick is an all-in-one outdoor companion designed for forest rangers, adventure seekers, and wildlife personnel. Crafted from aircraft-grade aluminium and used by 17+ Indian state forest departments, this multipurpose stick integrates powerful lighting, panic alarm, electroshock deterrent, and USB power bank. It is ideal for night patrolling, self-defense, river crossings, and emergency situations in the wild. Durable, portable, and weather-resistant, it’s the ultimate smart tool for challenging terrains and scenarios.',
+
+  images: [
+    '/Solutions/Intruder/smart-stick-drone/intr8.png',
+
+  ],
+
+  dataAiHints: [
+    'smart walking stick with torch and alarm',
+    'electroshock safety stick',
+    'forest ranger smart stick',
+    'wildlife protection stick with LED and siren',
+    'IP54 outdoor walking stick with power bank'
+  ],
+
+  specifications: [
+    { key: 'Material', value: 'Aircraft-grade aluminium (Alloy 6063)' },
+    { key: 'Water & Dust Proofing', value: 'IP54 rated' },
+    { key: 'LEDs', value: '2 forward + 1 downward LEDs' },
+    { key: 'LED Output', value: '80 lumens per LED, 1.5 W each, ~120° beam' },
+    { key: 'Lighting Modes', value: '7 combinations (spot, throbbing, path lighting)' },
+    { key: 'Panic Alarm', value: '>110 dB hooter with flashing LEDs' },
+    { key: 'Electroshock Voltage', value: '~10,000 V' },
+    { key: 'Shock Current', value: '~1 mA (1000 shocks of 2 sec per charge)' },
+    { key: 'Battery', value: 'Rechargeable, with USB output for charging devices' },
+    { key: 'Charging Output', value: 'USB power bank function' },
+    { key: 'Model Variants', value: 'Available in V4+, V4s+, Mini+ (not in base Mini)' }
+  ],
+
+  benefits: [
+    'Combines illumination, deterrence, alarm, and power backup',
+    'Strong, durable, and water-resistant body for rugged use',
+    'Ideal for forest patrolling, trekking, and night navigation',
+    'Portable with foldable designs for easy carrying',
+    'Field-proven in wildlife and ranger operations across India'
+  ],
+
+  icon: Camera
+
+},
+{
+  id: '93',
+  slug: 'dronelab-industrial-agriculture-drone',
+  name: 'Dronelab Drone',
+  category: 'Smart Stick & Drone',
+
+  shortDescription: 'Multi-role drone for mapping, agriculture, inspection, and surveillance with RTK/PPK and payload options.',
+  longDescription: 'Dronelab Drone is a professional-grade, multi-rotor UAV tailored for industrial, agricultural, and security applications. Engineered for precision and durability, it supports RTK/PPK navigation, fully autonomous flight, and interchangeable payloads such as RGB, thermal, and multispectral cameras. Ideal for surveying, crop spraying, infrastructure inspection, and live surveillance, Dronelab delivers accurate, high-resolution data and integrates seamlessly into GIS and monitoring systems.',
+
+  images: [
+    '/Solutions/Intruder/smart-stick-drone/intr9.png',
+
+  ],
+
+  dataAiHints: [
+    'agricultural mapping drone',
+    'drone with RTK PPK for survey',
+    'thermal drone for inspection',
+    'construction site drone with photogrammetry',
+    'live surveillance drone with long range'
+  ],
+
+  specifications: [
+    { key: 'Navigation System', value: 'RTK / PPK for high-precision positioning' },
+    { key: 'Camera Payload Options', value: 'RGB (20–48MP), Thermal (640×512), Multispectral (5-band)' },
+    { key: 'Flight Time', value: '30–45 minutes (depending on payload)' },
+    { key: 'Mapping Accuracy', value: '±2 cm horizontal, ±3 cm vertical' },
+    { key: 'Spraying Tank Capacity', value: '10–30 L' },
+    { key: 'Spray Width', value: '4–7 meters' },
+    { key: 'Flow Rate', value: '2–6 L/min' },
+    { key: 'Range', value: 'Up to 10 km (LOS)' },
+    { key: 'Live Video Feed', value: '1080p real-time, <150ms latency' },
+    { key: 'Thermal Sensitivity', value: '≤50 mK (NETD)' },
+    { key: 'Flight Modes', value: 'Autonomous grid, terrain-following, manual + object tracking' },
+    { key: 'Export Formats', value: '.GeoTIFF, .OBJ, .DXF, .KML, .LAS, .PDF' }
+  ],
+
+  benefits: [
+    'Multi-industry application including agriculture, construction, and surveillance',
+    'High-precision mapping and inspection with RTK/PPK',
+    'Live video monitoring with long-range and low-latency transmission',
+    'AI-based analysis for solar inspection and structural integrity',
+    'Modular payload support for flexibility across projects'
+  ],
+
+  icon: Camera
+},
+{
+  id: '103',
+  slug: 'tplink-cpe510-outdoor-wireless-cpe',
+  name: 'TP-Link 5GHz N300 Long Range Outdoor CPE (CPE510)',
+  category: 'Remote Surveillance and Monitoring Solutions',
+
+
+  shortDescription: 'TP-Link 5GHz 300Mbps 13dBi Outdoor CPE for long-range PtP and PtMP wireless transmission. Ideal for surveillance, remote access, and rural connectivity.',
+  longDescription: 'The TP-Link CPE510 is a 5GHz 300Mbps outdoor CPE designed for cost-effective long-distance wireless networking. With a built-in 13dBi directional antenna and passive PoE support, it provides stable point-to-point (PtP) and point-to-multipoint (PtMP) connections over distances exceeding 15 km. Ideal for video surveillance, Wi-Fi expansion in remote areas, and bridging buildings without cabling. Includes Pharos Control centralized management software.',
+
+  images: [
+    '/Solutions/Command/Remote Surveillance and Monitoring Solutions/rem10.png',
+    '/Solutions/Command/Remote Surveillance and Monitoring Solutions/rem11.png',
+  ],
+
+  dataAiHints: [
+    'point to point wireless bridge 5GHz',
+    'tplink outdoor wifi extender CPE510',
+    'long range wifi device for CCTV',
+    '13dBi wireless bridge with PoE',
+    'tplink CPE510 for PtP and PtMP links'
+  ],
+
+  specifications: [
+    { key: 'Model Number', value: 'CPE510' },
+    { key: 'Frequency Band', value: '5GHz (802.11n)' },
+    { key: 'Wireless Speed', value: '300Mbps (N300)' },
+    { key: 'Antenna', value: 'Built-in 13dBi directional antenna' },
+    { key: 'Range', value: '15+ km (line of sight)' },
+    { key: 'RAM', value: '64MB' },
+    { key: 'Power Supply', value: 'Passive PoE, 24V 0.5A (PoE adapter included)' },
+    { key: 'Power Consumption', value: '13 Watts' },
+    { key: 'Dimensions', value: '22.4 x 7.9 x 6 cm' },
+    { key: 'Weight', value: '190g' },
+    { key: 'Mounting', value: 'Pole mounting with included straps' },
+    { key: 'Management Software', value: 'Pharos Control' },
+    { key: 'Operating Mode', value: 'AP / Client / Bridge / Repeater' },
+    { key: 'Voltage', value: '24V DC (via PoE)' },
+    { key: 'Body Color', value: 'White' },
+    { key: 'Weatherproofing', value: 'Outdoor use (IP-level not explicitly specified)' },
+    { key: 'Country of Origin', value: 'China' }
+  ],
+
+  benefits: [
+    'Long-range wireless transmission over 15 km (PtP or PtMP)',
+    'Ideal for rural Wi-Fi expansion and CCTV backhaul',
+    'Built-in 13dBi directional antenna for high-gain focused transmission',
+    'Centralized management with Pharos Control software',
+    'Easy pole mounting with included accessories',
+    'Supports passive PoE for simplified installation'
+  ],
+
+  icon: Wifi
+},
+{
+  id: '104',
+  slug: 'ubiquiti-powerbeam-m5-pbe-m5-400',
+  name: 'Ubiquiti PowerBeam M5 25dBi 5GHz AirMAX CPE (2-Pack)',
+  category: 'Remote Surveillance and Monitoring Solutions',
+
+
+  shortDescription: 'High-performance 5GHz AirMAX CPE designed for long-range point-to-point (PtP) wireless bridging with 25dBi gain and 150+ Mbps throughput.',
+  longDescription: 'The Ubiquiti PowerBeam M5 PBE-M5-400 is a 2-pack of 5GHz outdoor wireless bridge units designed for long-range point-to-point (PtP) applications. Featuring a 400mm dish and 25dBi directional antenna, it offers excellent performance and signal focus. Powered by airMAX technology, it supports speeds over 150 Mbps and is ideal for connecting remote buildings, rural internet distribution, or CCTV backhaul over long distances.',
+
+  images: [
+    '/Solutions/Command/Remote Surveillance and Monitoring Solutions/rem20.png',
+    '/Solutions/Command/Remote Surveillance and Monitoring Solutions/rem21.png',
+  ],
+
+  dataAiHints: [
+    'ubiquiti point to point wireless bridge',
+    'powerbeam m5 25dBi long range 5ghz',
+    'ubiquiti airMAX outdoor CPE PBE-M5-400',
+    'ubiquiti wireless bridge for long distance',
+    'ubiquiti 5ghz 25dbi ptp bridge device'
+  ],
+
+  specifications: [
+    { key: 'Model Name', value: 'PBE-M5-400' },
+    { key: 'Frequency Band', value: '5 GHz (airMAX)' },
+    { key: 'Antenna Gain', value: '25 dBi' },
+    { key: 'Wireless Speed', value: '150+ Mbps' },
+    { key: 'Form Factor', value: '400mm Dish Antenna' },
+    { key: 'Connector Type', value: 'airMAX' },
+    { key: 'Operating System', value: 'RouterOS (airOS)' },
+    { key: 'Wireless Protocol', value: '802.11a/n with airMAX TDMA' },
+    { key: 'Voltage Input', value: '24V Passive PoE' },
+    { key: 'Ports', value: '1x 10/100 Ethernet Port' },
+    { key: 'Dimensions (Package)', value: '50.2 x 44.8 x 22.4 cm' },
+    { key: 'Weight', value: '4.54 kg (approx for 2 units)' },
+    { key: 'Compatibility', value: 'Compatible with Laptops, Routers, Switches' },
+    { key: 'Color', value: 'White' },
+    { key: 'Power Supply', value: 'Passive PoE Injector (not specified if included)' },
+    { key: 'Weatherproofing', value: 'Outdoor Rated (exact IP not specified)' }
+  ],
+
+  benefits: [
+    'Long-range wireless point-to-point bridging up to 20+ km (line of sight)',
+    'High-performance 25 dBi directional antenna for strong signal focus',
+    'airMAX technology for low latency and high throughput',
+    'Ideal for CCTV backhaul, rural internet distribution, or building interconnect',
+    'Robust and weatherproof design suitable for outdoor use',
+    'Includes two PBE-M5-400 units for complete PtP setup'
+  ],
+
+  icon: Wifi
+},
+{
+  id: '105',
+  slug: 'sonicwall-tz270-firewall',
+  name: 'SonicWall TZ270 Network Security Appliance (02-SSC-2821)',
+  category: 'Remote Surveillance and Monitoring Solutions',
+
+
+  shortDescription: 'Next-Generation Firewall with zero-touch deployment, designed for small to mid-size businesses with advanced threat protection and high-speed connectivity.',
+  longDescription: 'The SonicWall TZ270 is a compact yet powerful next-generation firewall tailored for small businesses, branch offices, and distributed enterprises. It delivers enterprise-grade security with features like intrusion prevention, content filtering, malware protection, and application control. Powered by SonicOS 7.0, the TZ270 supports up to 2.5 Gbps firewall throughput and includes 8x 1GbE ports, making it ideal for multi-gigabit environments. It supports Zero-Touch Deployment for streamlined onboarding and integration.',
+
+  images: [
+    '/Solutions/Command/Remote Surveillance and Monitoring Solutions/rem30.png',
+    '/Solutions/Command/Remote Surveillance and Monitoring Solutions/rem31.png',
+    '/Solutions/Command/Remote Surveillance and Monitoring Solutions/rem32.png',
+  ],
+
+  dataAiHints: [
+    'sonicwall tz270 firewall device',
+    'next-gen firewall for small business',
+    'sonicos 7.0 security appliance',
+    'sonicwall 8 port 1gbe network security',
+    '02-SSC-2821 sonicwall model'
+  ],
+
+  specifications: [
+    { key: 'Model', value: 'TZ270' },
+    { key: 'Part Number', value: '02-SSC-2821' },
+    { key: 'Firewall Throughput', value: 'Up to 2.5 Gbps' },
+    { key: 'Threat Prevention Throughput', value: 'Up to 1.0 Gbps (varies with subscription)' },
+    { key: 'Ports', value: '8 x 1GbE' },
+    { key: 'Deployment', value: 'Zero-Touch Deployment supported' },
+    { key: 'Wireless Capability', value: 'Yes, 802.11ac (dual-band)' },
+    { key: 'Operating System', value: 'SonicOS 7.0' },
+    { key: 'Power Supply', value: '220V AC' },
+    { key: 'Dimensions (LxWxH)', value: '13.5 x 19 x 3.5 cm' },
+    { key: 'Weight', value: '820 g' },
+    { key: 'Security Features', value: 'Advanced Threat Protection, Application Control, IPS, Malware Filtering' },
+    { key: 'Management', value: 'Cloud-based and local GUI with SonicOS 7.0' },
+    { key: 'Country of Origin', value: 'China' }
+  ],
+
+  benefits: [
+    'Advanced security features to protect networks from modern threats',
+    'Zero-Touch Deployment enables rapid remote setup',
+    '8 Gigabit Ethernet ports support flexible LAN/WAN configurations',
+    'Compact form factor perfect for small offices or retail deployments',
+    'Supports VPN, SD-WAN, DPI-SSL, and cloud security integrations',
+    'High throughput firewall ideal for gigabit-speed environments'
+  ],
+
+  icon: ShieldCheck
+},
+{
+  id: '106',
+  slug: 'watchguard-firebox-m590-firewall',
+  name: 'WatchGuard Firebox M590 Network Security/Firewall Appliance',
+  category: 'Remote Surveillance and Monitoring Solutions',
+
+
+  shortDescription: 'Enterprise-grade firewall offering up to 29.7 Gbps throughput, redundant power supplies, and advanced threat protection — ideal for mid-to-large businesses.',
+  longDescription: 'The WatchGuard Firebox M590 is a high-performance, next-generation firewall appliance engineered for businesses requiring advanced threat detection and prevention. It provides up to 29.7 Gbps firewall throughput and 4.6 Gbps UTM throughput with all security engines enabled. The M590 includes an extensive suite of logging, analytics, and customizable port configurations for evolving network needs. With built-in redundant power supplies and included 1-year Total Security Suite, the M590 delivers both power and reliability for mission-critical operations.',
+
+  images: [
+    '/Solutions/Command/Remote Surveillance and Monitoring Solutions/rem40.png',
+    '/Solutions/Command/Remote Surveillance and Monitoring Solutions/rem41.png',
+    '/Solutions/Command/Remote Surveillance and Monitoring Solutions/rem42.png',
+
+
+  ],
+
+  dataAiHints: [
+    'watchguard m590 firewall device',
+    'high throughput enterprise firewall',
+    'utm security appliance with reporting',
+    'watchguard total security suite included',
+    'm590 29.7 gbps network firewall'
+  ],
+
+  specifications: [
+    { key: 'Model', value: 'Firebox M590' },
+    { key: 'Part Number', value: 'WGM59000801' },
+    { key: 'Firewall Throughput', value: 'Up to 29.7 Gbps' },
+    { key: 'UTM Throughput', value: 'Up to 4.6 Gbps with full security features' },
+    { key: 'Security Suite', value: 'Includes 1-Year Total Security Suite' },
+    { key: 'Port Configuration', value: 'Customizable for future scalability' },
+    { key: 'Redundancy', value: 'Dual power supplies for high availability' },
+    { key: 'Logging & Reporting', value: 'Over 100 dashboards and reports included' },
+    { key: 'Dimensions (LxWxH)', value: '23 x 16.5 x 4 inches (58.4 x 41.9 x 10.2 cm)' },
+    { key: 'Weight', value: '14.92 lbs (6.77 kg)' },
+    { key: 'Country of Origin', value: 'Imported from USA' },
+    { key: 'First Available', value: 'October 12, 2021' },
+    { key: 'Manufacturer', value: 'WatchGuard Technologies, Inc' }
+  ],
+
+  benefits: [
+    'Blazing-fast firewall throughput up to 29.7 Gbps for high-performance networks',
+    'Robust UTM protection with 4.6 Gbps throughput including all scanning engines',
+    'Built-in redundant power supplies ensure system uptime and fault tolerance',
+    'Customizable ports allow network expansion and segmentation',
+    'Includes 1-year Total Security Suite for advanced protection out of the box',
+    'Real-time visibility and analytics through 100+ dashboards and reports'
+  ],
+
+  icon: ShieldCheck
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  id: '94',
+  slug: 'remote-surveillance-monitoring-solutions',
+  name: 'Remote Surveillance & Monitoring Solutions',
+  category: 'Remote Surveillance and Monitoring Solutions',
+
+  shortDescription: 'Real-time remote surveillance system with live video, sensors, and AI-powered alerts for enhanced security and monitoring.',
+  longDescription: 'Remote Surveillance and Monitoring Solutions enable real-time or recorded observation and event tracking from any location. These systems integrate CCTV/IP cameras, IoT sensors, and cloud platforms to provide comprehensive coverage across residential, commercial, and industrial spaces. With advanced features like motion detection, AI analytics, mobile access, and cloud storage, these systems ensure operational security, safety, and situational awareness from afar.',
+
+  images: [
+    '/Solutions/Command/Remote Surveillance and Monitoring Solutions/comm1.png',
+    '/Solutions/Command/Remote Surveillance and Monitoring Solutions/comm1.png',
+  ],
+  
+
+  dataAiHints: [
+    'remote security camera system',
+    'live cctv surveillance solution',
+    'iot based monitoring system',
+    'cloud surveillance and recording',
+    'remote motion and intrusion detection'
+  ],
+
+  specifications: [
+    { key: 'CCTV/IP Cameras', value: 'HD, night vision, PTZ, audio-video capable' },
+    { key: 'NVR/DVR Systems', value: 'Network or analog video storage and management' },
+    { key: 'Sensors', value: 'Motion, door, vibration, temperature, intrusion detection' },
+    { key: 'IoT Devices', value: 'Environmental and mechanical data collection' },
+    { key: 'Gateways', value: 'Edge devices for data aggregation and processing' },
+    { key: 'Cloud Platform', value: 'Real-time and historical data storage & analytics' },
+    { key: 'Mobile/PC Apps', value: 'Live access, control, notifications, video playback' },
+    { key: 'Connectivity', value: 'Wi-Fi, Ethernet, 4G/5G, LoRa, Satellite' },
+    { key: 'Power Supply', value: 'Mains, solar, battery, PoE' }
+  ],
+
+  benefits: [
+    '24/7 remote monitoring and surveillance',
+    'AI-powered analytics for facial, vehicle, and anomaly detection',
+    'Real-time alerts via SMS, app, or email',
+    'Supports hybrid and cloud-based video storage',
+    'Integrates with access control and equipment monitoring systems'
+  ],
+
+  icon: Camera
+}
+,
+{
+  id: '95',
+  slug: 'ai-powered-threat-detection',
+  name: 'AI Powered Analytics for Proactive Threat Detection',
+  category: 'AI Powered Analytics for Proactive Threat Detection',
+
+  shortDescription: 'AI-based real-time analytics to detect threats proactively using video, audio, and sensor data integration.',
+  longDescription: 'AI Powered Analytics for Proactive Threat Detection leverages machine learning, deep learning, and computer vision to monitor environments in real time. These systems detect anomalies, identify suspicious behavior, recognize faces and license plates, and analyze audio cues to forecast and prevent threats before they escalate. Integrating data from cameras, access control, and IoT sensors, it enables proactive security management and rapid incident response.',
+
+  images: [
+    '/Solutions/Command/AI Powered Analytics for Proactive Threat Detection/ai1.png',
+    '/Solutions/Command/AI Powered Analytics for Proactive Threat Detection/ai1.png',
+
+
+  ],
+
+  dataAiHints: [
+    'ai surveillance system',
+    'proactive threat detection analytics',
+    'computer vision based security',
+    'ai anomaly behavior recognition',
+    'real-time ai facial license plate detection'
+  ],
+
+  specifications: [
+    { key: 'Anomaly Detection', value: 'Learns normal behavior patterns and flags deviations like loitering or trespassing' },
+    { key: 'Facial Recognition', value: 'Real-time identification of known or blacklisted individuals' },
+    { key: 'Behavioral Analysis', value: 'Detects running, crowd formation, aggression, or other unusual activities' },
+    { key: 'License Plate Recognition', value: 'Monitors entry/exit of flagged vehicles' },
+    { key: 'Object Detection', value: 'Identifies weapons, abandoned bags, or restricted objects in camera feed' },
+    { key: 'Audio Analytics', value: 'Detects gunshots, shouting, distress sounds, or glass breaking' },
+    { key: 'Predictive Analytics', value: 'Forecasts threats based on patterns and historical data' },
+    { key: 'Data Sources Integrated', value: 'Video feeds, access control systems, sensors, cybersecurity logs, IoT devices' }
+  ],
+
+  benefits: [
+    'Real-time threat detection and alerts',
+    'Reduces dependency on manual monitoring',
+    'Enables proactive security measures and faster response',
+    'Integrates with existing surveillance and IoT systems',
+    'Improves situational awareness through multi-sensor fusion'
+  ],
+
+  icon: ShieldCheck
+}
+,
+{
+  id: '96',
+  slug: 'centralized-control-room-setup',
+  name: 'Centralized Control Room Setup',
+  category: 'Centralized Control Room Setup',
+
+  shortDescription: 'Integrated command center setup for monitoring, analysis, and response with multi-source data and video feeds.',
+  longDescription: 'A Centralized Control Room Setup acts as a nerve center for real-time monitoring and incident management. It integrates multiple systems—such as surveillance cameras, industrial sensors, SCADA, IT infrastructure, and communication tools—into a single operational hub. Equipped with high-resolution video walls, ergonomic operator workstations, and redundant power and network systems, this setup ensures operational continuity, situational awareness, and rapid response.',
+
+  images: [
+    '/Solutions/Command/Centralized Control Room Setup/central1.png',
+    '/Solutions/Command/Centralized Control Room Setup/central1.png',
+
+
+  ],
+
+  dataAiHints: [
+    'centralized monitoring system',
+    'control room with video wall',
+    'command center design',
+    'real-time surveillance management',
+    'multi-source control room integration'
+  ],
+
+  specifications: [
+    { key: 'Visual Displays', value: 'Video walls, LED panels, and multi-monitor desks for live feed monitoring' },
+    { key: 'Workstations', value: 'Ergonomic operator consoles with dual or multi-monitor setups' },
+    { key: 'Data Sources', value: 'CCTV, SCADA, sensors (motion, gas, vibration), IoT, IT infrastructure' },
+    { key: 'Servers & Storage', value: 'NVRs, DVRs, application servers, data backup and archival systems' },
+    { key: 'Communication Systems', value: 'Intercoms, VoIP, radios, public announcement systems' },
+    { key: 'Software Platforms', value: 'VMS, BMS, SCADA systems, AI analytics tools' },
+    { key: 'Network Infrastructure', value: 'LAN/WAN, fiber optic backbone, routers, switches, firewalls' },
+    { key: 'Power Supply', value: 'UPS systems, redundant power lines, diesel generators' },
+    { key: 'Access Control', value: 'Biometric, fingerprint, or RFID secured entry' },
+    { key: 'Environmental Control', value: 'HVAC, fire suppression, soundproofing, and adaptive lighting' }
+  ],
+
+  benefits: [
+    'Real-time decision-making and incident response',
+    'Consolidated monitoring of multiple systems and data sources',
+    'Enhanced operational efficiency and situational awareness',
+    'High system availability with redundant power and networking',
+    'Improved security with access control and environmental safeguards'
+  ],
+
+  icon: Monitor
+},
 
 
 
@@ -4071,7 +5616,7 @@ export const navItems: NavItem[] = [
     icon: Layers,
     isMegaMenu: true,
   },
-  { href: '/industries', label: 'Industries', icon: Building2 },
+  { href: '/industries', label: 'B2G', icon: Building2 },
   { href: '/about', label: 'About Us', icon: Info },
 ];
 

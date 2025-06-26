@@ -1,4 +1,3 @@
-
 "use client";
 
 import Link from 'next/link';
@@ -71,16 +70,15 @@ export function HeroSection() {
       <div className="absolute inset-0 z-0">
         {mainHeroBackgroundImages.map((image, index) => (
           <Image
-            key={`bg-${image.src}`} // Unique key for each background image.
+            key={`bg-${image.src}`}
             src={image.src}
             alt={image.alt}
             layout="fill"
             objectFit="cover"
-            priority={index === 0} // Prioritize loading the first background image.
+            priority={index === 0}
             className={cn(
               "absolute inset-0 transition-opacity ease-in-out",
-              FADE_DURATION, // Apply fade transition duration.
-              // Image is visible (opacity-30) if it's the current one, otherwise hidden (opacity-0).
+              FADE_DURATION,
               image.src === currentMainBgImage.src ? 'opacity-30' : 'opacity-0'
             )}
             data-ai-hint={image.dataAiHint}
@@ -88,8 +86,8 @@ export function HeroSection() {
         ))}
       </div>
       
-      {/* Gradient Overlay for visual effect and text readability. */}
-      <div className="absolute inset-0 z-10 bg-gradient-to-br from-primary/20 via-background/70 to-background/90"></div>
+      {/* Gradient Overlay */}
+      <div className="absolute inset-0 z-10 bg-gradient-to-b from-[#9EC6F3] via-[#9EC6F3]/70 to-[#F2F2F2]"></div>
 
       {/* Main content container with entrance animation. */}
       <div className={cn(

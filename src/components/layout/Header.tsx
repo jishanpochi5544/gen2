@@ -240,7 +240,7 @@ export function Header() {
                         return (
                            <div
                             key={card.name}
-                                                          className={cn(
+                            className={cn(
                                "group/item relative flex flex-col p-6 rounded-2xl transition-all duration-300",
                                "bg-gradient-to-br from-white via-[#FFF7E6] to-[#FFE4B3]/20",
                                "border border-[#FFE4B3]",
@@ -248,7 +248,7 @@ export function Header() {
                                "hover:shadow-[0_8px_20px_-4px_rgba(255,153,0,0.15),0_4px_12px_-2px_rgba(255,153,0,0.1)]",
                                "hover:border-[#FF9900]/30 hover:-translate-y-1",
                                "hover:bg-gradient-to-br hover:from-white hover:via-[#FFE4B3]/30 hover:to-[#FFD580]/30"
-                              )}
+                            )}
                           >
                             <div className="flex items-center mb-3">
                               <Link
@@ -294,7 +294,7 @@ export function Header() {
                               )}
                             </div>
                                                          {card.name !== "All Solutions" && (
-                                <Link
+                              <Link
                                   href={card.href}
                                   className={cn(
                                     "absolute bottom-4 right-4 flex items-center justify-center h-10 w-10 rounded-xl transition-all duration-500",
@@ -306,25 +306,25 @@ export function Header() {
                                   )}
                                   onClick={() => setIsSolutionsMenuOpen(false)}
                                   aria-label={`Explore ${card.name}`}
-                                >
+                              >
                                   <ArrowRight className="h-5 w-5 transition-all duration-500 animate-pulse group-hover/item:animate-none group-hover/item:rotate-[360deg]" />
-                                </Link>
-                              )}
+                              </Link>
+                            )}
                               {card.name === "All Solutions" && (
                                 <Link
-                                  href={card.href}
-                                  className={cn(
+                                    href={card.href}
+                                    className={cn(
                                     "mt-auto block w-full text-center py-2.5 rounded-xl transition-all duration-300",
                                     "bg-gradient-to-r from-[#FFE4B3] to-[#FFD580]",
                                     "text-black/80 shadow-[0_2px_4px_rgba(255,153,0,0.15)]",
                                     "hover:shadow-[0_4px_8px_rgba(255,153,0,0.25)]",
                                     "hover:from-[#FFD580] hover:to-[#FFE4B3]"
-                                  )}
-                                  onClick={() => setIsSolutionsMenuOpen(false)}
+                                    )}
+                                    onClick={() => setIsSolutionsMenuOpen(false)}
                                 >
                                   Explore All Solutions
                                 </Link>
-                              )}
+                            )}
                           </div>
                         );
                       })}
@@ -341,11 +341,25 @@ export function Header() {
               );
             })}
           </nav>
-           <div className="ml-6" onMouseEnter={handleOtherNavItemEnter}>
+           <div className="ml-6 flex items-center" onMouseEnter={handleOtherNavItemEnter}>
             <Link href="/contact" passHref legacyBehavior>
-              <SparkleButton>
+              <button
+                type="button"
+                className="flex justify-center items-center shadow-xl text-sm font-medium bg-gray-50 backdrop-blur-md isolation-auto border-gray-50 before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full before:bg-[#f5f7fa] before:hover:bg-gradient-to-r before:hover:from-blue-600 before:hover:to-blue-300 hover:text-gray-50 before:-z-10 before:aspect-square before:hover:scale-150 before:hover:duration-700 relative z-10 px-5 py-2 overflow-hidden border-2 rounded-full group"
+                style={{ minWidth: '120px' }}
+              >
                 Contact Us
-              </SparkleButton>
+                <svg
+                  className="w-6 h-6 ml-2 group-hover:rotate-90 group-hover:bg-gray-50 text-gray-50 ease-linear duration-300 rounded-full border border-gray-700 group-hover:border-none p-1.5 rotate-45"
+                  viewBox="0 0 16 19"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M7 18C7 18.5523 7.44772 19 8 19C8.55228 19 9 18.5523 9 18H7ZM8.70711 0.292893C8.31658 -0.0976311 7.68342 -0.0976311 7.29289 0.292893L0.928932 6.65685C0.538408 7.04738 0.538408 7.68054 0.928932 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292893ZM9 18L9 1H7L7 18H9Z"
+                    className="fill-gray-800 group-hover:fill-gray-800"
+                  ></path>
+                </svg>
+              </button>
             </Link>
           </div>
         </div>
@@ -392,12 +406,23 @@ export function Header() {
               </div>
               <div className="mt-auto pt-6 border-t border-border/30">
                 <Link href="/contact" passHref legacyBehavior>
-                  <SparkleButton 
-                    className="w-full py-4 text-lg" 
+                  <button
+                    type="button"
+                    className="w-full flex justify-center gap-2 items-center mx-auto shadow-xl text-lg bg-gray-50 backdrop-blur-md lg:font-semibold isolation-auto border-gray-50 before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full before:bg-[#f3f4f6] before:hover:bg-gradient-to-r before:hover:from-blue-600 before:hover:to-blue-300 hover:text-gray-50 before:-z-10 before:aspect-square before:hover:scale-150 before:hover:duration-700 relative z-10 px-4 py-2 overflow-hidden border-2 rounded-full group"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
-                    Inquire Now
-                  </SparkleButton>
+                    Explore
+                    <svg
+                      className="w-8 h-8 justify-end group-hover:rotate-90 group-hover:bg-gray-50 text-gray-50 ease-linear duration-300 rounded-full border border-gray-700 group-hover:border-none p-2 rotate-45"
+                      viewBox="0 0 16 19"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M7 18C7 18.5523 7.44772 19 8 19C8.55228 19 9 18.5523 9 18H7ZM8.70711 0.292893C8.31658 -0.0976311 7.68342 -0.0976311 7.29289 0.292893L0.928932 6.65685C0.538408 7.04738 0.538408 7.68054 0.928932 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292893ZM9 18L9 1H7L7 18H9Z"
+                        className="fill-gray-800 group-hover:fill-gray-800"
+                      ></path>
+                    </svg>
+                  </button>
                 </Link>
               </div>
             </SheetContent>

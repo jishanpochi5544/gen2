@@ -1,4 +1,3 @@
-
 "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -185,20 +184,37 @@ export function ContactForm() {
             </FormItem>
           )}
         />
-        <Button 
-          type="submit" 
-          className="w-full md:w-auto"
-          disabled={isSubmitting}
+        {/* Mailto Button */}
+        <a
+          href={`mailto:jishanpochi30@gmail.com?subject=${encodeURIComponent(`${form.watch('inquiryType')} - Inquiry from ${form.watch('name') || ''}`)}&body=${encodeURIComponent(
+            `Dear GenX Secure Team,
+
+I am writing to ${form.watch('inquiryType') || ''} with the following details:
+
+Contact Information:
+------------------
+Name: ${form.watch('name') || ''}
+Email: ${form.watch('email') || ''}
+Phone: ${form.watch('phone') || 'Not provided'}
+Company: ${form.watch('company') || 'Not provided'}
+
+Inquiry Details:
+--------------
+Type: ${form.watch('inquiryType') || ''}
+Message:
+${form.watch('message') || ''}
+
+Looking forward to hearing from you.
+
+Best regards,
+${form.watch('name') || ''}`
+          )}`}
+          className={`w-full md:w-auto mt-2 inline-block text-center rounded-lg px-6 py-3 font-semibold bg-[#f7b801] text-gray-900 hover:bg-[#f7b801]/90 transition-colors ${!form.formState.isValid ? 'pointer-events-none opacity-50' : ''}`}
+          tabIndex={form.formState.isValid ? 0 : -1}
+          aria-disabled={!form.formState.isValid}
         >
-          {isSubmitting ? (
-            <>
-              <Loader2 className="mr-2 h-5 w-5 animate-spin" />
-              Submitting...
-            </>
-          ) : (
-            "Send Inquiry"
-          )}
-        </Button>
+          Send via Email
+        </a>
       </form>
     </Form>
   );

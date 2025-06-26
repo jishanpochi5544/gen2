@@ -55,7 +55,7 @@ export default function ProductPage({ params }: ProductPageProps) {
             images={product.images} 
             name={product.name}
             dataAiHints={product.dataAiHints}
-          />
+                    />
 
           {/* Product Info */}
           <div className="space-y-6">

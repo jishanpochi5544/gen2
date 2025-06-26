@@ -1,4 +1,3 @@
-
 import type { Metadata } from 'next';
 // import { GeistSans } from 'geist/font/sans'; // Removed
 // import { GeistMono } from 'geist/font/mono'; // Removed
@@ -14,6 +13,11 @@ export const metadata: Metadata = {
   },
   description: 'GenX Secure offers cutting-edge security solutions including CCTV, DVRs, NVRs, access control, and more. Protect your assets with our reliable technology.',
   keywords: ['security systems', 'CCTV', 'DVR', 'NVR', 'access control', 'surveillance', 'GenX Secure'],
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 1,
+  },
 };
 
 export default function RootLayout({

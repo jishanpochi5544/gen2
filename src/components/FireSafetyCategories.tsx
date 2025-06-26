@@ -49,22 +49,22 @@ export function FireSafetyCategories() {
             {/* Decorative background gradient */}
             <div className={cn(
               "absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out",
-              "bg-gradient-to-tr from-primary/5 via-transparent to-accent/5 z-0"
+              "bg-gradient-to-tr from-primary/5 via-transparent to-orange-500/5 z-0"
             )}></div>
 
             <CardHeader className="relative z-10 items-center text-center p-6 pb-4 border-b border-border/30 bg-card/50 backdrop-blur-sm">
               <div className={cn(
-                "p-4 bg-gradient-to-br from-primary/15 to-accent/15 rounded-full mb-4 transition-all duration-300 ease-out",
-                "group-hover:scale-110 group-hover:shadow-lg group-hover:from-primary/20 group-hover:to-accent/20"
+                "p-4 bg-gradient-to-br from-primary/15 to-primary/15 rounded-full mb-4 transition-all duration-300 ease-out",
+                "group-hover:scale-110 group-hover:shadow-lg group-hover:from-orange-500/20 group-hover:to-orange-600/20"
               )}>
                 <Flame className={cn(
                   "h-12 w-12 md:h-14 md:w-14 text-primary transition-all duration-300 ease-out",
-                  "group-hover:text-accent group-hover:rotate-[-5deg] group-hover:scale-105"
+                  "group-hover:text-orange-600 group-hover:rotate-[-5deg] group-hover:scale-105"
                 )} />
               </div>
               <CardTitle className={cn(
                 "text-xl md:text-2xl font-bold text-foreground transition-colors duration-300",
-                "group-hover:text-primary"
+                "group-hover:text-orange-600"
               )}>
                 {category.title}
               </CardTitle>
@@ -80,7 +80,7 @@ export function FireSafetyCategories() {
               <div className={cn(
                 "inline-flex items-center justify-center px-6 py-3 rounded-lg text-sm font-semibold transition-all duration-300 ease-in-out transform",
                 "bg-primary text-primary-foreground shadow-md",
-                "group-hover:bg-accent group-hover:text-accent-foreground group-hover:shadow-lg group-hover:scale-105"
+                "group-hover:bg-orange-600 group-hover:text-white group-hover:shadow-lg group-hover:scale-105"
               )}>
                 Explore Products
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1.5 group-hover:rotate-[360deg]" />

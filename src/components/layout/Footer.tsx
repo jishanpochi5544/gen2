@@ -216,7 +216,7 @@ export function Footer() {
             Discover how GenX Secure's advanced solutions can protect your assets. Let's build a safer future together.
           </p>
           <div className="relative z-20 pb-4 sm:pb-6 md:pb-8">
-            <Link
+             <Link
               href="/contact?inquiry=demo"
               className={cn(
                 "group relative inline-flex items-center justify-center h-10 sm:h-12 md:h-14 px-6 sm:px-8 md:px-10 text-sm sm:text-base md:text-lg font-semibold rounded-full shadow-xl transition-all duration-300 ease-in-out transform hover:scale-105 focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-primary",

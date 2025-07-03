@@ -20,7 +20,7 @@ export function ProductCard({ product, animationDelay = '0ms', isVisible = true 
 
   return (
     <Link
-      href={`/solutions/${product.slug}`}
+      href={`/solutions/product/${product.slug}`}
       className={cn(
         "group block h-full outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-lg", // Added focus styles and rounded-lg for focus outline
         "transition-all duration-300 ease-out",

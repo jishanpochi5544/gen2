@@ -20,7 +20,7 @@ export const products: Product[] = [
     ],
     dataAiHints: ['wireless dome camera', 'panasonic security cam', 'smart surveillance'],
     specifications: [
-      { key: 'Resolution', value: '5MP (1/2.9” Progressive CMOS)' },
+      { key: 'Resolution', value: '5MP (1/2.9" Progressive CMOS)' },
       { key: 'Night Vision', value: 'Up to 25 meters' },
       { key: 'Connectivity', value: 'Wi-Fi & PoE' },
       { key: 'Storage', value: 'Local Recording' },
@@ -423,6 +423,52 @@ export const products: Product[] = [
 
   icon: Camera
 },
+{
+  id: '118',
+  slug: 'cpplus-8ch-dvr-cp-uvr-0801e1-cs',
+  name: 'CP Plus 8 Channel 1080P Lite DVR (CP-UVR-0801E1-CS)',
+  category: 'CCTV Cameras',
+
+
+  shortDescription: 'Compact 8-channel HD DVR for CCTV surveillance systems, supporting 1080p resolution and video input connectivity.',
+  longDescription: 'The CP Plus CP-UVR-0801E1-CS is an 8-channel 1080P Lite DVR designed to support high-definition analog surveillance systems. It offers reliable performance, compact design, and simple integration with existing CCTV setups. With 1080p resolution and standard video input connectors, it is ideal for homes, offices, and small commercial establishments looking for budget-friendly surveillance recording.',
+
+  images: [
+    '/Solutions/Surveillance/CCTV/dvr10.png',
+    '/Solutions/Surveillance/CCTV/dvr11.png',
+    '/Solutions/Surveillance/CCTV/dvr12.png',
+  ],
+
+  dataAiHints: [
+    'cp plus 8ch dvr',
+    '1080p lite dvr',
+    'cp-uvr-0801e1-cs',
+    'cp plus cosmic hd recorder',
+    'budget hd surveillance dvr'
+  ],
+
+  specifications: [
+    { key: 'Channels', value: '8' },
+    { key: 'Video Capture Resolution', value: '1080p Lite' },
+    { key: 'Connector Type', value: 'Video Input (BNC)' },
+    { key: 'Dimensions', value: '33.2 x 24.6 x 6.6 cm' },
+    { key: 'Weight', value: '1.06 kg' },
+    { key: 'Batteries Required', value: 'No' },
+    { key: 'Country of Origin', value: 'China' }
+  ],
+
+  benefits: [
+    'Supports 8 cameras with HD recording',
+    'Compact design suitable for tight spaces',
+    'Reliable 1080p video playback and recording',
+    'Plug-and-play setup for CP Plus cameras',
+    'Ideal for home and small office surveillance'
+  ],
+
+  icon: Camera,
+},
+
+
 
 
 
@@ -461,6 +507,19 @@ export const products: Product[] = [
     ],
     icon: Video,
   },
+
+
+
+
+
+
+
+
+
+
+
+
+  
   {
     id: '6',
     slug: 'hikvision-indoor-outdoor-camera',
@@ -556,37 +615,7 @@ export const products: Product[] = [
     ],
     icon: Video,
   },
-  {
-    id: '9',
-    slug: 'swan-k1-4k-long-range-drone',
-    name: 'Swan-K1 4K Long Range Drone',
-    category: 'CCTV Cameras',
-    shortDescription: '4K camera drone with 60-minute flight time, immersive FPV goggles, and 40km range.',
-    longDescription: 'The Swan-K1 is a high-endurance, feature-rich drone equipped with a 4K HEQ camera, FPV goggles, and intelligent flight modes. With up to 60 minutes of flight time and a range of 40km, it’s ideal for aerial photography, exploration, and multiplayer drone experiences. Its VTOL capability and multi-drone networking add unmatched flexibility.',
-    images: [
-      '/Solutions/Surveillance/CCTV/vtol.png',
-      '/Solutions/Surveillance/CCTV/vtol2.png',
-      
-    ],
-    dataAiHints: ['long range drone', 'swan-k1 fpv drone', '4k aerial photography drone'],
-    specifications: [
-      { key: 'Flight Time', value: 'Up to 60 minutes' },
-      { key: 'Camera', value: '4K HEQ 12MP, 1/2.49” CMOS, 3-axis gimbal' },
-      { key: 'Range & Speed', value: 'Up to 40km, 10–25 m/s flight speed' },
-      { key: 'Flight Tech', value: 'Vertical Takeoff & Landing, Wind Resistance Level 5' },
-      { key: 'Image Transmission', value: '1080p up to 8km, 5.8GHz' },
-      { key: 'Interactive Features', value: 'Multi-drone networking, FPV Goggles, One-Key Return' }
-    ],
-    benefits: [
-      'Capture high-resolution 4K aerial footage',
-      'Enjoy extended flights with up to 60-minute battery life',
-      'Fly long distances with up to 40km control range',
-      'Seamless immersive flying with HD FPV goggles',
-      'Simplified takeoff and return with one-key operations',
-      'Coordinate with other drones using multiplayer mode'
-    ],
-    icon: Video,
-  },
+  
   {
     id: '10',
     slug: '2-port-voice-logger',
@@ -1713,111 +1742,6 @@ category: 'Fire Hydrant System',
 
 },
 {
-  id: '39',
-  slug: 'tripod-turnstile-access-control-mt152',
-  name: 'TRIPOD TURNSTILE FOR ACCESS CONTROL MT152 / MT142',
-  category: 'Turnstiles',
-  shortDescription: 'Durable semi-automatic tripod turnstile for controlled access, compatible with biometric & RFID systems.',
-  longDescription: 'The MT152/MT142 Tripod Turnstile is a robust and semi-automatic access control solution, ideal for high-traffic indoor and outdoor environments. It supports biometric integrations such as fingerprint scanners, face recognition cameras, RFID readers, QR code scanners, and more. Built with waterproof IP56 standards, hydraulic dampers, and a fault-free mechanism tested for up to 3 million cycles, it is perfect for long-term security infrastructure in schools, factories, communities, and construction sites. The tripod turnstile comes with OEM/ODM customization, optional protective arm sleeves, and emergency drop-arm functionality for safe exits.',
-  images: [
-    '/Solutions/Access Control/Turnstiles/turns30.png',
-    '/Solutions/Access Control/Turnstiles/turns32.png',
-    '/Solutions/Access Control/Turnstiles/turns31.png',
-    '/Solutions/Access Control/Turnstiles/turns33.png',
-  ],
-  dataAiHints: [
-    'tripod turnstile for access control',
-    'mt152 tripod gate biometric integration',
-    'turnstile for schools factories community entry',
-    'semi-automatic access turnstile with drop arm',
-    'customizable tripod barrier gate'
-  ],
-  specifications: [
-    { key: 'Size', value: '1400 x 280 x 980 mm (customizable)' },
-    { key: 'Lane Width', value: '550 mm (customizable)' },
-    { key: 'Passing Speed', value: '35 persons/minute' },
-    { key: 'Weight', value: '60 kg' },
-    { key: 'Arm Length', value: '510 mm' },
-    { key: 'Operation', value: 'Semi-Automatic with Hydraulic Damper' },
-    { key: 'Solenoid Valve', value: 'DC24V ±5%' },
-    { key: 'Gate Open Signal', value: 'Dry Contact / Relay' },
-    { key: 'Power Supply', value: '110V/220V, 50/60Hz' },
-    { key: 'Operating Voltage', value: 'DC 24V ±5%' },
-    { key: 'Indicator Light Voltage', value: 'DC12V ±5%' },
-    { key: 'Emergency Exit', value: 'Drop Arm on Power Cut' },
-    { key: 'Direction', value: 'Bidirectional / Single Direction' },
-    { key: 'Opening Time', value: '0.2 seconds' },
-    { key: 'Waterproof', value: 'IP56 Rated' },
-    { key: 'Operating Temperature', value: '-30°C to 60°C' },
-    { key: 'Humidity', value: '5% to 90%' },
-    { key: 'Supported Features', value: 'IC/ID reader, Barcode, Face Recognition, Fingerprint, UPS' },
-    { key: 'Application Areas', value: 'Community, Factory, Construction Site, School, Resorts' },
-    { key: 'Certifications', value: 'CE, ISO9001' }
-  ],
-  benefits: [
-    'Durable for up to 3 million fault-free operations',
-    'Emergency safety with auto drop-arm on power failure',
-    'Supports biometric and RFID integrations',
-    'Weatherproof and suitable for both indoor and outdoor use',
-    'Shock-absorbing hydraulic mechanism for smooth operation',
-    'OEM/ODM customization with drawings and 3D renderings provided'
-  ],
-  icon: DoorOpen,
-
-},
-{
-  id: '40',
-  slug: 'double-lane-full-height-turnstile-mt403-1',
-  name: 'DOUBLE LANE SS FULL HEIGHT TURNSTILE MT403-1',
-  category: 'Turnstiles',
-  shortDescription: 'Robust double-lane full height turnstile for high-security areas, compatible with biometric and RFID systems.',
-  longDescription: 'The MT403-1 Double Lane Full Height Turnstile is a heavy-duty access control solution designed for high-traffic, high-security environments such as factories, construction sites, communities, and resorts. It supports biometric integrations including fingerprint scanners, face recognition, RFID readers, QR scanners, and more. Featuring a stainless-steel build, brushless motor, hydraulic shock-absorbing mechanism, and 5 million fault-free cycles, this semi-automatic turnstile is built to last. With emergency fail-safe or fail-lock options, it ensures safety during power outages. OEM/ODM supported with full layout and installation documentation.',
-  images: [
-    '/Solutions/Access Control/Turnstiles/turns40.png',
-    '/Solutions/Access Control/Turnstiles/turns42.png',
-    '/Solutions/Access Control/Turnstiles/turns41.png',
-    '/Solutions/Access Control/Turnstiles/turns43.png',
-  ],
-  dataAiHints: [
-    'double lane full height turnstile mt403-1',
-    'high security access gate biometric RFID',
-    'industrial full height turnstile gate',
-    'automatic stainless steel turnstile with fail-safe',
-    'mt403-1 dual lane full height access control'
-  ],
-  specifications: [
-    { key: 'Size', value: '2400 x 1500 x 2310 mm (customizable)' },
-    { key: 'Lane Width', value: '650 mm (customizable)' },
-    { key: 'Passing Speed', value: '30 persons/minute' },
-    { key: 'Weight', value: 'Varies by configuration' },
-    { key: 'Drive', value: 'Semi-Automatic with Hydraulic Damper' },
-    { key: 'Solenoid', value: 'DC24V' },
-    { key: 'Gate Open Signal', value: 'Dry Contact / Relay' },
-    { key: 'Logic Voltage', value: 'DC24V' },
-    { key: 'Power Supply', value: '110V/220V, 50/60Hz' },
-    { key: 'Emergency Mode', value: 'Fail-Safe or Fail-Lock on Power Cut' },
-    { key: 'Direction', value: 'Bidirectional' },
-    { key: 'Opening Time', value: '0.2 seconds' },
-    { key: 'Material', value: '304 Stainless Steel' },
-    { key: 'Reliability', value: '5 million no-fault operations' },
-    { key: 'Operating Temperature', value: '-25°C to 60°C' },
-    { key: 'Humidity', value: '≤95%' },
-    { key: 'Supported Features', value: 'IC/ID reader, Barcode, Face Recognition, Fingerprint, UPS' },
-    { key: 'Application Areas', value: 'Community, Factory, Construction Site, School, Resorts' },
-    { key: 'Certifications', value: 'CE, ISO9001' }
-  ],
-  benefits: [
-    'Dual-lane design for higher throughput',
-    'Reliable operation up to 5 million cycles',
-    'Fail-safe or fail-lock security in emergencies',
-    'Biometric, RFID, and QR compatibility',
-    'Shock-absorbing hydraulic drive system',
-    'Ideal for rugged outdoor and indoor use',
-    'Customizable with layout drawings and full OEM/ODM support'
-  ],
-  icon: DoorOpen
-},
-{
   id: '41',
   slug: 'radar-turnstile-swing-barrier-mt313',
   name: 'Radar Turnstile Swing Barrier Gate MT313',
@@ -1863,206 +1787,6 @@ category: 'Fire Hydrant System',
   icon: DoorOpen
 },
 {
-  id: '42',
-  slug: 'silver-ss-tripod-turnstile-kp',
-  name: 'Silver SS Automatic Tripod Turnstile',
-  category: 'Turnstiles',
-  shortDescription: 'Stainless steel semi-automatic tripod turnstile with bidirectional access and smooth, silent operation.',
-  longDescription: 'The SS Tripod Turnstile by K P ENTERPRISES is a premium access control system crafted from high-grade stainless steel. It supports bidirectional access and integrates seamlessly with electronic systems like RFID and biometric scanners. Built for high-traffic environments, it offers silent operation, emergency exit features, LED indicators, and customizable aesthetics. Ideal for corporate, transport, and government facilities, this turnstile enhances both security and user convenience.',
-  images: [
-    '/Solutions/Access Control/Turnstiles/turns60.png',
-    '/Solutions/Access Control/Turnstiles/turns61.png',
-    '/Solutions/Access Control/Turnstiles/turns62.png',
-  ],
-  dataAiHints: [
-    'ss tripod turnstile stainless steel',
-    'semi automatic tripod access control',
-    'kp enterprises access barrier gate',
-    'turnstile for government corporate use',
-    'bi-directional turnstile gate integration'
-  ],
-  specifications: [
-    { key: 'Material', value: 'Stainless Steel' },
-    { key: 'Color', value: 'Silver' },
-    { key: 'Model', value: 'KP-TT-001' },
-    { key: 'Operation', value: 'Semi-Automatic / Automatic' },
-    { key: 'Access Direction', value: 'Bi-directional' },
-    { key: 'Access Integration', value: 'RFID, Fingerprint, Card, Biometric' },
-    { key: 'Power Type', value: 'Single Phase' },
-    { key: 'Emergency Mode', value: 'Override for Free Exit' },
-    { key: 'LED Indicators', value: 'Status Lights for Guidance' }
-  ],
-  benefits: [
-    'High-grade stainless steel ensures durability and corrosion resistance',
-    'Supports integration with various electronic access control systems',
-    'Smooth, low-noise operation suitable for quiet environments',
-    'LED indicators provide intuitive guidance to users',
-    'Emergency override for quick evacuation or power failures',
-    'Bi-directional flow management improves traffic handling',
-    'Sleek and modern design suitable for premium infrastructure',
-    'Customizable finishes and branding available from KP Enterprises'
-  ],
-  icon: DoorOpen
-},
-{
-  id: '43',
-  slug: 'zkteco-boom-barrier-cmp200',
-  name: 'ZKTeco Boom Barrier CMP200 (4.5 to 6 Meter)',
-  category: 'Door Automation',
-  shortDescription: 'Automatic boom barrier for vehicle access control with 4.5 to 6-meter arm, ideal for parking and security management.',
-  longDescription: 'The ZKTeco CMP200 Boom Barrier is an automatic entry solution designed for vehicle access control at high-traffic areas such as airports, schools, hotels, and railway stations. Built with cold-rolled steel, it operates reliably across extreme temperatures from -25°C to +75°C. With a boom length ranging from 4.5 to 6 meters, it provides efficient entry management in parking systems and secure zones. Its rugged design, simple installation, and wide compatibility with access systems make it a preferred choice for outdoor security applications.',
-  images: [
-    '/Solutions/Access Control/Door/boom1.png',
-
-  ],
-  dataAiHints: [
-    'automatic boom barrier for parking',
-    'zkteco cmp200 boom gate',
-    'vehicle access control barrier',
-    'cold rolled steel boom barrier',
-    'boom barrier for school hotel airport'
-  ],
-  specifications: [
-    { key: 'Boom Length', value: '4.5 to 6 meters' },
-    { key: 'Material', value: 'Cold Rolled Steel' },
-    { key: 'Temperature Range', value: '-25°C to +75°C' },
-    { key: 'Dimensions (L×W×H)', value: '350 × 280 × 1010 mm' },
-    { key: 'Weight', value: '45 kg' },
-    { key: 'Application Areas', value: 'Airports, Schools, Hotels, Theaters, Outdoor' },
-    { key: 'Power Supply', value: 'Auto Entry System (Standard)' },
-    { key: 'Usage', value: 'Parking and Entry Management' },
-    { key: 'Brand', value: 'ZKTeco' }
-  ],
-  benefits: [
-    'Supports arm lengths from 4.5 to 6 meters for flexible setups',
-    'Rugged cold-rolled steel construction for long-term durability',
-    'Withstands extreme temperatures from -25°C to +75°C',
-    'Ideal for commercial, government, and public infrastructure use',
-    'Seamless integration with access control systems',
-    'Fast opening time and efficient entry/exit management',
-    'Low maintenance design with high reliability',
-    'Compact form factor suitable for limited space installation'
-  ],
-  icon: DoorOpen
-},
-{
-  id: '44',
-  slug: 'essl-boom-barrier-bg108-rfid-uhf',
-  name: 'eSSL BG108 Automatic Boom Barrier System with RFID UHF TAG',
-  category: 'Door Automation',
-
-  shortDescription: 'Heavy-duty automatic boom barrier with RFID UHF support, 8m aluminum arm, IP54 rated with advanced access control interfaces.',
-  longDescription: 'The eSSL BG108 is a robust automatic boom barrier system designed for efficient vehicle access control. With support for RFID UHF TAGs, it offers a boom length of up to 8 meters and fast arm movement with an 8-second up/down cycle. Featuring IP54 ingress protection and compatibility with photocells, loop detectors, and standalone access panels, this barrier system is ideal for parking lots, gated societies, commercial buildings, and industrial complexes. Built with a powerful 90W motor and aluminium boom arm, the BG108 combines security, durability, and automation for seamless traffic control.',
-  images: [
-    '/Solutions/Access Control/Door/boom2.png',
-  ],
-  dataAiHints: [
-    'essl bg108 boom barrier',
-    'automatic rfid uhf boom gate',
-    '8m parking boom gate system',
-    'ip54 access control boom barrier',
-    'barrier gate for parking and RFID control'
-  ],
-  specifications: [
-    { key: 'Boom Length', value: '5.8 to 8 meters' },
-    { key: 'Arm Material', value: 'Aluminium' },
-    { key: 'Ingress Protection', value: 'IP54' },
-    { key: 'Up/Down Time', value: '8 seconds (8m)' },
-    { key: 'Motor Power', value: '90W, 220V AC' },
-    { key: 'Control Signal', value: 'Dry Contact' },
-    { key: 'Operating Temperature', value: '-20°C to +50°C' },
-    { key: 'Control Interfaces', value: 'Photocell, Loop Detector, Remote, Access Panel' },
-    { key: 'Dimension (L×W×H)', value: '268 × 348 × 1050 mm' }
-  ],
-  benefits: [
-    'Supports RFID UHF TAG for seamless vehicle entry',
-    'Strong aluminum boom arm with 8m max length',
-    'Fast open/close operation with auto-closing timer',
-    'Advanced safety features like bump bounce-back',
-    'Ingress protection IP54 – suitable for outdoor use',
-    'Remote control up to 25 meters for convenience',
-    'Compatible with eSSL access control panels',
-    'Ideal for residential, commercial, and industrial settings'
-  ],
-  icon: DoorOpen
-},
-{
-  id: '45',
-  slug: 'mas-engineers-automatic-boom-barrier',
-  name: 'Automatic Boom Barrier - Metal, Yellow & White | MAS Engineers',
-  category: 'Door Automation',
-  shortDescription: 'High-quality metal automatic boom barrier in yellow and white, designed for secure access control with customizable size options.',
-  longDescription: 'MAS Engineers offers a premium automatic boom barrier designed for robust security and traffic management at entry/exit points. Made from durable metal with a high-visibility yellow and white finish, it supports various sizes to suit different installation environments. Ideal for commercial, residential, and industrial zones, the barrier ensures controlled vehicle access with a reliable mechanism. Supplied across India with a weekly capacity of 50 units, it’s a cost-effective, heavy-duty solution for high-traffic access control.',
-  images: [
-    '/Solutions/Access Control/Door/boom3.png',
-  ],
-  dataAiHints: [
-    'mas engineers boom barrier',
-    'automatic yellow white boom gate',
-    'metal security boom barrier',
-    'entry control boom gate india',
-    'access control gate automatic barrier'
-  ],
-  specifications: [
-    { key: 'Material', value: 'High-quality Metal' },
-    { key: 'Colors Available', value: 'Yellow, White' },
-    { key: 'Size Options', value: 'Different Sizes Available' },
-    { key: 'Application', value: 'Security & Access Control' },
-    { key: 'Delivery Time', value: '10 Days' },
-    { key: 'Supply Capacity', value: '50 Units Per Week' },
-    { key: 'Brand', value: 'MAS Engineers' },
-    { key: 'Price', value: '₹55,000.00' },
-    { key: 'Market Availability', value: 'All India' }
-  ],
-  benefits: [
-    'Highly visible yellow and white color scheme for safety',
-    'Durable metal body ensures long-lasting performance',
-    'Available in multiple sizes for different gate widths',
-    'Ideal for parking lots, gated communities, factories, and offices',
-    'Fast delivery with high weekly supply capacity',
-    'Trusted Indian brand with nationwide availability',
-    'Smooth automatic operation for reliable access control'
-  ],
-  icon: DoorOpen
-},
-{
-  id: '46',
-  slug: 'secureye-sbb300-automatic-toll-boom-barrier',
-  name: 'AUTOMATIC TOLL BOOM BARRIER S-BB300 | Secureye',
-  category: 'Door Automation',
-  shortDescription: 'Secureye S-BB300 automatic toll boom barrier with 3m aluminum boom and foam padding for safe vehicle access control.',
-  longDescription: 'The Secureye S-BB300 Automatic Toll Boom Barrier is engineered for efficient and safe toll plaza operations and high-traffic access points. It features a 3-meter boom constructed from durable 2mm thick aluminum, enhanced with foam padding for vehicle protection. With smooth automatic operation and solid build quality, this boom barrier offers both safety and performance in toll collection and controlled entry systems.',
-  images: [
-    '/Solutions/Access Control/Door/boom41.png',
-    '/Solutions/Access Control/Door/boom40.png',
-  ],
-  dataAiHints: [
-    'secureye toll boom barrier',
-    'automatic toll gate s-bb300',
-    '3m aluminum boom barrier with foam',
-    'secureye access control system',
-    'high-speed toll barrier india'
-  ],
-  specifications: [
-    { key: 'Boom Length', value: '3 meters' },
-    { key: 'Boom Material', value: '2 mm Round Aluminum' },
-    { key: 'Boom Protection', value: 'Foam Padded' },
-    { key: 'Usage', value: 'Toll Plazas, Entry/Exit Points' },
-    { key: 'Operation Type', value: 'Automatic' },
-    { key: 'Brand', value: 'Secureye' },
-    { key: 'Model', value: 'S-BB300' },
-    { key: 'Category', value: 'Toll Boom Barrier' }
-  ],
-  benefits: [
-    'Foam-padded boom for vehicle safety',
-    'Ideal for toll gates and high-traffic control',
-    'Durable 2mm aluminum boom resists impact',
-    'Smooth and fast automatic barrier operation',
-    'Trusted brand with reliable performance'
-  ],
-  icon: DoorOpen
-},
-{
   id: '47',
   slug: 'boom-barrier-gate-housing-society',
   name: 'Boom Barrier Gate | 6m Automatic Aluminum Gate',
@@ -2072,6 +1796,10 @@ category: 'Fire Hydrant System',
   longDescription: 'This Boom Barrier Gate is an ideal access control solution for housing societies and residential complexes. Made from durable aluminum and designed for 6-meter wide entries, the gate opens and closes in just 6 seconds. It operates on 220V with an 80W power rating and supports automated operation, ensuring convenience, safety, and security in daily vehicle movement.',
   images: [
     '/Solutions/Access Control/Door/boom5.png',
+    '/Solutions/Access Control/Door/boom1.png',
+    '/Solutions/Access Control/Door/boom2.png',
+    '/Solutions/Access Control/Door/boom3.png',
+
 
   ],
   dataAiHints: [
@@ -2858,48 +2586,6 @@ category: 'Fire Hydrant System',
   icon: Wifi
 },
 {
-  id: '66',
-  slug: 'christie-microtiles-led',
-  name: 'Christie MicroTiles® LED',
-  category: 'Conference room solutions',
-  shortDescription: 'Next-generation modular LED display system with unparalleled design freedom, superior visual quality, and intelligent auto-calibration.',
-  longDescription: 'Christie MicroTiles® LED is a revolutionary modular LED display system engineered for the most demanding visualization and collaboration applications. Developed in North America, it builds on the legacy of the original MicroTiles® with advanced LED technology, cabinet-free design, and innovative features like Neighbor Detection™, AutoMatch™, and QuickMount™ system. Designed for limitless creativity, it supports 90-degree corners, curves, 4K@120Hz processing, HDR10, and robust Active 3D experiences. With TAA compliance and cinema-grade image fidelity, it’s a powerful solution for corporate, control rooms, broadcast, and architectural environments.',
-  images: [
-    '/Solutions/Automation/Conference room solutions/led10.png',
-    '/Solutions/Automation/Conference room solutions/led11.png',
-
-  ],
-  dataAiHints: [
-    'modular led display christie',
-    'microtiles led 4k hdr',
-    'click-n-go led tiles',
-    'led wall active 3d visualization',
-    'taa compliant led video wall'
-  ],
-  specifications: [
-    { key: 'Pixel Pitch Options', value: '0.75mm, 1.0mm' },
-    { key: 'Resolution Support', value: 'Up to 4K @ 120Hz, HDR10 compatible' },
-    { key: 'Processing', value: '12-bit color input, cinema-grade color' },
-    { key: 'Design Features', value: '90° inside/outside corners, convex/concave curves' },
-    { key: 'Mounting System', value: 'QuickMount™ laser-cut steel with machined wall anchors' },
-    { key: 'Self-Calibration', value: 'Neighbor Detection™ and AutoMatch™ technology' },
-    { key: 'Uniformity', value: '≥97% color and brightness across display lifetime' },
-    { key: '3D Support', value: 'Active 3D, 60Hz per eye' },
-    { key: 'Compliance', value: 'TAA-compliant, manufactured in Canada' }
-  ],
-  benefits: [
-    'Cabinet-free design allows limitless display configurations',
-    'Stunning visual fidelity with high brightness and 12-bit color',
-    'Fast, accurate installation with proprietary QuickMount™ system',
-    'Self-calibrating tiles maintain visual uniformity long-term',
-    'Ideal for creative architectural, broadcast, or enterprise displays',
-    'Support for high-end 3D and collaborative design environments',
-    'TAA compliance supports federal and enterprise projects',
-    'Minimal maintenance, scalable architecture'
-  ],
-  icon: Video
-},
-{
   id: '67',
   slug: 'christie-core-series-iii',
   name: 'Christie Core Series III LED Video Wall',
@@ -2998,6 +2684,74 @@ category: 'Fire Hydrant System',
   ],
   icon: Video
 },
+
+{
+  "id": "115",
+  "slug": "samsung-video-wall-display-8mm",
+  "name": "Samsung 8mm Pixel Pitch Outdoor Video Wall Display (46\"/55\")",
+  category: 'Conference room solutions',
+
+
+  "shortDescription": "Samsung’s ultra-narrow bezel LCD video wall display with 8mm pixel pitch, full HD resolution, and high brightness for seamless outdoor video walls.",
+  
+  "longDescription": "Samsung’s LCD Video Wall Displays offer a virtually seamless visual experience with ultra-narrow bezels and 24/7 operation. Available in 46” and 55” sizes, they support Full HD (1920x1080) resolution, high brightness up to 800 cd/m², and advanced color calibration out of the box. These displays are ideal for control rooms, digital signage, advertising, and outdoor visibility. Equipped with DisplayPort 1.2 loop-out, HDMI 2.0, DVI-D, and support for daisy-chaining up to 15x15 video walls, the panel ensures scalable deployment. Suitable for both portrait and landscape mounting with robust operation in 0°C to 40°C and 10–80% humidity.",
+  
+  "images": [
+    '/Solutions/Automation/Conference room solutions/led40.png',
+    '/Solutions/Automation/Conference room solutions/led41.png',
+    '/Solutions/Automation/Conference room solutions/led42.png',
+  ],
+
+  "dataAiHints": [
+    "samsung ultra narrow bezel video wall",
+    "outdoor video wall display 8mm pixel pitch",
+    "video wall 55 inch samsung commercial",
+    "lcd seamless video wall for signage",
+    "samsung display wall hdmi daisy chain"
+  ],
+
+  "specifications": [
+    { "key": "Pixel Pitch", "value": "8 mm" },
+    { "key": "Usage/Application", "value": "Outdoor" },
+    { "key": "Panel Type", "value": "D-LED DID" },
+    { "key": "Diagonal Size", "value": "46\" and 55\"" },
+    { "key": "Resolution", "value": "1920 x 1080 (Full HD)" },
+    { "key": "Brightness", "value": ">800 cd/m² (Max: 700–800 cd/m² depending on model)" },
+    { "key": "Contrast Ratio", "value": "4000:1" },
+    { "key": "Viewing Angle", "value": "178° / 178°" },
+    { "key": "Response Time", "value": "8 ms (G to G)" },
+    { "key": "Bezel Size", "value": "0.8mm / 1.8mm / 3.8mm (Depending on model)" },
+    { "key": "Operation Time", "value": "24/7 continuous use" },
+    { "key": "Active Display Area", "value": "Up to 1209.6 x 680.4 mm (55\")" },
+    { "key": "Power Consumption", "value": "Typical: 120–180W, Max: 143–297W" },
+    { "key": "Power Supply", "value": "AC 100–240V, 50/60Hz" },
+    { "key": "Frequency", "value": "50 Hz" },
+    { "key": "Connectivity", "value": "HDMI 2.0 (x2), DVI-D, DisplayPort 1.2, RS232C, RJ45, USB (FW upgrade)" },
+    { "key": "Audio In/Out", "value": "Stereo mini jack" },
+    { "key": "External Control", "value": "RS232C, RJ45, IR Sensor (detachable)" },
+    { "key": "Mount Type", "value": "VESA 600x400mm, Landscape/Portrait" },
+    { "key": "Display Features", "value": "Auto Source Switching, Advanced Color Management, Daisy Chain (DP 1.2), Haze 25%" },
+    { "key": "Certifications", "value": "UL, TUV, CE, FCC, KC, CCC, RoHS" },
+    { "key": "Operating Temperature", "value": "0°C to 40°C" },
+    { "key": "Humidity Range", "value": "10–80% RH" },
+    { "key": "Dimensions (WxHxD)", "value": "Up to 1211.6 x 682.4 x 96.3 mm (panel)" },
+    { "key": "Weight", "value": "15.7 kg (46”), 21 kg (55”)" }
+  ],
+
+  "benefits": [
+    "Virtually seamless video wall setup with ultra-narrow bezel options.",
+    "High brightness and contrast ratio suitable for outdoor environments.",
+    "Factory-calibrated panels ensure uniformity in color and brightness.",
+    "Flexible connectivity with DisplayPort daisy-chaining and HDMI 2.0.",
+    "24/7 durability for mission-critical commercial environments."
+  ],
+
+ 
+
+  icon: Video
+
+},
+
 
 {
   id: '69',
@@ -3335,8 +3089,8 @@ category: 'Fire Hydrant System',
   shortDescription: 'Multi-output PA system power supply supporting PoE, DC outputs, and advanced control and supervision interfaces.',
   longDescription: 'This PA Power Supply Box is a robust and intelligent power distribution unit designed for public address and IP-based audio systems. It supports multiple DC output levels including 48V, 24V, and 18V, with built-in PoE capabilities. It features control interfaces, network supervision, AES128 encryption, and watchdog security for fault tolerance. Ideal for modern audio networks requiring high reliability and multi-interface connectivity.',
   images: [
-   '/Solutions/Automation/PA system/pa10.png',
    '/Solutions/Automation/PA system/pa11.png',
+   '/Solutions/Automation/PA system/pa10.png',
 
   ],
   dataAiHints: [
@@ -3412,8 +3166,8 @@ category: 'Fire Hydrant System',
   shortDescription: 'Durable 10W explosion-proof PA horn speaker with 105 dB SPL, suitable for industrial and hazardous zones.',
   longDescription: 'The KNLB-EX10 is a rugged explosion-proof horn speaker designed for high-performance audio broadcasting in hazardous environments. Featuring an 8-ohm AC impedance and transformer support for 70V/100V constant pressure systems, it delivers a powerful sound pressure level of 105 dB at 1W/m at 1000 Hz. Ideal for public address and emergency systems in oil & gas, mining, chemical plants, and other industrial areas requiring certified explosion-proof audio equipment.',
   images: [
-    '/Solutions/Automation/PA system/sound10.png',
     '/Solutions/Automation/PA system/sound11.png',
+    '/Solutions/Automation/PA system/sound10.png',
 
   ],
   dataAiHints: [
@@ -3728,6 +3482,72 @@ category: 'Fire Hydrant System',
   icon: Server
 },
 {
+  "id": "116",
+  "slug": "grandstream-ucm6300-series-ip-pbx",
+  "name": "Grandstream UCM6300 Series IP PBX",
+  category: 'PA system',
+
+
+  "shortDescription": "High-performance unified communication and collaboration platform supporting voice, video, web meetings, analytics, facility access, and more for up to 3000 users.",
+
+  "longDescription": "The UCM6300 Series by Grandstream delivers a powerful Unified Communication & Collaboration platform, integrating voice, video calling and conferencing, video surveillance, web meetings, mobility, analytics, and intercoms on a centralized network. Designed for scalability and security, the UCM6300 supports up to 3000 users and 450 concurrent calls. It includes built-in conferencing features, cloud and on-premise communication via the Wave app, and full compatibility with Grandstream SIP endpoints. Featuring advanced NAT traversal, secure boot, PoE+, and full-band Opus codec, it’s ideal for enterprises seeking a fully integrated and manageable communication ecosystem.",
+
+  "images": [
+    '/Solutions/Automation/PA system/epa80.png',
+    '/Solutions/Automation/PA system/epa81.png',
+    '/Solutions/Automation/PA system/epa82.png',
+    '/Solutions/Automation/PA system/epa83.png',
+
+  ],
+
+  "dataAiHints": [
+    "Grandstream UCM6300 IP PBX",
+    "Unified Communication system for businesses",
+    "on-premise IP PBX with video conferencing",
+    "3000 user PBX system with web meetings",
+    "IP PBX with secure boot and NAT traversal"
+  ],
+
+  "specifications": [
+    { "key": "Series", "value": "UCM6300 Series" },
+    { "key": "User Capacity", "value": "Up to 3000 users" },
+    { "key": "Concurrent Calls", "value": "Up to 450 concurrent calls" },
+    { "key": "SIP Endpoint Provisioning", "value": "Zero configuration for Grandstream SIP devices" },
+    { "key": "Web Meetings Support", "value": "Built-in video conferencing and web meetings platform" },
+    { "key": "App Support", "value": "Wave app for Android, iOS, Chrome, and Firefox" },
+    { "key": "Third-party Integration", "value": "API support for CRM, PMS platforms" },
+    { "key": "Security", "value": "Secure boot, unique device certificate, random default password" },
+    { "key": "Network Interfaces", "value": "3x Gigabit RJ45 ports with PoE+ support" },
+    { "key": "NAT Traversal", "value": "Automated NAT firewall traversal service" },
+    { "key": "Voice Codecs", "value": "Full-Band Opus" },
+    { "key": "Video Codecs", "value": "H.265, H.264, H.263, H.263+, VP8" },
+    { "key": "Jitter Resilience", "value": "Up to 50% packet loss" },
+    { "key": "Cloud Management", "value": "Compatible with GDMS for cloud-based setup and monitoring" },
+    { "key": "Operating System", "value": "Based on Asterisk 16 open-source telephony OS" }
+  ],
+
+  "benefits": [
+    "Centralized voice, video, and collaboration on a single platform.",
+    "Supports both remote and on-premise communication through Wave app.",
+    "Plug-and-play provisioning of Grandstream SIP devices saves time and complexity.",
+    "High-level security ensures safe communication and account protection.",
+    "Cloud-based management and monitoring with GDMS enhances remote administration."
+  ],
+
+  icon: Server
+
+},
+
+
+
+
+
+
+
+
+
+
+{
   id: '83',
   slug: 'ucm6202-ippbx-system-grandstream',
   name: 'UCM6202 IPPBX System',
@@ -3824,119 +3644,10 @@ category: 'Fire Hydrant System',
   ],
 
   icon: Phone
-},
-{
-  "id": "107",
-  "slug": "tecmojo-12u-open-frame-network-rack",
-  "name": "Tecmojo 12U Open Frame Network Rack",
-  "category": "Conference room solutions",
-
-  "shortDescription": "12U open-frame network rack by Tecmojo for 19\" IT and AV equipment, floor standing or wall-mounted, includes 2x 1U rack shelves and mounting hardware.",
-  "longDescription": "The Tecmojo 12U Open Frame Network Rack is a durable, versatile rack designed to support 19-inch standard networking, AV, and server equipment. Made from robust alloy steel, it can be used as a floor-standing or wall-mounted unit. Ideal for IT rooms, studios, or telecom setups, the rack comes with two 1U shelves and all necessary mounting hardware. With a compact design and flexible mounting options, it's perfect for organizing patch panels, switches, and AV gear efficiently.",
-
-  "images": [
-    '/Solutions/Automation/Conference room solutions/rack10.png',
-    '/Solutions/Automation/Conference room solutions/rack11.png',
-    '/Solutions/Automation/Conference room solutions/rack12.png',
- 
-
-  ],
-
-  "dataAiHints": [
-    "12u open frame rack for it gear",
-    "av network rack wall mount or floor standing",
-    "rack for 19 inch server switch",
-    "tecmojo network rack for server room",
-    "network cabinet with shelves included"
-  ],
-
-  "specifications": [
-    { "key": "Brand", "value": "Tecmojo" },
-    { "key": "Rack Size", "value": "12U" },
-    { "key": "Mount Type", "value": "Wall Mount / Floor Standing" },
-    { "key": "Form Factor", "value": "AT (19-inch standard)" },
-    { "key": "Material", "value": "Alloy Steel" },
-    { "key": "Included Accessories", "value": "2 x 1U Rack Shelves, Mounting Hardware" },
-    { "key": "Dimensions (L x W x H)", "value": "51.18 x 51.99 x 53.39 cm" },
-    { "key": "Weight", "value": "13 kg" },
-    { "key": "Compatible Devices", "value": "Server, AV, and Networking Equipment" },
-    { "key": "Batteries Included", "value": "No" },
-    { "key": "ASIN", "value": "B0CSJR2RZB" },
-    { "key": "Customer Rating", "value": "4.5 out of 5 stars (145 reviews)" },
-    { "key": "First Available", "value": "16 April 2024" }
-  ],
-
-  "benefits": [
-    "Strong alloy steel construction ensures durability and stability.",
-    "12U rack space ideal for organizing switches, routers, patch panels, and more.",
-    "Dual functionality: can be wall-mounted or placed as a floor-standing unit.",
-    "Includes 2 x 1U shelves for additional storage convenience.",
-    "Perfect for IT infrastructure, AV setups, and home networking.",
-    "Efficient airflow and cable management with open-frame design."
-  ],
-
-  icon: Server
-},
-{
-  "id": "108",
-  "slug": "star-work-5-shelf-metal-storage-rack",
-  "name": "STAR WORK 5-Shelf Adjustable Metal Storage Rack – 63\" Black Freestanding Utility Rack",
-  "category": "Conference room solutions",
+},  
 
 
-  "shortDescription": "Adjustable 5-shelf black metal storage rack by STAR WORK. Ideal for garage, bedroom, office or library with 800 lbs load capacity.",
-  "longDescription": "The STAR WORK 5-Shelf Adjustable Metal Storage Rack offers a durable and space-efficient solution for organizing your space. Constructed with engineered wood shelves and steel bootless rivets, this freestanding rack is designed for tool storage, home organization, or office use. With adjustable shelves, anti-slip foot mats, and easy DIY assembly, it provides both functionality and style in one package. With a maximum weight capacity of over 360 kg and sleek black finish, it's perfect for heavy-duty or aesthetic use in bedrooms, libraries, garages, and more.",
 
-  "images": [
-    '/Solutions/Automation/Conference room solutions/rack20.png',
-    '/Solutions/Automation/Conference room solutions/rack21.png',
-    '/Solutions/Automation/Conference room solutions/rack22.png',
-    '/Solutions/Automation/Conference room solutions/rack23.png',
-
-  
-  ],
-
-  "dataAiHints": [
-    "adjustable metal storage rack black",
-    "garage utility 5 shelf rack",
-    "steel bootless rivet rack 63 inches",
-    "star work display shelving unit",
-    "freestanding black rack for bedroom or office"
-  ],
-
-  "specifications": [
-    { "key": "Brand", "value": "STAR WORK" },
-    { "key": "Material", "value": "Engineered Wood & Steel Frame" },
-    { "key": "Number of Shelves", "value": "5" },
-    { "key": "Color", "value": "Black" },
-    { "key": "Dimensions (H x W x D)", "value": "92 x 33 x 7.5 cm (converted from inches: 63\" x 24\" x 12\")" },
-    { "key": "Weight Capacity", "value": "362.87 kg (800 lbs)" },
-    { "key": "Style", "value": "5 Shelf Premium" },
-    { "key": "Assembly Required", "value": "Yes (tool-free rivet system)" },
-    { "key": "Room Type", "value": "Bedroom, Library, Playroom, Office" },
-    { "key": "Special Features", "value": "Adjustable, Durable, Detachable, Non-Slip Foot Mats" },
-    { "key": "Installation Type", "value": "Freestanding" },
-    { "key": "Product Care", "value": "Wipe with Dry Cloth" },
-    { "key": "Furniture Finish", "value": "Black Coating" },
-    { "key": "Item Weight", "value": "6 kg" },
-    { "key": "Model Number", "value": "STRK6SET-25" },
-    { "key": "ASIN", "value": "B09SZGXHN3" },
-    { "key": "Customer Rating", "value": "4.0 out of 5 stars (6,752 reviews)" },
-    { "key": "Country of Origin", "value": "India" },
-    { "key": "Date First Available", "value": "9 November 2021" }
-  ],
-
-  "benefits": [
-    "Heavy-duty weight capacity supports up to 362.87 kg for reliable storage.",
-    "Adjustable shelving to fit items of various heights and sizes.",
-    "Steel rivet construction ensures stability and strength without tools.",
-    "Ideal for organizing tools, books, decor, or office supplies.",
-    "Sleek black finish blends with modern interiors.",
-    "Quick and easy installation – tool-free with detachable design."
-  ],
-
-  icon: Server
-},
 {
   "id": "109",
   "slug": "plantex-2u-wall-mount-cctv-dvr-nvr-rack",
@@ -5516,13 +5227,38 @@ export const coreOfferings: CoreOfferingItem[] = [
     link: '/solutions?category=Access%20Control',
     linkText: 'Manage Access',
   },
+ 
   {
-    gifSrc: '/icons/cyber-security.gif',
-    dataAiHint: 'gears turning solution animation',
-    title: 'Integrated Solutions',
-    description: 'Comprehensive systems including Fire & Emergency, Intruder Detection, and Command Control Rooms for holistic security.',
-    link: '/solutions',
-    linkText: 'Discover All Solutions',
+    gifSrc: '/icons/fire.gif',
+    dataAiHint: 'fire safety animation',
+    title: 'Fire Safety',
+    description: 'Advanced fire alarm, detection, and suppression systems to protect lives and property from fire hazards in any environment.',
+    link: '/solutions?category=Fire%20%26%20Emergency%20System',
+    linkText: 'View Fire Safety',
+  },
+  {
+    gifSrc: '/icons/office.gif',
+    dataAiHint: 'office automation animation',
+    title: 'Office & Home Automation',
+    description: 'Smart automation for lighting, climate, and devices, enhancing comfort, efficiency, and security in offices and homes.',
+    link: '/solutions?category=Office%20%26%20Home%20Automations',
+    linkText: 'See Automation',
+  },
+  {
+    gifSrc: '/icons/intuder.gif',
+    dataAiHint: 'intruder detection animation',
+    title: 'Intruder Detection System',
+    description: 'Intrusion alarms, smart sensors, and perimeter security to detect and deter unauthorized access before it becomes a threat.',
+    link: '/solutions?category=Intruder%20Detection%20System',
+    linkText: 'Explore Intruder Detection',
+  },
+  {
+    gifSrc: '/icons/command.gif',
+    dataAiHint: 'command control room animation',
+    title: 'Command Control Room',
+    description: 'Centralized monitoring and management with AI-powered analytics for real-time decision-making and incident response.',
+    link: '/solutions?category=Command%20Control%20Room',
+    linkText: 'View Command Center',
   },
 ];
 
@@ -5768,7 +5504,14 @@ export const solutionCategoriesData: SolutionCategory[] = [
   { id: 'cat_fire_emergency', name: 'Fire & Emergency System', description: 'Advanced systems for early fire detection, alerts, and emergency communication.', icon: Flame, dataAiHint: 'fire alarm system' },
   { id: 'cat_access_control', name: 'Access Control', description: 'Manage and control entry with biometric scanners, card readers, and robust controllers.', icon: KeyRound, dataAiHint: 'access control security' },
   { id: 'cat_intruder_detection', name: 'Intruder Detection System', description: 'Reliable sensors and alarms to detect and deter unauthorized access attempts.', icon: Siren, dataAiHint: 'intruder alarm system' },
-  { id: 'cat_networking_jammers', name: 'Networking Jammers', description: 'Specialized signal disruption tools for authorized use in restricted environments. (Regulated)', icon: SignalZero, dataAiHint: 'signal jammer' },
+  {
+    id: 'cat_office_automation',
+    name: 'Office & Home Automations',
+    description: 'Smart automation solutions for offices and homes, including WiFi, conference room, and PA systems.',
+    icon: Wifi, // or another relevant icon
+    dataAiHint: 'office home automation'
+  },
+  
   { id: 'cat_command_control', name: 'Command Control Room', description: 'Integrated solutions for central monitoring, incident management, and operational command.', icon: ScreenShare, dataAiHint: 'control room console' },
   // Sub-categories for direct linking if needed, or just rely on product category filtering
   { id: 'cat_cctv', name: 'CCTV Cameras', description: 'Explore a wide range of high-definition cameras for comprehensive indoor and outdoor surveillance.', icon: Camera, dataAiHint: 'cctv camera stack' },

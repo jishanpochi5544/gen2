@@ -25,7 +25,6 @@ import {
 import { useToast } from "@/hooks/use-toast";
 import { Loader2 } from "lucide-react";
 import React from "react";
-import { submitContactInquiry } from "@/lib/actions/contactActions"; 
 
 const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters.").max(50, "Name must be less than 50 characters."),
@@ -56,21 +55,45 @@ export function ContactForm() {
   async function onSubmit(values: FormData) {
     setIsSubmitting(true);
     try {
-      const result = await submitContactInquiry(values);
-      if (result.success) {
-        toast({
-          title: "Inquiry Submitted!",
-          description: result.message,
-          variant: "default",
-        });
-        form.reset();
-      } else {
-        toast({
-          title: "Submission Failed",
-          description: result.message,
-          variant: "destructive",
-        });
-      }
+      // Simulate processing delay
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      
+      // Create mailto link with form data
+      const subject = `${values.inquiryType} - Inquiry from ${values.name}`;
+      const body = `Dear GenX Secure Team,
+
+I am writing to ${values.inquiryType} with the following details:
+
+Contact Information:
+------------------
+Name: ${values.name}
+Email: ${values.email}
+Phone: ${values.phone || 'Not provided'}
+Company: ${values.company || 'Not provided'}
+
+Inquiry Details:
+--------------
+Type: ${values.inquiryType}
+Message:
+${values.message}
+
+Looking forward to hearing from you.
+
+Best regards,
+${values.name}`;
+
+      const mailtoLink = `mailto:jishanpochi30@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      
+      // Open email client
+      window.location.href = mailtoLink;
+      
+      toast({
+        title: "Email Client Opened!",
+        description: "Your inquiry has been prepared. Please send the email from your email client.",
+        variant: "default",
+      });
+      
+      form.reset();
     } catch (error) {
       console.error("Error submitting contact form:", error);
       toast({
@@ -184,37 +207,20 @@ export function ContactForm() {
             </FormItem>
           )}
         />
-        {/* Mailto Button */}
-        <a
-          href={`mailto:jishanpochi30@gmail.com?subject=${encodeURIComponent(`${form.watch('inquiryType')} - Inquiry from ${form.watch('name') || ''}`)}&body=${encodeURIComponent(
-            `Dear GenX Secure Team,
-
-I am writing to ${form.watch('inquiryType') || ''} with the following details:
-
-Contact Information:
-------------------
-Name: ${form.watch('name') || ''}
-Email: ${form.watch('email') || ''}
-Phone: ${form.watch('phone') || 'Not provided'}
-Company: ${form.watch('company') || 'Not provided'}
-
-Inquiry Details:
---------------
-Type: ${form.watch('inquiryType') || ''}
-Message:
-${form.watch('message') || ''}
-
-Looking forward to hearing from you.
-
-Best regards,
-${form.watch('name') || ''}`
-          )}`}
-          className={`w-full md:w-auto mt-2 inline-block text-center rounded-lg px-6 py-3 font-semibold bg-[#f7b801] text-gray-900 hover:bg-[#f7b801]/90 transition-colors ${!form.formState.isValid ? 'pointer-events-none opacity-50' : ''}`}
-          tabIndex={form.formState.isValid ? 0 : -1}
-          aria-disabled={!form.formState.isValid}
+        <Button 
+          type="submit" 
+          disabled={isSubmitting || !form.formState.isValid}
+          className="w-full md:w-auto bg-[#f7b801] hover:bg-[#f7b801]/90 text-gray-900"
         >
-          Send via Email
-        </a>
+          {isSubmitting ? (
+            <>
+              <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+              Preparing Email...
+            </>
+          ) : (
+            "Send Inquiry"
+          )}
+        </Button>
       </form>
     </Form>
   );

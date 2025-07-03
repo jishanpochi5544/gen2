@@ -1,4 +1,3 @@
-
 import type { LucideIcon } from 'lucide-react';
 
 export interface Product {
@@ -96,6 +95,7 @@ export interface ClientLogo {
   logoUrl: string;
   dataAiHint?: string;
   description: string;
+  category?: string; // e.g., "Technology", "Finance"
 }
 
 export interface CoreOfferingItem {
@@ -119,4 +119,5 @@ export interface SolutionCategory {
   description: string;
   icon: LucideIcon;
   dataAiHint?: string;
+  slug?: string;
 }

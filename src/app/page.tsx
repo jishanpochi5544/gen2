@@ -8,14 +8,24 @@ import { products, caseStudies, whyChooseUsItems, testimonials, clientLogos, cor
 import { ArrowRight, Users2, Quote, Lightbulb, Settings, ShieldCheck, Camera, KeyRound } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import Image from 'next/image';
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef, useState, useEffect, Suspense } from 'react';
 import { useIntersectionObserver } from '@/hooks/useIntersectionObserver';
 import { cn } from '@/lib/utils';
 import { ProductCard } from '@/components/ProductCard';
 import type { Product as FullProductType } from '@/types';
 import { StatsBanner } from '@/components/StatsBanner';
 import { FAQSection } from '@/components/FAQSection';
+import { PartnersCarousel } from '@/components/PartnersCarousel';
+import { SolutionsFilter } from '@/components/SolutionsFilter';
 
+const mainCategoryNames = [
+  "Surveillance Systems",
+  "Fire & Emergency System",
+  "Access Control",
+  "Office & Home Automations",
+  "Intruder Detection System",
+  "Command Control Room"
+];
 
 export default function HomePage() {
   const [featuredProducts, setFeaturedProducts] = useState(products.slice(0, 2) as FullProductType[]);
@@ -77,10 +87,25 @@ export default function HomePage() {
               "text-center mb-12 transition-all duration-700 ease-out",
               isCoreOfferingsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'
             )}>
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground">Our Core Offerings</h2>
+              <h2 className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-cyan-600 via-blue-500 to-purple-500 bg-clip-text text-transparent mb-3 drop-shadow-lg">
+                Our Core Offerings
+              </h2>
+              <div className="w-24 h-1 mx-auto bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 rounded-full mb-4"></div>
               <p className="mt-4 text-lg text-foreground font-semibold max-w-2xl mx-auto">
                 Discover robust security solutions designed for reliability and peace of mind.
               </p>
+              <div className="mt-10">
+                <Suspense fallback={<div>Loading filters...</div>}>
+                <SolutionsFilter 
+                  query="" 
+                  selectedCategory="all" 
+                  mainCategories={mainCategoryNames} 
+                  subCategories={[]} 
+                  allCategories={mainCategoryNames} 
+                  themeColor="bg-cyan-600 hover:bg-cyan-700" 
+                />
+                </Suspense>
+              </div>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {coreOfferings.map((offering, index) => {
@@ -124,68 +149,16 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section ref={whyChooseUsRef} className="relative py-16 lg:py-24 overflow-hidden">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover z-0"
-          poster="https://placehold.co/1920x1080.png"
-          data-ai-hint="abstract technology moving"
-        >
-          <source src="/videos/why-choose-us-bg.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-        <div className="absolute inset-0 bg-black/30 backdrop-blur-sm z-0"></div>
-
-        <div className="container mx-auto px-4 md:px-6 relative z-10">
-          <div className={cn(
-            "text-center mb-16 transition-all duration-700 ease-out",
-            isWhyChooseUsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'
-          )} style={{ transitionDelay: isWhyChooseUsVisible ? '0ms' : '0ms' }}>
-            <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground">Why Choose GenX Secure?</h2>
-            <p className="mt-4 text-lg text-primary-foreground/90 max-w-2xl mx-auto">
-              Experience the GenX Secure difference with our commitment to excellence and innovation.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8">
-            {whyChooseUsItems.map((item, index) => {
-              const IconComponent = item.icon;
-              return (
-                <div
-                  key={item.id}
-                  className={cn(
-                    "group bg-card/90 p-8 rounded-xl border shadow-xl transition-all duration-300 ease-out text-center",
-                    "hover:border-accent/60 hover:shadow-2xl hover:shadow-accent/30 hover:-translate-y-1.5",
-                    isWhyChooseUsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'
-                  )}
-                  style={{ transitionDelay: isWhyChooseUsVisible ? `${index * 150 + 150}ms` : '0ms' }}
-                >
-                  <div className="flex items-center justify-center mb-6">
-                    <div className={cn(
-                        "flex items-center justify-center h-20 w-20 rounded-full bg-accent/15 transition-all duration-300 ease-out",
-                        "group-hover:bg-accent/25 group-hover:scale-110 group-hover:ring-4 group-hover:ring-accent/30"
-                      )}>
-                      <IconComponent className="h-10 w-10 text-accent transition-all duration-300 group-hover:scale-125 group-hover:rotate-[10deg]" />
-                    </div>
-                  </div>
-                  <h3 className="text-2xl font-bold text-foreground mb-3">{item.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed">{item.description}</p>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
         <section ref={featuredSolutionsRef} className="py-16 lg:py-24 relative overflow-hidden bg-white/30">
           <div className="container mx-auto px-4 md:px-6 relative">
           <div className={cn(
             "text-center mb-12 transition-all duration-700 ease-out",
             isFeaturedSolutionsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'
           )} style={{ transitionDelay: isFeaturedSolutionsVisible ? '0ms' : '0ms' }}>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground">Featured Solutions</h2>
+            <h2 className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-cyan-600 via-blue-500 to-purple-500 bg-clip-text text-transparent mb-3 drop-shadow-lg">
+              Featured Solutions
+            </h2>
+            <div className="w-24 h-1 mx-auto bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 rounded-full mb-4"></div>
               <p className="mt-4 text-lg text-foreground font-semibold">Explore some of our cutting-edge security products.</p>
           </div>
             <div className={cn(
@@ -219,57 +192,16 @@ export default function HomePage() {
 
         <StatsBanner />
 
-      {featuredCaseStudy && (
-          <section ref={successStoryRef} className="py-16 lg:py-24 relative overflow-hidden bg-white/50">
-            <div className="container mx-auto px-4 md:px-6 relative">
-            <div className={cn(
-              "text-center mb-12 transition-all duration-700 ease-out",
-              isSuccessStoryVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'
-              )}>
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground">Success in Action</h2>
-                <p className="mt-4 text-lg text-foreground font-semibold max-w-2xl mx-auto">
-                  See how our solutions have transformed security for businesses like yours.
-                </p>
-            </div>
-            <Card className={cn(
-              "group grid md:grid-cols-2 items-center gap-8 p-6 md:p-8 shadow-xl overflow-hidden border hover:border-primary/50 hover:shadow-primary/20 transition-all duration-300 ease-out",
-              isSuccessStoryVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'
-              )} style={{ transitionDelay: isSuccessStoryVisible ? '150ms' : '0ms' }}>
-              <div className={cn(
-                "relative aspect-video rounded-lg overflow-hidden transition-opacity duration-1000 ease-in-out",
-                isSuccessStoryVisible ? 'opacity-100' : 'opacity-0'
-                )} style={{ transitionDelay: isSuccessStoryVisible ? '300ms' : '0ms' }}>
-                 <Image
-                    src={featuredCaseStudy.image || 'https://placehold.co/800x450.png'}
-                    alt={featuredCaseStudy.title}
-                    fill
-                    className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-110 group-hover:filter group-hover:saturate-125"
-                    data-ai-hint={featuredCaseStudy.dataAiHint || "business success team"}
-                  />
-              </div>
-              <div className={cn(
-                "transition-all duration-700 ease-out",
-                isSuccessStoryVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-                )} style={{ transitionDelay: isSuccessStoryVisible ? '450ms' : '0ms' }}>
-                <h3 className="text-2xl font-semibold text-primary mb-2">{featuredCaseStudy.industry} Spotlight</h3>
-                <h4 className="text-xl font-bold text-foreground mb-3">{featuredCaseStudy.title}</h4>
-                <p className="text-muted-foreground mb-4 line-clamp-3">{featuredCaseStudy.challenge}</p>
-                <Button asChild className="bg-primary hover:bg-primary/80 text-primary-foreground transition-all duration-300 ease-out group-hover:gap-3">
-                  <Link href={`/success-stories#${featuredCaseStudy.slug}`}>Read Full Story <ArrowRight className="ml-1 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" /></Link>
-                </Button>
-              </div>
-            </Card>
-          </div>
-        </section>
-      )}
-
         <section ref={testimonialsRef} className="py-16 lg:py-24 relative overflow-hidden bg-white/30">
           <div className="container mx-auto px-4 md:px-6 relative">
           <div className={cn(
             "text-center mb-12 transition-all duration-700 ease-out",
             isTestimonialsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'
             )}>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground">What Our Clients Say</h2>
+            <h2 className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-cyan-600 via-blue-500 to-purple-500 bg-clip-text text-transparent mb-3 drop-shadow-lg">
+              What Our Clients Say
+            </h2>
+            <div className="w-24 h-1 mx-auto bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 rounded-full mb-4"></div>
               <p className="mt-4 text-lg text-foreground font-semibold max-w-2xl mx-auto">
                 Hear from businesses who have experienced the GenX Secure difference.
             </p>
@@ -314,53 +246,20 @@ export default function HomePage() {
         </div>
       </section>
 
-         <section ref={trustedByRef} className="py-16 lg:py-24 bg-white/50">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className={cn(
-            "text-center mb-12 lg:mb-16 transition-all duration-700 ease-out",
-            isTrustedByVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'
-          )} style={{ transitionDelay: isTrustedByVisible ? '0ms' : '0ms' }}>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground">Trusted By Leading Companies</h2>
-              <p className="mt-4 text-lg text-foreground font-semibold max-w-2xl mx-auto">
-              We are proud to partner with organizations of all sizes to enhance their security.
-            </p>
-          </div>
-          {clientLogos.length > 0 ? (
-            <div className={cn(
-                "group relative w-full overflow-hidden mask-image-linear-gradient-to-r from-transparent via-black to-transparent transition-all duration-700 ease-out", // Mask for fade effect on edges
-              isTrustedByVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'
-            )} style={{ transitionDelay: isTrustedByVisible ? '150ms' : '0ms' }}>
-                <div className="flex animate-scroll group-hover:pause whitespace-nowrap">
-                  {[...clientLogos, ...clientLogos, ...clientLogos, ...clientLogos].map((client, index) => ( // Duplicate for seamless loop
-                  <div
-                    key={`${client.id}-${index}`}
-                      className="mx-6 shrink-0"
-                  >
-                    <div
-                        className="relative w-32 h-32 md:w-36 md:h-36 rounded-full bg-card shadow-md border flex items-center justify-center p-4 transition-transform duration-300 ease-out hover:scale-110 hover:shadow-lg"
-                    >
-                      <Image
-                        src={client.logoUrl}
-                        alt={client.name}
-                          width={90}
-                          height={90}
-                          className="object-contain filter grayscale transition-all duration-300 ease-out hover:filter-none"
-                        data-ai-hint={client.dataAiHint || 'company logo'}
-                      />
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          ) : (
-            <p className="text-center text-muted-foreground">Client information coming soon.</p>
-          )}
-        </div>
-      </section>
+      <PartnersCarousel />
 
       {/* FAQ Section */}
       <section ref={faqRef} className="py-16 lg:py-24 relative overflow-hidden bg-white/30">
         <div className="container mx-auto px-4 md:px-6">
+          <div className="text-center mb-10">
+            <h2 className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-cyan-600 via-blue-500 to-purple-500 bg-clip-text text-transparent mb-3 drop-shadow-lg">
+              Frequently Asked Questions
+            </h2>
+            <div className="w-24 h-1 mx-auto bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 rounded-full mb-4"></div>
+            <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
+              Find answers to common questions about our security solutions, services, and support.
+            </p>
+          </div>
           <FAQSection isVisible={isFAQVisible} />
         </div>
       </section>

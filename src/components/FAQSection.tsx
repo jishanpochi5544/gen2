@@ -35,13 +35,6 @@ export function FAQSection({ className, isVisible }: FAQSectionProps) {
       isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16',
       className
     )}>
-      <div className="text-center mb-12">
-        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Frequently Asked Questions</h2>
-        <p className="text-lg text-foreground/80">
-          Find answers to common questions about our security solutions and services
-        </p>
-      </div>
-      
       <div className="w-full bg-card/80 backdrop-blur-sm rounded-xl p-6 shadow-lg">
         {faqs.map((faq, index) => (
           <div 

@@ -1,4 +1,3 @@
-
 import Link from 'next/link';
 import type { SolutionCategory } from '@/types';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
@@ -7,14 +6,20 @@ import { cn } from '@/lib/utils';
 
 interface SolutionCategoryCardProps {
   category: SolutionCategory;
+  href?: string;
+  themeHoverBg?: string;
 }
 
-export function SolutionCategoryCard({ category }: SolutionCategoryCardProps) {
+export function SolutionCategoryCard({ category, href, themeHoverBg }: SolutionCategoryCardProps) {
   const IconComponent = category.icon;
   return (
     <Link
-      href={`/solutions?category=${encodeURIComponent(category.name)}`}
-      className="group block h-full transition-all duration-300 ease-in-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-xl"
+      href={href || '#'}
+      className={cn(
+        "group relative block overflow-hidden rounded-2xl shadow-lg transition-all duration-300",
+        "bg-white/80 hover:shadow-xl",
+        themeHoverBg
+      )}
       aria-label={`Explore ${category.name} solutions`}
     >
       <Card
@@ -27,18 +32,18 @@ export function SolutionCategoryCard({ category }: SolutionCategoryCardProps) {
         {/* Optional: Decorative pseudo-element for background shine/gradient on hover - advanced */}
         <div className={cn(
             "absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out",
-            "bg-gradient-to-tr from-primary/5 via-transparent to-accent/5 z-0"
+            "bg-gradient-to-tr from-primary/5 via-transparent to-primary/10 z-0"
         )}></div>
 
 
         <CardHeader className="relative z-10 items-center text-center p-6 pb-4 border-b border-border/30 bg-card/50 backdrop-blur-sm">
           <div className={cn(
-            "p-4 bg-gradient-to-br from-primary/15 to-accent/15 rounded-full mb-4 transition-all duration-300 ease-out",
-            "group-hover:scale-110 group-hover:shadow-lg group-hover:from-primary/20 group-hover:to-accent/20"
+            "p-4 bg-gradient-to-br from-primary/15 to-primary/15 rounded-full mb-4 transition-all duration-300 ease-out",
+            "group-hover:scale-110 group-hover:shadow-lg group-hover:from-primary/20 group-hover:to-primary/20"
           )}>
             <IconComponent className={cn(
               "h-12 w-12 md:h-14 md:w-14 text-primary transition-all duration-300 ease-out",
-              "group-hover:text-accent group-hover:rotate-[-5deg] group-hover:scale-105"
+              "group-hover:text-primary group-hover:rotate-[-5deg] group-hover:scale-105"
             )} />
           </div>
           <CardTitle className={cn(
@@ -59,7 +64,7 @@ export function SolutionCategoryCard({ category }: SolutionCategoryCardProps) {
           <div className={cn(
             "inline-flex items-center justify-center px-6 py-3 rounded-lg text-sm font-semibold transition-all duration-300 ease-in-out transform",
             "bg-primary text-primary-foreground shadow-md",
-            "group-hover:bg-accent group-hover:text-accent-foreground group-hover:shadow-lg group-hover:scale-105"
+            "group-hover:bg-primary group-hover:text-primary-foreground group-hover:shadow-lg group-hover:scale-105"
           )}>
             Explore Products
             <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1.5 group-hover:rotate-[360deg]" />

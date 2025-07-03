@@ -35,7 +35,7 @@ export function FireSafetyCategories() {
       {fireSafetySubCategories.map((category) => (
         <Link
           key={category.id}
-          href={`/solutions/fire-safety?category=${encodeURIComponent(category.title)}`}
+          href={`/solutions/fire-safety/${category.slug}`}
           className="group block h-full transition-all duration-300 ease-in-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-xl"
           aria-label={`Explore ${category.title} solutions`}
         >

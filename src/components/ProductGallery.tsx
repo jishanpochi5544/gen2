@@ -1,5 +1,7 @@
 'use client';
 
+import Zoom from 'react-medium-image-zoom';
+import 'react-medium-image-zoom/dist/styles.css';
 import Image from 'next/image';
 import { useState } from 'react';
 
@@ -14,18 +16,20 @@ export function ProductGallery({ images, name, dataAiHints }: ProductGalleryProp
 
   return (
     <div className="space-y-4">
-      {/* Main Image */}
-      <div className="relative aspect-video w-full overflow-hidden rounded-lg shadow-xl border group cursor-zoom-in">
-        <Image
-          src={images[selectedImage]}
-          alt={name}
-          fill
-          quality={100}
-          sizes="(max-width: 768px) 100vw, 50vw"
-          className="object-contain transition-all duration-300 group-hover:scale-110"
-          priority
-          data-ai-hint={dataAiHints?.[selectedImage] || 'security product detail'}
-        />
+      {/* Main Image with Zoom */}
+      <div className="relative aspect-video w-full overflow-hidden rounded-lg shadow-xl border group">
+        <Zoom>
+          <Image
+            src={images[selectedImage]}
+            alt={name}
+            fill
+            quality={100}
+            sizes="(max-width: 768px) 100vw, 50vw"
+            className="object-contain"
+            priority
+            data-ai-hint={dataAiHints?.[selectedImage] || 'security product detail'}
+          />
+        </Zoom>
       </div>
       {/* Thumbnail Gallery */}
       {images.length > 1 && (

@@ -1,5 +1,6 @@
 "use client"
 
+import React, { Suspense } from 'react';
 import { FireSafetyCategories } from "@/components/FireSafetyCategories";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -25,7 +26,17 @@ const fireSafetyCategories = [
   "Fire Suppression System"
 ];
 
-export default function FireSafetyPage() {
+// Add main categories array
+const mainCategoryNames = [
+  "Surveillance Systems",
+  "Fire & Emergency System",
+  "Access Control",
+  "Office & Home Automations",
+  "Intruder Detection System",
+  "Command Control Room"
+];
+
+function FireSafetyPageInner() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const query = searchParams.get('query') ?? '';
@@ -209,54 +220,6 @@ export default function FireSafetyPage() {
             </Link>
           </Button>
 
-          {/* Search and Filter Section */}
-          <div id="products" className="mb-12">
-            <form className="grid grid-cols-1 lg:grid-cols-4 gap-4 md:gap-6" action="/solutions/fire-safety">
-              <div className="lg:col-span-2">
-                <label htmlFor="searchQuery" className="block text-sm font-medium text-foreground mb-1.5">Search Products</label>
-                <Input
-                  type="text"
-                  id="searchQuery"
-                  name="query"
-                  placeholder="Search fire safety products..."
-                  defaultValue={query}
-                  className="w-full h-11 text-base"
-                />
-              </div>
-
-              <div className="lg:col-span-1">
-                <label htmlFor="categoryFilter" className="block text-sm font-medium text-foreground mb-1.5">Filter by Category</label>
-                <Select 
-                  name="category" 
-                  defaultValue={selectedCategory}
-                  onValueChange={(value) => {
-                    const paramsObj = new URLSearchParams(searchParams.toString());
-                    if (value === 'all') {
-                      paramsObj.delete('category');
-                    } else {
-                      paramsObj.set('category', value);
-                    }
-                    router.push(`/solutions/fire-safety?${paramsObj.toString()}`);
-                  }}
-                >
-                  <SelectTrigger id="categoryFilter" className="w-full h-11 text-base">
-                    <SelectValue placeholder="All Categories" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="all">All Categories</SelectItem>
-                    {fireSafetyCategories.map(category => (
-                      <SelectItem key={category} value={category}>{category}</SelectItem>
-                    ))}
-                  </SelectContent>
-                </Select>
-              </div>
-
-              <Button type="submit" className="w-full lg:col-span-1 bg-primary hover:bg-primary/90 text-primary-foreground h-11 text-base mt-auto">
-                <Filter className="mr-2 h-5 w-5" /> Apply Filters
-              </Button>
-            </form>
-          </div>
-
           {/* Categories Section - Only show when no category is selected */}
           {selectedCategory === 'all' && (
             <div className="mb-12">
@@ -298,5 +261,13 @@ export default function FireSafetyPage() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function FireSafetyPage() {
+  return (
+    <Suspense>
+      <FireSafetyPageInner />
+    </Suspense>
   );
 } 

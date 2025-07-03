@@ -3,21 +3,50 @@
 @tailwind utilities;
 
 @layer utilities {
-  @keyframes scroll {
+  @keyframes infinite-scroll {
     from { transform: translateX(0); }
-    to { transform: translateX(-25%); }
+    to { transform: translateX(-100%); }
   }
 
-  .animate-scroll {
-    animation: scroll 10s linear infinite;
+  @keyframes infinite-scroll-reverse {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+  }
+
+  .animate-infinite-scroll {
+    animation: infinite-scroll 30s linear infinite;
+  }
+
+  .animate-infinite-scroll-reverse {
+    animation: infinite-scroll-reverse 30s linear infinite;
   }
   
+  .animate-infinite-scroll-reverse-slow {
+    animation: infinite-scroll-reverse 50s linear infinite;
+  }
+
+  .animate-infinite-scroll-slow {
+    animation: infinite-scroll 50s linear infinite;
+  }
+
   .pause {
     animation-play-state: paused;
   }
 
   .mask-image-linear-gradient-to-r {
     mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  }
+
+  .hero-description-animate {
+    transition-property: opacity, transform;
+    transition-duration: 300ms, 900ms;
+    transition-timing-function: ease-in-out, ease-in-out;
+  }
+
+  .hero-buttons-animate {
+    transition-property: opacity, transform;
+    transition-duration: 900ms, 900ms;
+    transition-timing-function: ease-in-out, ease-in-out;
   }
 }
 

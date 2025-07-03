@@ -1,12 +1,12 @@
 "use client";
 import Link from 'next/link';
-import { ShieldCheck, Menu, X, ChevronDown, LucideIcon, Video, HardDrive, KeyRound, ListChecks, Info, Layers, Palette, Mail as MailIconSvg, ArrowUpRight, Grid, Camera, Award, Building2, Settings, ArrowRight, House, Mic, Cpu, Flame, Siren, SignalZero, ScreenShare } from 'lucide-react';
+import { ShieldCheck, Menu, X, ChevronDown, LucideIcon, Video, HardDrive, KeyRound, ListChecks, Info, Layers, Palette, Mail as MailIconSvg, ArrowUpRight, Grid, Camera, Award, Building2, Settings, ArrowRight, House, Mic, Cpu, Flame, Siren, SignalZero, ScreenShare, Search } from 'lucide-react';
 import { SparkleButton } from '@/components/ui/SparkleButton';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger, SheetClose, SheetTitle } from '@/components/ui/sheet';
 import { navItems } from '@/lib/data';
 import type { NavItem, MegaMenuCardItem } from '@/types';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { cn } from '@/lib/utils';
 import React, { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
@@ -18,6 +18,7 @@ import {
   DropdownMenuTrigger,
   DropdownMenuSeparator
 } from "@/components/ui/dropdown-menu";
+import { Input } from '@/components/ui/input';
 
 
 export function Header() {
@@ -29,6 +30,9 @@ export function Header() {
   const solutionsMenuTimerRef = React.useRef<ReturnType<typeof setTimeout> | null>(null);
   const solutionsTriggerRef = React.useRef<HTMLButtonElement>(null);
   const solutionsMenuCooldownRef = React.useRef(false);
+
+  const router = useRouter();
+  const [searchValue, setSearchValue] = useState("");
 
   const handleSolutionsMenuEnter = () => {
     if (solutionsMenuCooldownRef.current) {
@@ -90,47 +94,47 @@ export function Header() {
   const solutionCardsData: MegaMenuCardItem[] = [
     {
       name: 'Surveillance Systems',
-      href: '/solutions?category=Surveillance%20Systems',
+      href: '/solutions/surveillance-systems',
       icon: Video,
       description: "Comprehensive monitoring with CCTV, Voice Loggers, and HPC for analytics.",
       dataAiHint: 'surveillance systems overview',
       subItems: [
-        { name: "CCTV Cameras", href: `/solutions?category=${encodeURIComponent("CCTV Cameras")}` },
-        { name: "Voice Logger", href: `/solutions?category=${encodeURIComponent("Voice Logger")}` },
-        { name: "HPC", href: `/solutions?category=${encodeURIComponent("HPC")}` },
+        { name: "CCTV Cameras", href: "/solutions/surveillance-systems/cctv-cameras" },
+        { name: "Voice Logger", href: "/solutions/surveillance-systems/voice-logger" },
+        { name: "HPC", href: "/solutions/surveillance-systems/hpc" },
       ]
     },
     {
       name: 'Fire & Emergency System',
-      href: `/solutions?category=${encodeURIComponent("Fire & Emergency System")}`,
+      href: '/solutions/fire-safety',
       icon: Flame,
       description: "Early detection, alerts, and communication for fire safety and emergencies.",
       dataAiHint: 'fire safety system',
     },
     {
       name: 'Access Control',
-      href: `/solutions?category=${encodeURIComponent("Access Control")}`,
+      href: '/solutions/access-control',
       icon: KeyRound,
       description: "Manage facility access with cutting-edge systems for top-tier security.",
       dataAiHint: 'access control security',
     },
     {
       name: 'Intruder Detection System',
-      href: `/solutions?category=${encodeURIComponent("Intruder Detection System")}`,
+      href: '/solutions/intruder-detection-system',
       icon: Siren,
       description: "Reliable sensors and alarms to detect and deter unauthorized access.",
       dataAiHint: 'intruder alarm system',
     },
     {
       name: 'Office & Home Automations',
-      href: `/solutions?category=${encodeURIComponent("Office & Home Automations")}`,
+      href: '/solutions/office-home-automations',
       icon: Settings,
       description: "Smart automation solutions for offices and homes, enhancing comfort and efficiency.",
       dataAiHint: 'office and home automation',
     },
     {
       name: 'Command Control Room',
-      href: `/solutions?category=${encodeURIComponent("Command Control Room")}`,
+      href: '/solutions/command-control-room',
       icon: ScreenShare,
       description: "Integrated solutions for central monitoring and operational command.",
       dataAiHint: 'security control room',
@@ -176,6 +180,14 @@ export function Header() {
     );
   };
   
+  const handleHeaderSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (searchValue.trim()) {
+      router.push(`/solutions?query=${encodeURIComponent(searchValue.trim())}`);
+      setSearchValue("");
+      setIsMobileMenuOpen(false);
+    }
+  };
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -341,6 +353,21 @@ export function Header() {
               );
             })}
           </nav>
+          {/* Header Search Bar (desktop) */}
+          <form onSubmit={handleHeaderSearch} className="ml-6 flex items-center w-56">
+            <div className="relative w-full group">
+              <span className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground group-focus-within:text-cyan-500 group-hover:text-cyan-500 transition-colors duration-300">
+                <Search className="h-5 w-5 transition-colors duration-300" />
+              </span>
+              <Input
+                type="text"
+                placeholder="Search solutions..."
+                value={searchValue}
+                onChange={e => setSearchValue(e.target.value)}
+                className="h-10 pl-10 pr-3 py-2 rounded-full border border-cyan-200 bg-white/80 shadow-md focus-visible:ring-cyan-500 focus-visible:border-cyan-500 group-hover:border-cyan-500 group-hover:shadow-xl group-hover:scale-105 focus:shadow-2xl focus:scale-105 transition-all duration-300 ease-out text-base md:text-sm"
+              />
+            </div>
+          </form>
            <div className="ml-6 flex items-center" onMouseEnter={handleOtherNavItemEnter}>
             <Link href="/contact" passHref legacyBehavior>
               <button
@@ -367,33 +394,38 @@ export function Header() {
         <div className="md:hidden">
           <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon">
+              <Button variant="ghost" size="icon" className="md:hidden">
                 <Menu className="h-6 w-6" />
-                <span className="sr-only">Toggle menu</span>
+                <span className="sr-only">Open menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-full max-w-xs p-6 flex flex-col">
-              <SheetTitle className="sr-only">Mobile Navigation Menu</SheetTitle>
-               <div className="flex justify-between items-center mb-4">
-                 <Link href="/" className="flex items-center space-x-2" onClick={() => setIsMobileMenuOpen(false)}>
-                    <Image
-                      src="/genx-logo.png" 
-                      alt="GenX Secure Logo"
-                      width={212}
-                      height={40}
-                      className="object-contain"
-                      data-ai-hint="company logo"
-                      priority
-                    />
-                  </Link>
+            <SheetContent side="left" className="w-[90vw] max-w-sm p-0">
+              <div className="p-4 border-b flex items-center justify-between">
+                <Link href="/" className="flex items-center" onClick={() => setIsMobileMenuOpen(false)}>
+                  <Image src="/genx-logo.png" alt="GenX Secure Logo" width={180} height={36} className="object-contain" />
+                </Link>
                 <SheetClose asChild>
-                  <Button variant="ghost" size="icon" onClick={() => setIsMobileMenuOpen(false)}>
+                  <Button variant="ghost" size="icon">
                     <X className="h-6 w-6" />
-                     <span className="sr-only">Close menu</span>
+                    <span className="sr-only">Close menu</span>
                   </Button>
                 </SheetClose>
               </div>
-
+              {/* Mobile Search Bar */}
+              <form onSubmit={handleHeaderSearch} className="p-4 border-b flex items-center w-full">
+                <div className="relative w-full group">
+                  <span className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground group-focus-within:text-cyan-500 group-hover:text-cyan-500 transition-colors duration-300">
+                    <Search className="h-5 w-5 transition-colors duration-300" />
+                  </span>
+                  <Input
+                    type="text"
+                    placeholder="Search solutions..."
+                    value={searchValue}
+                    onChange={e => setSearchValue(e.target.value)}
+                    className="h-10 pl-10 pr-3 py-2 rounded-full border border-cyan-200 bg-white/80 shadow-md focus-visible:ring-cyan-500 focus-visible:border-cyan-500 group-hover:border-cyan-500 group-hover:shadow-xl group-hover:scale-105 focus:shadow-2xl focus:scale-105 transition-all duration-300 ease-out text-base"
+                  />
+                </div>
+              </form>
               <div className="flex flex-col space-y-5 flex-grow">
                 {navItems.map((item) => (
                   <NavLink

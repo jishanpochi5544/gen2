@@ -1,4 +1,3 @@
-"use client";
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
@@ -8,17 +7,9 @@ import { cn } from "@/lib/utils";
 import { products, solutionCategoriesData } from '@/lib/data';
 import { ProductCard } from '@/components/ProductCard';
 import type { Product as FullProductType } from '@/types';
-import { Input } from "@/components/ui/input";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import { useRouter, useSearchParams } from "next/navigation";
 import { SolutionCategoryCard } from '@/components/SolutionCategoryCard';
-import React, { Suspense } from 'react';
+import React from 'react';
+import { Metadata } from 'next';
 
 const commandControlRoomSubCategoryNames = [
   "Remote Surveillance and Monitoring Solutions",
@@ -31,33 +22,24 @@ const mainCategoryNames = solutionCategoriesData
   .filter(cat => !commandControlRoomSubCategoryNames.includes(cat.name) && !cat.name.includes('CCTV') && !cat.name.includes('DVR') && !cat.name.includes('Voice Logger') && !cat.name.includes('HPC'))
   .map(cat => cat.name);
 
-function CommandControlRoomPageInner() {
-  const router = useRouter();
-  const searchParams = useSearchParams();
-  const query = searchParams.get('query') ?? '';
-  const category = searchParams.get('category');
+export const metadata: Metadata = {
+  title: 'Command Control Room Solutions | GenX Security',
+  description: 'Centralized, intelligent, and proactive security management solutions with AI-powered analytics and remote monitoring.',
+};
+
+interface CommandControlRoomPageProps {
+  searchParams: { query?: string; category?: string };
+}
+
+export default function CommandControlRoomPage({ searchParams }: CommandControlRoomPageProps) {
+  const query = searchParams.query ?? '';
+  const category = searchParams.category;
   const selectedCategory = category ? decodeURIComponent(category) : 'all';
 
   // Filter products for command control room
-  const productsToDisplay: FullProductType[] = products.filter(product => {
-    const matchesQuery = query
-      ? product.name.toLowerCase().includes(query.toLowerCase()) ||
-        product.shortDescription.toLowerCase().includes(query.toLowerCase()) ||
-        product.longDescription.toLowerCase().includes(query.toLowerCase())
-      : true;
-
-    // Check if product matches the selected category
-    let matchesSelectedCategory = false;
-    if (selectedCategory === 'all') {
-      matchesSelectedCategory = commandControlRoomSubCategoryNames.includes(product.category);
-    } else if (mainCategoryNames.includes(selectedCategory)) {
-      matchesSelectedCategory = product.category === selectedCategory;
-    } else {
-      matchesSelectedCategory = product.category === selectedCategory;
-    }
-
-    return matchesQuery && matchesSelectedCategory;
-  });
+  const productsToDisplay: FullProductType[] = products.filter(product => 
+    commandControlRoomSubCategoryNames.includes(product.category)
+  );
 
   return (
     <div className="relative min-h-screen">
@@ -214,100 +196,13 @@ function CommandControlRoomPageInner() {
             }} href={`/solutions/command-control-room/remote-surveillance-and-monitoring-solutions`} />
           </div>
 
-          {/* Search and Filter Section */}
-          <div className="container mx-auto px-4 mb-12">
-            <div className="bg-card rounded-xl shadow-lg p-6">
-              <form className="grid grid-cols-1 lg:grid-cols-4 gap-4 md:gap-6" action="/solutions/command-control-room">
-                <div className="lg:col-span-2">
-                  <label htmlFor="searchQuery" className="block text-sm font-medium text-foreground mb-1.5">
-                    Search Products
-                  </label>
-                  <Input
-                    type="text"
-                    id="searchQuery"
-                    name="query"
-                    placeholder="e.g., Command Center, Analytics"
-                    defaultValue={query}
-                    className="w-full h-11 text-base"
-                  />
-                </div>
-                <div className="lg:col-span-1">
-                  <label htmlFor="categoryFilter" className="block text-sm font-medium text-foreground mb-1.5">
-                    Filter by Category
-                  </label>
-                  <Select 
-                    name="category" 
-                    defaultValue={selectedCategory}
-                    onValueChange={(value) => {
-                      // Redirect to main solution pages for main categories
-                      if (mainCategoryNames.includes(value)) {
-                        if (value === 'Fire & Emergency System') {
-                          router.push('/solutions/fire-safety');
-                        } else if (value === 'Intruder Detection System') {
-                          router.push('/solutions/intruder-detection-system');
-                        } else if (value === 'Command Control Room') {
-                          router.push('/solutions/command-control-room');
-                        } else if (value === 'Access Control') {
-                          router.push('/solutions?category=Access%20Control');
-                        } else if (value === 'Surveillance Systems') {
-                          router.push('/solutions?category=Surveillance%20Systems');
-                        } else if (value === 'Office & Home Automations') {
-                          router.push('/solutions?category=Office%20%26%20Home%20Automations');
-                        } else {
-                          // fallback: go to main solutions page with category
-                          router.push(`/solutions?category=${encodeURIComponent(value)}`);
-                        }
-                        return;
-                      }
-                      // Otherwise, filter in-place for subcategories
-                      const paramsObj = new URLSearchParams(searchParams.toString());
-                      if (value === 'all') {
-                        paramsObj.delete('category');
-                      } else {
-                        paramsObj.set('category', value);
-                      }
-                      router.push(`/solutions/command-control-room?${paramsObj.toString()}`);
-                    }}
-                  >
-                    <SelectTrigger id="categoryFilter" className="w-full h-11 text-base">
-                      <SelectValue placeholder="All Categories" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="all">All Categories</SelectItem>
-                      {/* Main solution categories */}
-                      {mainCategoryNames.map(category => (
-                        <SelectItem key={category} value={category}>{category}</SelectItem>
-                      ))}
-                      {/* Sub-categories for Command Control Room */}
-                      {commandControlRoomSubCategoryNames.map(category => (
-                        <SelectItem key={category} value={category}>{category}</SelectItem>
-                      ))}
-                    </SelectContent>
-                  </Select>
-                </div>
-                <div className="lg:col-span-1 flex items-end">
-                  <Button 
-                    type="submit"
-                    size="lg"
-                    className="w-full bg-primary text-white hover:bg-primary/90"
-                  >
-                    <ArrowRight className="mr-2 h-5 w-5" /> Apply Filters
-                  </Button>
-                </div>
-              </form>
-            </div>
-          </div>
+
 
           {/* Products Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
             {productsToDisplay.map((product) => (
               <ProductCard key={product.id} product={product} />
             ))}
-            {productsToDisplay.length === 0 && (
-              <div className="col-span-full text-center py-12">
-                <p className="text-lg text-gray-600">No products found matching your criteria.</p>
-              </div>
-            )}
           </div>
         </div>
       </div>
@@ -315,10 +210,4 @@ function CommandControlRoomPageInner() {
   );
 }
 
-export default function CommandControlRoomPage() {
-  return (
-    <Suspense>
-      <CommandControlRoomPageInner />
-    </Suspense>
-  );
-} 
+ 

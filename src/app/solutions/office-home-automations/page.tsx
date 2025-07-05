@@ -1,22 +1,12 @@
-"use client"
-
-import React, { Suspense } from 'react';
+import React from 'react';
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import Link from "next/link";
-import { ArrowLeft, Filter, ArrowRight, Home, CheckCircle, Building2, Settings, Users2, HelpCircle, Wifi, Phone, Video } from "lucide-react";
+import { ArrowLeft, ArrowRight, Home, CheckCircle, Building2, Settings, Users2, HelpCircle, Wifi, Phone, Video } from "lucide-react";
 import { ProductCard } from "@/components/ProductCard";
 import { products } from "@/lib/data";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
-import { useRouter, useSearchParams } from "next/navigation";
+import { Metadata } from 'next';
 import { OfficeAutomationCategories } from "@/components/OfficeAutomationCategories";
 
 const automationCategories = [
@@ -35,28 +25,24 @@ const mainCategoryNames = [
   "Command Control Room"
 ];
 
-function OfficeHomeAutomationsPageInner() {
-  const router = useRouter();
-  const searchParams = useSearchParams();
-  const query = searchParams.get('query') ?? '';
-  const category = searchParams.get('category');
+export const metadata: Metadata = {
+  title: 'Office & Home Automation Solutions | GenX Security',
+  description: 'Smart automation solutions including WiFi systems, conference room solutions, and PA systems for modern offices and homes.',
+};
+
+interface OfficeHomeAutomationsPageProps {
+  searchParams: { query?: string; category?: string };
+}
+
+export default function OfficeHomeAutomationsPage({ searchParams }: OfficeHomeAutomationsPageProps) {
+  const query = searchParams.query ?? '';
+  const category = searchParams.category;
   const selectedCategory = category ? decodeURIComponent(category) : 'all';
 
   // Filter products for office and home automation
-  const automationProducts = products.filter(product => {
-    const matchesQuery = query
-      ? product.name.toLowerCase().includes(query.toLowerCase()) ||
-        product.shortDescription.toLowerCase().includes(query.toLowerCase()) ||
-        product.longDescription.toLowerCase().includes(query.toLowerCase())
-      : true;
-
-    // Check if product matches the selected category
-    const matchesSelectedCategory = selectedCategory === 'all'
-      ? automationCategories.includes(product.category)
-      : product.category === selectedCategory;
-
-    return matchesQuery && matchesSelectedCategory;
-  });
+  const automationProducts = products.filter(product => 
+    automationCategories.includes(product.category)
+  );
 
   return (
     <div className="relative min-h-screen">
@@ -88,12 +74,10 @@ function OfficeHomeAutomationsPageInner() {
           {/* Content */}
           <div className="relative h-full container mx-auto px-4 md:px-6 flex flex-col justify-center items-center text-center text-white">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-4 animate-fade-up">
-              {selectedCategory === 'all' ? 'Office & Home Automation Solutions' : selectedCategory}
+              Office & Home Automation Solutions
             </h1>
             <p className="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto mb-8 animate-fade-up animation-delay-200">
-              {selectedCategory === 'all' 
-                ? "Smart automation solutions for modern offices and homes. From WiFi systems to conference rooms, we bring intelligent technology to your space."
-                : `Browse our selection of ${selectedCategory.toLowerCase()} products and solutions designed to enhance your automation experience.`}
+              Smart automation solutions for modern offices and homes. From WiFi systems to conference rooms, we bring intelligent technology to your space.
             </p>
             <Button 
               asChild
@@ -220,54 +204,34 @@ function OfficeHomeAutomationsPageInner() {
             </Link>
           </Button>
 
-          {/* Categories Section - Only show when no category is selected */}
-          {selectedCategory === 'all' && (
-            <div className="mb-12">
-              <OfficeAutomationCategories />
-            </div>
-          )}
+          {/* Categories Section */}
+          <div className="mb-12">
+            <OfficeAutomationCategories />
+          </div>
 
           {/* Products Section */}
-          {automationProducts.length > 0 ? (
-            <div className={cn(
-              selectedCategory === 'all' ? "border-t border-border/50 pt-12" : ""
-            )}>
-              <h2 className="text-xl md:text-2xl font-semibold text-foreground mb-6 text-center">
-                {selectedCategory === 'all' ? 'Available Automation Products' : `Available ${selectedCategory} Products`}
-              </h2>
-              <div className="flex flex-wrap justify-center gap-4 md:gap-6">
-                {automationProducts.map((product) => {
-                  const { icon, ...productFieldsForCard } = product;
-                  return (
-                    <div key={productFieldsForCard.id} className="w-full max-w-xs">
-                      <ProductCard 
-                        product={productFieldsForCard} 
-                        isVisible={true} 
-                      />
-                    </div>
-                  );
-                })}
-              </div>
+          <div className="border-t border-border/50 pt-12">
+            <h2 className="text-xl md:text-2xl font-semibold text-foreground mb-6 text-center">
+              Available Automation Products
+            </h2>
+            <div className="flex flex-wrap justify-center gap-4 md:gap-6">
+              {automationProducts.map((product) => {
+                const { icon, ...productFieldsForCard } = product;
+                return (
+                  <div key={productFieldsForCard.id} className="w-full max-w-xs">
+                    <ProductCard 
+                      product={productFieldsForCard} 
+                      isVisible={true} 
+                    />
+                  </div>
+                );
+              })}
             </div>
-          ) : (
-            <div className="text-center py-12 bg-card rounded-lg shadow border mt-12">
-              <p className="text-xl text-muted-foreground mb-2">No products found matching your criteria.</p>
-              <p className="text-sm text-muted-foreground mb-4">Try adjusting your search or filters.</p>
-              <Button variant="link" asChild className="text-primary">
-                <Link href="/solutions/office-home-automations">Clear Filters</Link>
-              </Button>
-            </div>
-          )}
+          </div>
         </div>
       </div>
     </div>
   );
 }
 
-export default function OfficeHomeAutomationsPage() {
-  return (
-    <Suspense>
-      <OfficeHomeAutomationsPageInner />
-    </Suspense>
-  );
-} 
+ 

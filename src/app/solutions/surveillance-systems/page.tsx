@@ -1,23 +1,14 @@
-"use client"
-
-import React, { Suspense } from 'react';
+import React from 'react';
 import { SurveillanceCategories } from "@/components/SurveillanceCategories";
+import { SurveillanceSearch } from "@/components/SurveillanceSearch";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import Link from "next/link";
-import { ArrowLeft, Filter, ArrowRight, Video, CheckCircle, Building2, Settings, Users2, HelpCircle } from "lucide-react";
+import { ArrowLeft, ArrowRight, Video, CheckCircle, Building2, Settings, Users2, HelpCircle } from "lucide-react";
 import { ProductCard } from "@/components/ProductCard";
 import { products } from "@/lib/data";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
-import { useRouter, useSearchParams } from "next/navigation";
+import { Metadata } from 'next';
 
 const surveillanceCategories = [
   "CCTV Cameras",
@@ -35,11 +26,18 @@ const mainCategoryNames = [
   "Command Control Room"
 ];
 
-function SurveillanceSystemsPageInner() {
-  const router = useRouter();
-  const searchParams = useSearchParams();
-  const query = searchParams.get('query') ?? '';
-  const category = searchParams.get('category');
+export const metadata: Metadata = {
+  title: 'Surveillance Systems | GenX Security',
+  description: 'Advanced surveillance solutions including CCTV cameras, voice loggers, and HPC systems for comprehensive security monitoring.',
+};
+
+interface SurveillanceSystemsPageProps {
+  searchParams: { query?: string; category?: string };
+}
+
+export default function SurveillanceSystemsPage({ searchParams }: SurveillanceSystemsPageProps) {
+  const query = searchParams.query ?? '';
+  const category = searchParams.category;
   const selectedCategory = category ? decodeURIComponent(category) : 'all';
 
   // Filter products for surveillance systems
@@ -219,6 +217,9 @@ function SurveillanceSystemsPageInner() {
             </Link>
           </Button>
 
+          {/* Search Component */}
+          <SurveillanceSearch />
+
           {/* Categories Section - Only show when no category is selected */}
           {selectedCategory === 'all' && (
             <div className="mb-12">
@@ -263,11 +264,5 @@ function SurveillanceSystemsPageInner() {
   );
 }
 
-export default function SurveillanceSystemsPage() {
-  return (
-    <Suspense>
-      <SurveillanceSystemsPageInner />
-    </Suspense>
-  );
-}
+
  

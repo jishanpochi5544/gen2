@@ -1,7 +1,8 @@
 
+import CCTVPage from '@/app/solutions/surveillance-systems/cctv-cameras/page';
 import { Alert } from '@/components/ui/alert';
 import type { Product, CaseStudy, Industry, NavItem, MegaMenuCardItem, WhyChooseUsItem, Testimonial, TeamMember, ClientLogo, CoreOfferingItem, FAQItem, SolutionCategory } from '@/types';
-import { ShieldCheck,Wifi, Layers, KeyRound, Network,Lock, Building2,Fingerprint,House, Landmark, Factory, Users, TrendingUp, Award, Video, HardDrive, Route, Mail, Home, Info, Star, ThumbsUp, Lightbulb, Users2, Briefcase, Palette, MessageSquare, Bell, Settings, HelpCircle, Rss, CheckCircle, Grid, ArrowRight, Camera, Eye, Mic, Cpu, Flame, Siren, SignalZero, ScreenShare, AlertTriangle, DoorOpen, Pen, Volume, Server, Phone, AlarmCheck, Monitor } from 'lucide-react';
+import { ShieldCheck,Wifi, Layers, KeyRound, Network,Lock, Building2,Fingerprint,House, Landmark, Factory, Users, TrendingUp, Award, Video, HardDrive, Route, Mail, Home, Info, Star, ThumbsUp, Lightbulb, Users2, Briefcase, Palette, MessageSquare, Bell, Settings, HelpCircle, Rss, CheckCircle, Grid, ArrowRight, Camera, Eye, Mic, Cpu, Flame, Siren, SignalZero, ScreenShare, AlertTriangle, DoorOpen, Pen, Volume, Server, Phone, AlarmCheck, Monitor, Cctv } from 'lucide-react';
 
 export const products: Product[] = [
   // --- CCTV Cameras ---
@@ -93,6 +94,262 @@ export const products: Product[] = [
     ],
     icon: Video,
   },
+  {
+    id: '120',
+    slug: 'cpplus-4ch-dvr-2mp-kit',
+    name: 'CP PLUS 4 Channel DVR Kit with 2MP Color Night Vision Cameras',
+    category: 'CCTV Cameras',
+  
+    shortDescription: 'Complete CP PLUS DVR kit with 2 outdoor 2MP color night vision cameras, built-in audio, and 500GB HDD.',
+    longDescription: 'This CP PLUS 4 Channel DVR kit includes 2 high-quality 2.4MP outdoor cameras with built-in microphones and dual-light color night vision. The DVR supports multiple formats (AHD, HDCVI, HDTVI, CVBS, and IP), offers motion detection recording, and comes with a 500GB hard drive pre-installed. Easily view footage remotely via the iCMOB or gCMOB mobile apps. This kit also includes SMPS, HDMI, BNC, and DC cables for a full setup.',
+  
+    images: [
+      '/Solutions/Surveillance/CCTV/dvr.png',
+
+    ],
+  
+    dataAiHints: [
+      'cp plus 4 channel dvr kit',
+      '2mp outdoor color night vision camera',
+      'cctv setup with built-in audio mic',
+      'motion detection dvr cctv kit',
+      'wired surveillance with mobile viewing'
+    ],
+  
+    specifications: [
+      { key: 'Channels', value: '4' },
+      { key: 'Camera Resolution', value: '2.4MP with Color Night Vision' },
+      { key: 'Built-in Mic', value: 'Yes, Audio over Coaxial' },
+      { key: 'Storage', value: '500GB Hard Drive' },
+      { key: 'Connectivity', value: 'Ethernet, HDMI, VGA, USB (2 Ports)' },
+      { key: 'Night Vision', value: 'IR 30m, Warm Light 20m' },
+      { key: 'Recording Modes', value: 'Motion Detection, Continuous' },
+      { key: 'Video Formats Supported', value: 'HDTVI, AHD, HDCVI, CVBS, IP' },
+      { key: 'Mobile Apps', value: 'iCMOB, gCMOB' },
+      { key: 'Power Supply', value: '4 Channel SMPS Included' },
+      { key: 'Product Dimensions', value: '20 x 20 x 15 cm' },
+      { key: 'Weight', value: '4.5 kg' },
+      { key: 'Included Components', value: 'DVR, 2 Cameras, SMPS, HDD, Cables, BNC, DC, HDMI' },
+      { key: 'Warranty', value: '2 Years on DVR and Cameras, 1 Year on Power Supply and HDD' }
+    ],
+  
+    benefits: [
+      'Complete plug-and-play wired CCTV kit',
+      'Built-in mic for real-time audio recording',
+      'Dual-light night vision provides color clarity in darkness',
+      'Supports mobile viewing from anywhere',
+      'Multi-format compatibility ensures flexible installation'
+    ],
+  
+    icon: Cctv,
+  },  
+  {
+    id: '121',
+    slug: 'honeywell-4ch-5mp-ahd-dvr',
+    name: 'Honeywell 4 Channel 5MP AHD DVR (HA-DVR-5104-L)',
+    category: 'CCTV Cameras',
+  
+    shortDescription: '4 Channel 5MP AHD DVR with H.265 compression, face detection, tripwire, and metal housing.',
+    longDescription: 'Honeywell\'s 4 Channel 5MP AHD DVR (HA-DVR-5104-L) is a high-performance recorder supporting 5MP resolution, H.265 compression, and 4-in-1 video signal input. It features HDMI and VGA outputs, face detection, tripwire and perimeter analytics, and supports live view, playback, backup, and remote access. Ideal for small to medium surveillance installations, with metal housing for durability.',
+  
+    images: [
+      '/Solutions/Surveillance/CCTV/dvr30.png',
+      '/Solutions/Surveillance/CCTV/dvr31.png',
+
+    ],
+  
+    dataAiHints: [
+      'honeywell 5mp 4 channel dvr',
+      'honeywell ha-dvr-5104-l',
+      'face detection dvr',
+      'tripwire perimeter ahd dvr',
+      'metal housing 4ch security recorder'
+    ],
+  
+    specifications: [
+      { key: 'Channels', value: '4' },
+      { key: 'Video Input', value: '4 in 1 (AHD/TVI/CVI/CVBS)' },
+      { key: 'Resolution', value: 'Up to 5MP' },
+      { key: 'Compression', value: 'H.265 / H.264 High Profile' },
+      { key: 'Video Output', value: 'HDMI, VGA (1080P)' },
+      { key: 'Operation Modes', value: 'Pentaplex - Live, Record, Playback, Backup, Remote' },
+      { key: 'VCA Support', value: 'Face Detection, Tripwire, Perimeter Detection' },
+      { key: 'Connectivity', value: 'VGA, HDMI, USB, Remote Access' },
+      { key: 'Storage', value: '1 SATA (Up to 6TB supported)' },
+      { key: 'Color', value: 'Black' },
+      { key: 'Material', value: 'Metal Housing' },
+      { key: 'Dimensions', value: '26 x 23.6 x 4.8 cm' },
+      { key: 'Weight', value: '900g' },
+      { key: 'Included Components', value: 'DVR, Manual, Power Adapter, USB Mouse, HDD Screws & Cable' },
+      { key: 'Mobile & Web Access', value: 'Supports IE browser, CMS, DDNS, DHCP' }
+    ],
+  
+    benefits: [
+      'Supports 5MP high-definition recording',
+      'Advanced H.265 compression saves storage space',
+      'AI features like face detection and tripwire included',
+      'Strong metal housing for durability',
+      'Remote access and CMS compatibility'
+    ],
+  
+    icon: Cctv,
+  },
+  {
+    id: '122',
+    slug: 'tp-link-vigi-nvr1008h',
+    name: 'TP-Link VIGI NVR1008H 8 Channel NVR',
+    category: 'CCTV Cameras',
+  
+    shortDescription: '8-Channel NVR with H.265+ compression, 80 Mbps bandwidth, 10TB storage support, and remote monitoring via VIGI app.',
+    longDescription: 'The TP-Link VIGI NVR1008H is an advanced 8-channel network video recorder designed for 24/7 surveillance. With support for H.265+ video compression, simultaneous 4-camera playback, two-way audio, and up to 10TB of local storage, it delivers smart security and efficient monitoring. Its compatibility with ONVIF ensures easy integration with VIGI and third-party cameras. Ideal for small to medium-sized commercial or residential surveillance setups.',
+  
+    images: [
+      '/Solutions/Surveillance/CCTV/nvr.png',
+      '/Solutions/Surveillance/CCTV/nvr11.png',
+      '/Solutions/Surveillance/CCTV/nvr12.png',
+      '/Solutions/Surveillance/CCTV/nvr13.png',
+      '/Solutions/Surveillance/CCTV/nvr14.png',
+    ],
+  
+    dataAiHints: [
+      'tp-link vigi 8ch nvr',
+      'h.265+ video recorder',
+      'nvr with remote monitoring',
+      'network video recorder with 10tb storage',
+      'vigi nvr1008h with onvif support'
+    ],
+  
+    specifications: [
+      { key: 'Channels', value: '8' },
+      { key: 'Video Compression', value: 'H.265+' },
+      { key: 'Resolution Support', value: 'Up to 8MP' },
+      { key: 'Simultaneous Playback', value: 'Up to 4 channels' },
+      { key: 'Video Access Bandwidth', value: '80 Mbps' },
+      { key: 'Audio', value: 'Two-way audio supported' },
+      { key: 'Storage', value: '1 SATA up to 10TB (approx. 720 days)' },
+      { key: 'Remote Monitoring', value: 'VIGI App (Android/iOS)' },
+      { key: 'Connectivity', value: 'Wired Ethernet' },
+      { key: 'ONVIF Compatibility', value: 'Yes, third-party IPC support' },
+      { key: 'Power Consumption', value: '4.25 Watts' },
+      { key: 'Included Components', value: 'NVR, Power Adapter, Mouse, HDD Screws, Quick Guide' },
+      { key: 'Dimensions', value: '20 x 15 x 15 cm' },
+      { key: 'Weight', value: '10g (net)' }
+    ],
+  
+    benefits: [
+      'Connect and manage up to 8 high-resolution IP cameras',
+      'Supports up to 10TB of continuous local video recording',
+      'H.265+ compression saves bandwidth and storage space',
+      'Two-way audio allows real-time communication remotely',
+      'Access live view and playback from anywhere via VIGI app'
+    ],
+  
+    icon: Cctv,
+  }
+,  
+
+{
+  id: '123',
+  slug: 'cpplus-32ch-dvr-20x-camera',
+  name: 'CP PLUS 32 Channel DVR with 20x 2MP Outdoor Cameras',
+  category: 'CCTV Cameras',
+
+  shortDescription: '32 Channel DVR kit with 2MP outdoor cameras, built-in mics, color night vision, and 4TB storage.',
+  longDescription: 'The CP PLUS 32 Channel DVR Kit is a comprehensive surveillance solution with 20 high-performance 2.4MP outdoor cameras featuring built-in microphones, dual-light color night vision, and up to 30 meters IR range. The DVR supports H.265+ compression, multiple video signal inputs, and mobile connectivity via iCMOB/gCMOB apps. With 4TB HDD storage, 2x 16 Ch SMPS, and support for audio over coaxial cable, it’s ideal for large-scale surveillance across commercial and residential spaces.',
+
+  images: [
+    '/Solutions/Surveillance/CCTV/nvr20.png',
+    '/Solutions/Surveillance/CCTV/nvr21.png',
+    '/Solutions/Surveillance/CCTV/nvr22.png',
+    '/Solutions/Surveillance/CCTV/nvr23.png',
+  ],
+
+  dataAiHints: [
+    'cp plus 32ch dvr with 20 cameras',
+    '2mp color night vision cctv kit',
+    'cctv system with built-in mic',
+    'h.265+ 32 channel surveillance dvr',
+    'cpplus 4tb 32ch security camera system'
+  ],
+
+  specifications: [
+    { key: 'Channels', value: '32' },
+    { key: 'Camera Resolution', value: '2.4MP' },
+    { key: 'Camera Type', value: 'Outdoor, Fixed Lens' },
+    { key: 'Special Features', value: 'Built-in mic, Dual-light color night vision, Motion Detection' },
+    { key: 'IR/Night Vision Range', value: '30m IR, 20m warm light' },
+    { key: 'Audio', value: 'Audio over coaxial cable, built-in mic' },
+    { key: 'DVR Compression', value: 'H.265+' },
+    { key: 'Storage', value: '4TB HDD, 1 SATA (up to 6TB)' },
+    { key: 'Power Supply', value: '2x 16 Channel SMPS' },
+    { key: 'Connectivity', value: 'Ethernet, VGA, HDMI, USB x2' },
+    { key: 'Mobile Access', value: 'iCMOB/gCMOB app' },
+    { key: 'Compatible Inputs', value: 'HDTVI/AHD/CVI/CVBS/IP' },
+    { key: 'Dimensions', value: '30 x 30 x 26 cm' },
+    { key: 'Weight', value: '8kg' }
+  ],
+
+  benefits: [
+    'Supports up to 32 cameras for full property coverage',
+    '20 high-resolution cameras included with built-in mic',
+    'Color night vision ensures visibility even in low light',
+    'Remote access via mobile apps with real-time viewing',
+    'Massive 4TB storage for long-term video retention'
+  ],
+
+  icon: Cctv,
+},
+{
+  id: '124',
+  slug: 'cpplus-4ch-nvr-2in-2out-kit',
+  name: 'CP PLUS 4 Channel NVR with 2x Outdoor & 2x Indoor IP Cameras',
+  category: 'CCTV Cameras',
+
+
+  shortDescription: '4 Channel NVR kit with 2MP IP cameras (2 indoor + 2 outdoor), PoE ports, motion detection, and 1TB storage.',
+  longDescription: 'This CP PLUS 4 Channel Full HD NVR Kit offers complete surveillance coverage with 2x 2MP outdoor and 2x 2MP indoor IP cameras. It includes built-in microphones for audio capture, motion detection, and PoE support for easy installation. The system comes with a 1TB refurbished HDD and supports remote viewing. Ideal for small offices and home surveillance setups, it also includes 100 meters of CAT6 cable and a 4-port PoE for simplified connectivity.',
+
+  images: [
+    '/Solutions/Surveillance/CCTV/nvr30.png',
+    '/Solutions/Surveillance/CCTV/nvr31.png',
+    '/Solutions/Surveillance/CCTV/nvr32.png',
+  ],
+
+  dataAiHints: [
+    'cp plus 4ch ip cctv kit',
+    '2mp poe cctv camera setup',
+    'cctv system with indoor and outdoor cameras',
+    'nvr kit with audio mic and 1tb hdd',
+    'home surveillance cpplus ip camera kit'
+  ],
+
+  specifications: [
+    { key: 'Channels', value: '4' },
+    { key: 'Camera Resolution', value: '2MP' },
+    { key: 'Camera Type', value: '2x Outdoor, 2x Indoor IP Cameras' },
+    { key: 'Special Features', value: 'Built-in mic, Motion Detection, PoE, Night Vision' },
+    { key: 'Night Vision Range', value: '20 meters' },
+    { key: 'Video Resolution', value: '1080p' },
+    { key: 'Storage', value: '1TB HDD (refurbished)' },
+    { key: 'Power Supply', value: '4-Port PoE, Corded Electric' },
+    { key: 'Connectivity', value: 'Ethernet, RJ45, USB x2' },
+    { key: 'Cable', value: '100 meters CAT6 Aluminium Cable' },
+    { key: 'Installation', value: 'Plug-and-play with PoE support' },
+    { key: 'Dimensions', value: '17 x 15 x 18 cm' },
+    { key: 'Weight', value: '5kg' }
+  ],
+
+  benefits: [
+    'Complete indoor-outdoor surveillance in one kit',
+    'Built-in mics enable audio capture over IP',
+    'PoE simplifies cabling and reduces setup time',
+    'Remote access via CP PLUS apps (iCMOB, gCMOB)',
+    'Includes cable, HDD, and accessories for quick deployment'
+  ],
+
+  icon: Cctv,
+},
+
 
   {
     id: '4',
@@ -1828,6 +2085,9 @@ category: 'Fire Hydrant System',
   ],
   icon: DoorOpen
 },
+
+
+
 {
   id: '48',
   slug: 'dorma-automatic-swing-door',
@@ -2410,7 +2670,79 @@ category: 'Fire Hydrant System',
   ],
   icon: Wifi,
 },
+
+
 {
+  id: '126',
+  slug: 'ajax-security-alarm-3d-model',
+  name: 'Ajax Security Alarm 3D Model',
+  category: 'Conference room solutions',
+
+  shortDescription: 'High-detail 3D model of Ajax wireless alarm system with multiple components and realistic metal materials.',
+  longDescription: 'The Ajax Security Alarm 3D Model is a high-fidelity visualization of a modern wireless alarm system. Created in 3ds Max 2013 with Corona renderer support, it features grouped objects with proper pivots and naming conventions. The set includes multiple devices like Hub, ReX, MotionProtect, MotionCam, and sirens. Ideal for security layout visualization, architectural rendering, or product simulations. Glow effects are controlled via self-illumination settings and materials are optimized for realism.',
+
+  images: [
+    '/Solutions/Automation/Conference room solutions/office.png',
+    '/Solutions/Automation/Conference room solutions/office11.png',
+    '/Solutions/Automation/Conference room solutions/office12.png',
+
+
+  ],
+
+  dataAiHints: [
+    'ajax alarm system 3d model',
+    'corona renderer alarm system 3ds max',
+    'modern security system 3d assets',
+    'ajax wireless sensor 3d',
+    'home alarm system 3d visualization'
+  ],
+
+  specifications: [
+    { key: 'Platform', value: '3ds Max 2013 + OBJ' },
+    { key: 'Render Engine', value: 'Corona' },
+    { key: 'File Size', value: '3888 KB' },
+    { key: 'Material', value: 'Metal with self-illumination' },
+    { key: 'Model Type', value: 'Technology – Miscellaneous' },
+    { key: 'Components Included', value: 'Hub, ReX, MotionProtect, MotionCam, DoorProtect, KeyPad, Sirens, and more' },
+    { key: 'Glow Control', value: 'Self-illumination multiplier in CoronaMtl' },
+    { key: 'Mesh Optimizations', value: 'ResetXForm, grouped objects, TurboSmooth ready' },
+    { key: 'Language & Naming', value: 'English / Latin naming convention' },
+    { key: 'Realism Level', value: 'Built from real object references, accurate sizing and proportions' }
+  ],
+
+  benefits: [
+    'Perfect for visualizing smart home security systems',
+    'Detailed and optimized for close-up renders',
+    'Includes full range of Ajax system components',
+    'Easy to modify materials and glow effects',
+    'Ready to use in Corona and compatible software'
+  ],
+
+  icon: AlarmCheck,
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+
+  
   id: '62',
   slug: 'cisco-isr-4331-router',
   name: 'Cisco ISR 4331 Router',
@@ -4285,7 +4617,8 @@ category: 'Fire Hydrant System',
   id: '91',
   slug: 'kynet-net-gun',
   name: 'KyNet Net Gun',
-  category: 'KyNet Net Gun',
+  category: 'Perimeter Security',
+
 
   shortDescription: 'Handheld CO₂-powered net launcher for safe capture and relocation of wild animals.',
   longDescription: 'KyNet is a handheld automatic net gun engineered for the humane capture and relocation of wild animals such as leopards, jackals, wild boars, deer, and more. Designed for forest departments, wildlife rescue teams, and conservationists, KyNet is effective in both urban and rural landscapes. Using a CO₂ propulsion system and a high-strength net, it ensures safe and non-lethal animal control for relocation or rehabilitation efforts. It is especially useful in human-wildlife conflict zones like highways, rail tracks, and forest fringes.',
@@ -4826,389 +5159,7 @@ category: 'Fire Hydrant System',
 
 
 
-
-
-
-
-  // --- DVRs/NVRs ---
-  {
-    id: '2',
-    slug: 'smart-dvr-recorder',
-    name: 'Smart DVR Recorder S16',
-    category: 'DVRs/NVRs',
-    shortDescription: 'Intelligent 16-channel DVR for reliable video recording.',
-    longDescription: 'The Smart DVR Recorder S16 supports up to 16 analog camera inputs, offers extensive storage options, and features smart analytics for efficient incident review. Secure your footage with our dependable recording solution.',
-    images: ['https://placehold.co/600x400.png'],
-    dataAiHints: ['dvr device security'],
-    specifications: [
-      { key: 'Channels', value: '16 Channels' },
-      { key: 'Max Storage', value: '16TB (2x8TB HDD)' },
-      { key: 'Compression', value: 'H.265+' },
-      { key: 'Smart Features', value: 'Motion Detection, Face Recognition (optional)' },
-    ],
-    benefits: ['Long-term video archiving', 'Easy playback and search', 'Scalable storage solutions', 'Integration with existing analog cameras'],
-    icon: HardDrive,
-  },
-  {
-    id: '13',
-    slug: 'compact-dvr-recorder-s8',
-    name: 'Compact DVR Recorder S8',
-    category: 'DVRs/NVRs',
-    shortDescription: 'Space-saving 8-channel DVR for smaller setups.',
-    longDescription: 'The Compact DVR S8 is ideal for small businesses or homes, offering 8 channels, H.265+ compression, and remote viewing capabilities in a small footprint.',
-    images: ['https://placehold.co/600x400.png'],
-    dataAiHints: ['compact dvr security'],
-    specifications: [
-      { key: 'Channels', value: '8 Channels' },
-      { key: 'Max Storage', value: '8TB (1x8TB HDD)' },
-      { key: 'Compression', value: 'H.265+' },
-      { key: 'Mobile App', value: 'Yes' },
-    ],
-    benefits: ['Cost-effective solution for fewer cameras', 'Easy to install and configure', 'Reliable recording performance'],
-    icon: HardDrive,
-  },
-  // ... (other DVR/NVR products) ...
-  {
-    id: '14',
-    slug: 'poe-nvr-solution-n32',
-    name: '32-Channel PoE NVR N32',
-    category: 'DVRs/NVRs',
-    shortDescription: '32-channel NVR with built-in PoE for easy IP camera setup.',
-    longDescription: 'The N32 NVR simplifies IP camera installation with its built-in 16-port PoE switch, supporting up to 32 cameras. Features 4K output and advanced network management.',
-    images: ['https://placehold.co/600x400.png'],
-    dataAiHints: ['poe nvr system'],
-    specifications: [
-      { key: 'Channels', value: '32 IP Cameras' },
-      { key: 'PoE Ports', value: '16 built-in' },
-      { key: 'Max Resolution', value: '8MP (4K)' },
-      { key: 'Bandwidth', value: '256 Mbps' },
-    ],
-    benefits: ['Simplified IP camera installation', 'Reduced cabling complexity', 'High-resolution recording and playback', 'Scalable for growing needs'],
-    icon: Network,
-  },
-  {
-    id: '15',
-    slug: 'hybrid-dvr-nvr-hvr64',
-    name: 'Hybrid DVR/NVR HVR64',
-    category: 'DVRs/NVRs',
-    shortDescription: 'Versatile 64-channel hybrid recorder for analog and IP cameras.',
-    longDescription: 'The HVR64 offers maximum flexibility, supporting a mix of analog and IP cameras up to 64 channels. Ideal for upgrading existing systems or new mixed-technology deployments.',
-    images: ['https://placehold.co/600x400.png'],
-    dataAiHints: ['hybrid dvr nvr'],
-    specifications: [
-      { key: 'Total Channels', value: '64 (Analog + IP)' },
-      { key: 'IP Channels Max', value: '32' },
-      { key: 'Analog Channels Max', value: '64 (with compatible cards)' },
-      { key: 'Supported Tech', value: 'TVI, AHD, CVI, CVBS, IP' },
-    ],
-    benefits: ['Supports legacy and modern cameras', 'Phased upgrade path', 'Centralized management for mixed systems', 'Cost-effective for large installations'],
-    icon: HardDrive,
-  },
-  {
-    id: '3',
-    slug: 'enterprise-nvr-solution',
-    name: 'Enterprise NVR E128',
-    category: 'DVRs/NVRs',
-    shortDescription: 'High-performance NVR for up to 128 IP cameras.',
-    longDescription: 'Our Enterprise NVR E128 is designed for demanding environments, supporting up to 128 IP cameras with robust performance, advanced management features, and seamless scalability. Features RAID support for data redundancy.',
-    images: ['https://placehold.co/600x400.png', 'https://placehold.co/600x400.png'],
-    dataAiHints: ['network video recorder', 'server rack security'],
-    specifications: [
-      { key: 'Channels', value: 'Up to 128 IP Cameras' },
-      { key: 'Throughput', value: '512 Mbps' },
-      { key: 'RAID Support', value: 'RAID 0/1/5/6/10' },
-      { key: 'Remote Access', value: 'Web, Mobile, CMS' },
-    ],
-    benefits: ['Centralized IP camera management', 'High reliability and redundancy', 'Advanced video analytics capabilities', 'Suitable for large facilities'],
-    icon: Network,
-  },
-  {
-    id: 'dvr-advanced-32',
-    slug: 'dvr-advanced-32',
-    name: 'Advanced 32-Channel DVR ProSeries',
-    category: 'DVRs/NVRs',
-    shortDescription: 'High-capacity 32-channel DVR with advanced analytics.',
-    longDescription: 'The ProSeries 32-channel DVR offers robust recording for larger analog setups, featuring H.265+ compression, 4K HDMI output, and intelligent video analytics like line crossing and intrusion detection.',
-    images: ['https://placehold.co/600x400.png'],
-    dataAiHints: ['32 channel dvr'],
-    specifications: [
-      { key: 'Channels', value: '32 Analog Channels' },
-      { key: 'Max Storage', value: '32TB (4x8TB HDD)' },
-      { key: 'Video Output', value: 'HDMI (4K), VGA' },
-      { key: 'Analytics', value: 'Line Crossing, Intrusion Detection' },
-    ],
-    benefits: ['Supports a large number of analog cameras', 'High-efficiency video compression', 'Smart event detection and alerts', 'Reliable long-term storage'],
-    icon: HardDrive,
-  },
-  {
-    id: 'nvr-ultra-64',
-    slug: 'nvr-ultra-64',
-    name: 'Ultra Series 64-Channel NVR',
-    category: 'DVRs/NVRs',
-    shortDescription: 'High-performance 64-channel NVR for extensive IP surveillance.',
-    longDescription: 'The Ultra Series NVR handles up to 64 IP cameras, supporting resolutions up to 12MP. It offers massive storage capacity with multiple HDD bays and advanced network features for enterprise-level deployments.',
-    images: ['https://placehold.co/600x400.png'],
-    dataAiHints: ['64 channel nvr'],
-    specifications: [
-      { key: 'IP Channels', value: '64 Channels' },
-      { key: 'Max Resolution Support', value: '12MP per camera' },
-      { key: 'HDD Bays', value: '8 SATA Bays (up to 10TB each)' },
-      { key: 'Network Bandwidth', value: '320 Mbps incoming' },
-    ],
-    benefits: ['Ideal for large-scale IP camera systems', 'Ultra-high-definition recording', 'Extensive storage options', 'Advanced network and camera management'],
-    icon: Network,
-  },
-
-  // --- Access Control ---
-  {
-    id: '4',
-    slug: 'secure-access-control',
-    name: 'Secure Access Control Pro',
-    category: 'Access Control',
-    shortDescription: 'Comprehensive access control with biometric and card readers.',
-    longDescription: 'Implement robust security with our Secure Access Control Pro system. Manage entry permissions for over 10,000 users, track access logs, and integrate with other security systems for a complete solution. Options include card readers, biometric scanners, and keypads.',
-    images: ['https://placehold.co/600x400.png'],
-    dataAiHints: ['access control panel'],
-    specifications: [
-      { key: 'User Capacity', value: '10,000+' },
-      { key: 'Reader Types', value: 'RFID, Biometric, Keypad' },
-      { key: 'Integration', value: 'CCTV, Alarm Systems' },
-      { key: 'Software', value: 'Centralized Management Platform' },
-    ],
-    benefits: ['Control who enters your premises', 'Detailed audit trails', 'Time-based access rules', 'Enhanced employee and asset safety'],
-    icon: KeyRound,
-  },
-  // ... (other Access Control products) ...
-  {
-    id: '16',
-    slug: 'standalone-fingerprint-reader-bio1',
-    name: 'BioAccess Fingerprint Reader Bio1',
-    category: 'Access Control',
-    shortDescription: 'Standalone fingerprint reader for single door access.',
-    longDescription: 'The Bio1 is a simple and effective standalone fingerprint reader, ideal for securing individual offices or sensitive areas. Stores up to 500 fingerprints.',
-    images: ['https://placehold.co/600x400.png'],
-    dataAiHints: ['fingerprint access reader'],
-    specifications: [
-      { key: 'User Capacity', value: '500 Fingerprints' },
-      { key: 'Verification', value: 'Fingerprint, PIN' },
-      { key: 'Relay Output', value: 'Yes, for door lock' },
-      { key: 'Power', value: '12V DC' },
-    ],
-    benefits: ['Keyless entry', 'High security with biometrics', 'Easy to enroll users', 'Cost-effective for single doors'],
-    icon: KeyRound,
-  },
-  {
-    id: '17',
-    slug: 'rfid-card-reader-cr100',
-    name: 'RFID Card Reader CR100',
-    category: 'Access Control',
-    shortDescription: 'Durable weatherproof RFID card reader.',
-    longDescription: 'The CR100 is a robust RFID card reader suitable for indoor and outdoor use. Supports standard proximity cards and fobs, providing reliable access control.',
-    images: ['https://placehold.co/600x400.png'],
-    dataAiHints: ['rfid card reader'],
-    specifications: [
-      { key: 'Card Type', value: 'EM Proximity (125KHz)' },
-      { key: 'Read Range', value: 'Up to 10cm' },
-      { key: 'Output', value: 'Wiegand 26/34 bit' },
-      { key: 'Protection', value: 'IP65 Weatherproof' },
-    ],
-    benefits: ['Reliable card-based access', 'Durable for outdoor installation', 'Compatible with most control panels'],
-    icon: KeyRound,
-  },
-  {
-    id: '18',
-    slug: 'network-access-controller-acp4',
-    name: '4-Door Network Access Controller ACP4',
-    category: 'Access Control',
-    shortDescription: 'Networked controller for managing up to 4 doors.',
-    longDescription: 'The ACP4 is a networkable access control panel that can manage up to 4 doors (8 readers). Features advanced access rules, event logging, and integration capabilities via TCP/IP.',
-    images: ['https://placehold.co/600x400.png'],
-    dataAiHints: ['access control board'],
-    specifications: [
-      { key: 'Doors Supported', value: '4 Doors (In/Out)' },
-      { key: 'Reader Inputs', value: '8 Wiegand' },
-      { key: 'User Capacity', value: '30,000 Cards' },
-      { key: 'Event Log', value: '100,000 Events' },
-    ],
-    benefits: ['Centralized management of multiple doors', 'Scalable for larger systems', 'Advanced access control features', 'Network connectivity for remote management'],
-    icon: KeyRound,
-  },
-  {
-    id: '19',
-    slug: 'elevator-access-control-ec10',
-    name: 'Elevator Access Control EC10',
-    category: 'Access Control',
-    shortDescription: 'Controller for secure elevator floor access.',
-    longDescription: 'The EC10 system provides restricted access to elevator floors, ensuring only authorized personnel can access specific levels. Integrates with standard elevator systems.',
-    images: ['https://placehold.co/600x400.png'],
-    dataAiHints: ['elevator control panel'],
-    specifications: [
-      { key: 'Floors Supported', value: 'Up to 10 (expandable)' },
-      { key: 'Card Capacity', value: '20,000' },
-      { key: 'Communication', value: 'RS485, TCP/IP' },
-      { key: 'Integration', value: 'With main access control system' },
-    ],
-    benefits: ['Enhanced building security by controlling floor access', 'Time-based floor permissions', 'Audit trail of elevator usage'],
-    icon: KeyRound,
-  },
-  {
-    id: 'ac-keypad-reader-kp200',
-    slug: 'ac-keypad-reader-kp200',
-    name: 'Weatherproof Keypad Reader KP200',
-    category: 'Access Control',
-    shortDescription: 'Durable keypad reader with card and PIN access options.',
-    longDescription: 'The KP200 is a rugged, weatherproof keypad reader that supports multiple authentication modes: Card only, PIN only, or Card + PIN for enhanced security. Suitable for outdoor installations.',
-    images: ['https://placehold.co/600x400.png'],
-    dataAiHints: ['access control keypad'],
-    specifications: [
-      { key: 'Modes', value: 'Card, PIN, Card+PIN' },
-      { key: 'Keypad', value: 'Backlit, 12-key' },
-      { key: 'Weatherproof', value: 'IP67 rated' },
-      { key: 'Card Type', value: 'Mifare/EM optional' },
-    ],
-    benefits: ['Flexible authentication methods', 'Suitable for harsh environments', 'Backlit keypad for night use', 'Increased security with dual authentication'],
-    icon: KeyRound,
-  },
-  {
-    id: 'ac-two-door-controller-acp2',
-    slug: 'ac-two-door-controller-acp2',
-    name: 'Compact 2-Door Access Controller ACP2',
-    category: 'Access Control',
-    shortDescription: 'Small-form-factor controller for two doors.',
-    longDescription: 'The ACP2 is a compact yet powerful access control panel designed for managing up to two doors. Ideal for small offices or specific zones within a larger building. Supports standard Wiegand readers.',
-    images: ['https://placehold.co/600x400.png'],
-    dataAiHints: ['small access controller'],
-    specifications: [
-      { key: 'Doors Supported', value: '2 Doors (In/Out or In only)' },
-      { key: 'Reader Inputs', value: '4 Wiegand' },
-      { key: 'User Capacity', value: '10,000 Cards' },
-      { key: 'Communication', value: 'TCP/IP, RS485' },
-    ],
-    benefits: ['Cost-effective for small installations', 'Easy to mount in tight spaces', 'Full access control features for two doors', 'Networkable for central management'],
-    icon: KeyRound,
-  },
-
-  // --- Voice Logger ---
-  
-
-
-  // --- Fire & Emergency System ---
-  
-
-  // --- Intruder Detection System ---
-  {
-    id: 'ids001',
-    slug: 'motion-sensor-pro-msp500',
-    name: 'Motion Sensor Pro MSP500',
-    category: 'Intruder Detection System',
-    shortDescription: 'Advanced PIR motion sensor with pet immunity.',
-    longDescription: 'The MSP500 offers reliable intrusion detection using passive infrared technology. Features pet immunity to reduce false alarms and adjustable sensitivity.',
-    images: ['https://placehold.co/600x400.png'],
-    dataAiHints: ['motion sensor security'],
-    specifications: [
-      { key: 'Detection Range', value: 'Up to 15 meters' },
-      { key: 'Pet Immunity', value: 'Up to 25kg' },
-      { key: 'Connectivity', value: 'Wired/Wireless options' },
-      { key: 'Coverage Angle', value: '90 degrees' },
-    ],
-    benefits: ['Accurate intruder detection', 'Reduced false alarms', 'Wide coverage area', 'Easy integration with alarm panels'],
-    icon: Siren,
-  },
-  {
-    id: 'ids002',
-    slug: 'glass-break-detector-gbd10',
-    name: 'Acoustic Glass Break Detector GBD10',
-    category: 'Intruder Detection System',
-    shortDescription: 'Detects the sound of breaking glass for perimeter security.',
-    longDescription: 'The GBD10 uses advanced acoustic analysis to detect the specific sound frequencies of breaking glass, providing an early warning of forced entry through windows or glass doors.',
-    images: ['https://placehold.co/600x400.png'],
-    dataAiHints: ['glass break sensor'],
-    specifications: [
-      { key: 'Detection Radius', value: 'Up to 8 meters' },
-      { key: 'Sensor Type', value: 'Dual-frequency acoustic' },
-      { key: 'Compatibility', value: 'Most alarm systems' },
-      { key: 'Power', value: '12V DC' },
-    ],
-    benefits: ['Early detection of break-ins', 'Protects vulnerable glass perimeters', 'High immunity to false alarms', 'Discreet design'],
-    icon: Siren,
-  },
-
-  // --- Networking Jammers ---
-  {
-    id: 'nj001',
-    slug: 'signal-disruptor-x1',
-    name: 'Signal Disruptor X1 (Gov/Mil Use)',
-    category: 'Networking Jammers',
-    shortDescription: 'Multi-band signal jammer for restricted environments.',
-    longDescription: 'The Signal Disruptor X1 is designed for authorized government or military use to block various communication frequencies in sensitive areas. (Note: Use of jammers is highly regulated).',
-    images: ['https://placehold.co/600x400.png'],
-    dataAiHints: ['signal jammer device'],
-    specifications: [
-      { key: 'Frequency Bands', value: 'Cellular, WiFi, GPS (configurable)' },
-      { key: 'Range', value: 'Up to 50 meters (variable)' },
-      { key: 'Power', value: 'AC/DC options' },
-      { key: 'Use Case', value: 'Restricted for official use only' },
-    ],
-    benefits: ['Prevents unauthorized communications', 'Secures sensitive locations', 'Customizable frequency blocking'],
-    icon: SignalZero,
-  },
-   {
-    id: 'nj002',
-    slug: 'drone-defense-jammer-ddj500',
-    name: 'Drone Defense Jammer DDJ500',
-    category: 'Networking Jammers',
-    shortDescription: 'Anti-drone jammer for protecting airspaces.',
-    longDescription: 'The DDJ500 is a specialized jammer designed to disrupt drone control signals, preventing unauthorized drone activity over restricted areas. (Subject to legal restrictions).',
-    images: ['https://placehold.co/600x400.png'],
-    dataAiHints: ['anti drone technology'],
-    specifications: [
-      { key: 'Target Frequencies', value: 'Common drone control bands (2.4GHz, 5.8GHz, GPS)' },
-      { key: 'Effective Range', value: 'Up to 1km' },
-      { key: 'Deployment', value: 'Fixed or portable' },
-      { key: 'Operation', value: 'Directional antenna system' },
-    ],
-    benefits: ['Protects against unauthorized drone surveillance', 'Secures sensitive airspace', 'Prevents drone-based threats'],
-    icon: SignalZero,
-  },
-
-  // --- Command Control Room ---
-  {
-    id: 'ccr001',
-    slug: 'central-monitoring-console-cmc3000',
-    name: 'Central Monitoring Console CMC3000',
-    category: 'Command Control Room',
-    shortDescription: 'Integrated console for managing multiple security systems.',
-    longDescription: 'The CMC3000 provides a unified interface for security operators to monitor CCTV, access control, alarms, and other systems from a central command point. Supports video walls and GIS mapping.',
-    images: ['https://placehold.co/600x400.png'],
-    dataAiHints: ['security control room'],
-    specifications: [
-      { key: 'System Integration', value: 'CCTV, Access, Alarms, PA' },
-      { key: 'Display Support', value: 'Multiple Monitors, Video Wall' },
-      { key: 'Mapping', value: 'GIS Integration, Interactive Maps' },
-      { key: 'Workflow', value: 'Incident Management, SOPs' },
-    ],
-    benefits: ['Situational awareness for operators', 'Efficient incident response', 'Centralized system management', 'Customizable dashboards'],
-    icon: ScreenShare,
-  },
-   {
-    id: 'ccr002',
-    slug: 'video-wall-processor-vwp8x8',
-    name: 'Video Wall Processor VWP-8x8',
-    category: 'Command Control Room',
-    shortDescription: 'High-performance processor for large video walls.',
-    longDescription: 'The VWP-8x8 drives complex video wall configurations, allowing flexible display of numerous video feeds and data sources for command and control centers.',
-    images: ['https://placehold.co/600x400.png'],
-    dataAiHints: ['video wall display'],
-    specifications: [
-      { key: 'Inputs/Outputs', value: 'Configurable (e.g., 8x8, 16x16 HDMI/IP)' },
-      { key: 'Layouts', value: 'Customizable, dynamic layouts' },
-      { key: 'Control', value: 'Software-based, Crestron/AMX integration' },
-      { key: 'Resolution', value: 'Up to 4K per display' },
-    ],
-    benefits: ['Manages large, complex video displays', 'Flexible content arrangement', 'High-resolution visual information', 'Reliable 24/7 operation'],
-    icon: ScreenShare,
-  },
-];
+]; 
 
 export const coreOfferings: CoreOfferingItem[] = [
   {

@@ -15,14 +15,6 @@ const intruderDetectionSubCategories = [
     dataAiHint: "perimeter security category"
   },
   {
-    id: 'intrusion-alarms',
-    title: "Intrusion Alarms",
-    description: "High-sensitivity intrusion alarm systems with motion detection, glass break sensors, and instant alert capabilities.",
-    slug: "intrusion-alarms",
-    icon: Bell,
-    dataAiHint: "intrusion alarms category"
-  },
-  {
     id: 'smart-sensors',
     title: "Smart Sensors",
     description: "Intelligent sensor systems including motion detectors, vibration sensors, and beam sensors for precise detection.",
@@ -37,14 +29,6 @@ const intruderDetectionSubCategories = [
     slug: "aniders",
     icon: Target,
     dataAiHint: "aniders category"
-  },
-  {
-    id: 'kynet-net-gun',
-    title: "KyNet Net Gun",
-    description: "Advanced non-lethal security systems with net deployment technology for safe intruder apprehension.",
-    slug: "kynet-net-gun",
-    icon: Plane,
-    dataAiHint: "kynet net gun category"
   },
   {
     id: 'smart-stick-drone',

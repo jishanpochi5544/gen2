@@ -11,10 +11,8 @@ import { Metadata } from 'next';
 
 const intruderDetectionCategories = [
   "Perimeter Security",
-  "Intrusion Alarms",
   "Smart Sensors",
   "ANIDERS",
-  "KyNet Net Gun",
   "Smart Stick & Drone"
 ];
 

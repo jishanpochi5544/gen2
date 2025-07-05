@@ -1,6 +1,5 @@
 import React from 'react';
 import { SurveillanceCategories } from "@/components/SurveillanceCategories";
-import { SurveillanceSearch } from "@/components/SurveillanceSearch";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight, Video, CheckCircle, Building2, Settings, Users2, HelpCircle } from "lucide-react";
@@ -41,20 +40,9 @@ export default function SurveillanceSystemsPage({ searchParams }: SurveillanceSy
   const selectedCategory = category ? decodeURIComponent(category) : 'all';
 
   // Filter products for surveillance systems
-  const surveillanceProducts = products.filter(product => {
-    const matchesQuery = query
-      ? product.name.toLowerCase().includes(query.toLowerCase()) ||
-        product.shortDescription.toLowerCase().includes(query.toLowerCase()) ||
-        product.longDescription.toLowerCase().includes(query.toLowerCase())
-      : true;
-
-    // Check if product matches the selected category
-    const matchesSelectedCategory = selectedCategory === 'all'
-      ? surveillanceCategories.includes(product.category)
-      : product.category === selectedCategory;
-
-    return matchesQuery && matchesSelectedCategory;
-  });
+  const surveillanceProducts = products.filter(product => 
+    surveillanceCategories.includes(product.category)
+  );
 
   return (
     <div className="relative min-h-screen">
@@ -217,15 +205,10 @@ export default function SurveillanceSystemsPage({ searchParams }: SurveillanceSy
             </Link>
           </Button>
 
-          {/* Search Component */}
-          <SurveillanceSearch />
-
-          {/* Categories Section - Only show when no category is selected */}
-          {selectedCategory === 'all' && (
-            <div className="mb-12">
-              <SurveillanceCategories />
-            </div>
-          )}
+          {/* Categories Section */}
+          <div className="mb-12">
+            <SurveillanceCategories />
+          </div>
 
           {/* Products Section */}
           {surveillanceProducts.length > 0 ? (

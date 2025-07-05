@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from 'react';
-import { useRouter, useSearchParams } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Filter } from "lucide-react";
@@ -21,9 +21,8 @@ const surveillanceCategories = [
 
 export function SurveillanceSearch() {
   const router = useRouter();
-  const searchParams = useSearchParams();
-  const [query, setQuery] = useState(searchParams.get('query') ?? '');
-  const [category, setCategory] = useState(searchParams.get('category') ?? '');
+  const [query, setQuery] = useState('');
+  const [category, setCategory] = useState('');
 
   const handleSearch = () => {
     const params = new URLSearchParams();

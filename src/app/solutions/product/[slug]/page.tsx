@@ -10,11 +10,11 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { ProductGallery } from '@/components/ProductGallery';
 
 interface ProductPageProps {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
 
 export async function generateMetadata({ params }: ProductPageProps): Promise<Metadata> {
-  const slug = await params.slug;
+  const { slug } = await params;
   const product = getProductBySlug(slug);
   if (!product) {
     return {
@@ -88,7 +88,7 @@ function getBackHrefAndLabel(categoryName: string): { href: string, label: strin
 }
 
 export default async function ProductPage({ params }: ProductPageProps) {
-  const slug = await params.slug;
+  const { slug } = await params;
   const product = getProductBySlug(slug);
 
   if (!product) {

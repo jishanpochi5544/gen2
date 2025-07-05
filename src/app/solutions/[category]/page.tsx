@@ -7,7 +7,7 @@ import { ProductCard } from "@/components/ProductCard";
 import { products, solutionCategoriesData } from "@/lib/data";
 
 interface SolutionsCategoryPageProps {
-  params: { category: string };
+  params: Promise<{ category: string }>;
 }
 
 function slugToName(slug: string) {
@@ -17,7 +17,7 @@ function slugToName(slug: string) {
 }
 
 export async function generateMetadata({ params }: SolutionsCategoryPageProps): Promise<Metadata> {
-  const category = await params.category;
+  const { category } = await params;
   const categoryName = slugToName(category);
   const categoryObj = solutionCategoriesData.find(cat => cat.name.toLowerCase() === categoryName.toLowerCase());
   if (!categoryObj) {
@@ -44,7 +44,7 @@ export async function generateStaticParams() {
 }
 
 export default async function SolutionsCategoryPage({ params }: SolutionsCategoryPageProps) {
-  const category = await params.category;
+  const { category } = await params;
   const categoryObj = solutionCategoriesData.find(cat => cat.slug === category);
 
   if (!categoryObj) {

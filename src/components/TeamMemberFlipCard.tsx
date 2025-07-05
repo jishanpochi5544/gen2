@@ -23,9 +23,8 @@ export function TeamMemberFlipCard({ member }: TeamMemberFlipCardProps) {
             <Image
               src={member.image}
               alt={member.name}
-              layout="fill"
-              objectFit="cover"
-              className="transition-transform duration-300 group-hover:scale-105"
+              fill
+              className="transition-transform duration-300 group-hover:scale-105 object-cover"
               data-ai-hint={member.dataAiHint || 'team member photo'}
             />
           </div>

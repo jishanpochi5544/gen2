@@ -34,8 +34,8 @@ export default function SuccessStoriesPage() {
                     <Image
                       src={study.image}
                       alt={study.title}
-                      layout="fill"
-                      objectFit="cover"
+                      fill
+                      className="object-cover"
                       data-ai-hint={study.dataAiHint || 'business security case study'}
                     />
                   </div>

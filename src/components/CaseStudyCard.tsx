@@ -24,9 +24,8 @@ export function CaseStudyCard({ caseStudy, isFeatured = false }: CaseStudyCardPr
           <Image
             src={caseStudy.image}
             alt={caseStudy.title}
-            layout="fill"
-            objectFit="cover"
-            className="transition-transform duration-500 ease-in-out group-hover:scale-105"
+            fill
+            className="transition-transform duration-500 ease-in-out group-hover:scale-105 object-cover"
             data-ai-hint={caseStudy.dataAiHint || 'business success security'}
           />
         </div>

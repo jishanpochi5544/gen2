@@ -21,7 +21,7 @@ export default function AboutPage() {
                 src="/about-us/about-us-hero.png" 
                 alt="GenX Secure Team or Abstract Background"
                 fill
-                objectFit="cover"
+                className="object-cover"
                 priority
                 data-ai-hint="company values"
             />
@@ -78,9 +78,8 @@ export default function AboutPage() {
                     <Image
                       src={member.image}
                       alt={member.name}
-                      layout="fill"
-                      objectFit="cover"
-                      className="rounded-full"
+                      fill
+                      className="rounded-full object-cover"
                       data-ai-hint={member.dataAiHint || 'team member photo'}
                     />
                   </div>

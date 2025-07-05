@@ -130,14 +130,13 @@ export function HeroSection() {
             key={`bg-${image.src}`}
             src={image.src}
             alt={image.alt}
-            layout="fill"
-            objectFit="cover"
-            priority={index === 0}
+            fill
             className={cn(
-              "absolute inset-0 transition-opacity ease-in-out",
+              "absolute inset-0 transition-opacity ease-in-out object-cover",
               FADE_DURATION,
               image.src === currentMainBgImage.src ? 'opacity-15' : 'opacity-0'
             )}
+            priority={index === 0}
             data-ai-hint={image.dataAiHint}
           />
         ))}

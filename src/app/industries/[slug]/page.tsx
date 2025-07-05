@@ -10,11 +10,12 @@ import { ProductCard } from '@/components/ProductCard';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 
 interface IndustryPageProps {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
 
 export async function generateMetadata({ params }: IndustryPageProps): Promise<Metadata> {
-  const industry = getIndustryBySlug(params.slug);
+  const { slug } = await params;
+  const industry = getIndustryBySlug(slug);
   if (!industry) {
     return {
       title: 'Industry Not Found',
@@ -56,7 +57,8 @@ const getRelevantProducts = (industryName: string): Product[] => {
 };
 
 export default async function IndustryPage({ params }: IndustryPageProps) {
-  const industry = getIndustryBySlug(params.slug);
+  const { slug } = await params;
+  const industry = getIndustryBySlug(slug);
 
   if (!industry) {
     notFound();

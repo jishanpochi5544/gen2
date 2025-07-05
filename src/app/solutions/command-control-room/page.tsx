@@ -199,11 +199,20 @@ export default function CommandControlRoomPage({ searchParams }: CommandControlR
 
 
           {/* Products Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-            {productsToDisplay.map((product) => (
-              <ProductCard key={product.id} product={product} />
-            ))}
-          </div>
+          {productsToDisplay.length > 0 ? (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+              {productsToDisplay.map((product) => {
+                const { icon, ...productFieldsForCard } = product;
+                return (
+                  <ProductCard key={product.id} product={productFieldsForCard} />
+                );
+              })}
+            </div>
+          ) : (
+            <div className="text-center py-12 bg-card rounded-lg shadow border">
+              <p className="text-lg text-muted-foreground">No products found for this category.</p>
+            </div>
+          )}
         </div>
       </div>
     </div>

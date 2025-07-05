@@ -1,5 +1,4 @@
 "use client";
-import { useRouter, useSearchParams } from "next/navigation";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Button } from "@/components/ui/button";
@@ -13,6 +12,8 @@ interface SolutionsFilterProps {
   subCategories: string[];
   allCategories: string[];
   themeColor: string;
+  setQuery: (value: string) => void;
+  setSelectedCategory: (value: string) => void;
 }
 
 export function SolutionsFilter({
@@ -22,9 +23,9 @@ export function SolutionsFilter({
   subCategories,
   allCategories,
   themeColor,
+  setQuery,
+  setSelectedCategory,
 }: SolutionsFilterProps) {
-  const router = useRouter();
-  const searchParams = useSearchParams();
   const formRef = useRef<HTMLFormElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
   const categoryRef = useRef<HTMLSelectElement>(null);
@@ -38,20 +39,20 @@ export function SolutionsFilter({
   // Handler for form submit
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    const params = new URLSearchParams(searchParams.toString());
-    const q = searchValue || "";
-    const cat = categoryRef.current?.value || "all";
-    if (q) {
-      params.set("query", q);
+    const params = new URLSearchParams();
+    const qValue = searchValue || "";
+    const catValue = categoryRef.current?.value || "all";
+    if (qValue) {
+      params.set("query", qValue);
     } else {
       params.delete("query");
     }
-    if (cat && cat !== "all") {
-      params.set("category", cat);
+    if (catValue && catValue !== "all") {
+      params.set("category", catValue);
     } else {
       params.delete("category");
     }
-    router.push(`/solutions?${params.toString()}`);
+    window.location.href = `/solutions?${params.toString()}`;
   }
 
   return (
@@ -72,7 +73,10 @@ export function SolutionsFilter({
               name="query"
               placeholder="Search products..."
               value={searchValue}
-              onChange={e => setSearchValue(e.target.value)}
+              onChange={e => {
+                setSearchValue(e.target.value);
+                setQuery(e.target.value);
+              }}
               className="w-full"
             />
           </div>
@@ -108,20 +112,21 @@ export function SolutionsFilter({
                   return;
                 }
                 // For all other categories, update query params on /solutions
-                const params = new URLSearchParams(searchParams.toString());
+                const params = new URLSearchParams();
                 if (value && value !== "all") {
                   params.set("category", value);
                 } else {
                   params.delete("category");
                 }
                 // Use the controlled search value
-                const q = searchValue || "";
-                if (q) {
-                  params.set("query", q);
+                const qValue = searchValue || "";
+                if (qValue) {
+                  params.set("query", qValue);
                 } else {
                   params.delete("query");
                 }
-                router.push(`/solutions?${params.toString()}`);
+                window.location.href = `/solutions?${params.toString()}`;
+                setSelectedCategory(value);
               }}
             >
               <SelectTrigger className="w-full">

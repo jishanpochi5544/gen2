@@ -5216,7 +5216,7 @@ export const coreOfferings: CoreOfferingItem[] = [
     dataAiHint: 'cctv surveillance animation',
     title: 'Surveillance Systems',
     description: 'High-definition CCTV, NVRs, and DVRs for comprehensive monitoring of your premises, day and night, ensuring maximum visibility and security.',
-    link: '/solutions?category=Surveillance%20Systems',
+    link: '/solutions/surveillance-systems/',
     linkText: 'Explore Cameras',
   },
   {
@@ -5224,7 +5224,7 @@ export const coreOfferings: CoreOfferingItem[] = [
     dataAiHint: 'access control lock animation',
     title: 'Access Control',
     description: 'Secure and manage entry to your facilities with advanced card readers, biometric scanners, and integrated systems for robust protection.',
-    link: '/solutions?category=Access%20Control',
+    link: '/solutions/access-control/',
     linkText: 'Manage Access',
   },
  
@@ -5233,7 +5233,7 @@ export const coreOfferings: CoreOfferingItem[] = [
     dataAiHint: 'fire safety animation',
     title: 'Fire Safety',
     description: 'Advanced fire alarm, detection, and suppression systems to protect lives and property from fire hazards in any environment.',
-    link: '/solutions?category=Fire%20%26%20Emergency%20System',
+    link: '/solutions/fire-safety/',
     linkText: 'View Fire Safety',
   },
   {
@@ -5241,7 +5241,7 @@ export const coreOfferings: CoreOfferingItem[] = [
     dataAiHint: 'office automation animation',
     title: 'Office & Home Automation',
     description: 'Smart automation for lighting, climate, and devices, enhancing comfort, efficiency, and security in offices and homes.',
-    link: '/solutions?category=Office%20%26%20Home%20Automations',
+    link: '/solutions/office-home-automations/',
     linkText: 'See Automation',
   },
   {
@@ -5249,7 +5249,7 @@ export const coreOfferings: CoreOfferingItem[] = [
     dataAiHint: 'intruder detection animation',
     title: 'Intruder Detection System',
     description: 'Intrusion alarms, smart sensors, and perimeter security to detect and deter unauthorized access before it becomes a threat.',
-    link: '/solutions?category=Intruder%20Detection%20System',
+    link: '/solutions/intruder-detection-system/',
     linkText: 'Explore Intruder Detection',
   },
   {
@@ -5257,7 +5257,7 @@ export const coreOfferings: CoreOfferingItem[] = [
     dataAiHint: 'command control room animation',
     title: 'Command Control Room',
     description: 'Centralized monitoring and management with AI-powered analytics for real-time decision-making and incident response.',
-    link: '/solutions?category=Command%20Control%20Room',
+    link: '/solutions/command-control-room/',
     linkText: 'View Command Center',
   },
 ];
@@ -5522,10 +5522,10 @@ export const solutionCategoriesData: SolutionCategory[] = [
 
 
 export const footerSolutionsLinks = [
-  { href: '/solutions?category=Surveillance%20Systems', label: 'Surveillance Systems' },
-  { href: '/solutions?category=Access%20Control', label: 'Access Control' },
-  { href: '/solutions?category=Fire%20%26%20Emergency%20System', label: 'Fire & Emergency' },
-  { href: '/solutions?category=Intruder%20Detection%20System', label: 'Intruder Detection' },
+  { href: '/solutions/surveillance-systems/', label: 'Surveillance Systems' },
+  { href: '/solutions/access-control/', label: 'Access Control' },
+  { href: '/solutions/fire-safety/', label: 'Fire & Emergency' },
+  { href: '/solutions/intruder-detection-system/', label: 'Intruder Detection' },
 ];
 
 export const footerCompanyLinks = [

@@ -1,4 +1,5 @@
-import React, { Suspense } from 'react';
+"use client";
+import React, { useState, Suspense } from 'react';
 import { ProductCard } from '@/components/ProductCard';
 import { products, solutionCategoriesData } from '@/lib/data';
 import type { Metadata } from 'next';
@@ -32,23 +33,9 @@ const mainCategoryNames = [
   "Command Control Room"
 ];
 
-export const metadata: Metadata = {
-  title: 'Our Security Solutions',
-  description: 'Explore a wide range of security solutions including CCTV cameras, DVRs, NVRs, access control systems, fire safety, intruder detection, and more from GenX Secure.',
-};
-
-export const dynamic = "force-dynamic";
-
-async function SolutionsPageInner({ searchParams }: { searchParams?: any }) {
-  let params = searchParams;
-  if (typeof searchParams === 'function') {
-    params = await searchParams();
-  } else if (searchParams && typeof searchParams.then === 'function') {
-    params = await searchParams;
-  }
-  const query = params?.query ?? '';
-  const category = params?.category ?? '';
-  const selectedCategoryForFilter = category !== '' ? decodeURIComponent(category) : 'all';
+export default function SolutionsPage() {
+  const [query, setQuery] = useState('');
+  const [selectedCategoryForFilter, setSelectedCategoryForFilter] = useState('all');
 
   const surveillanceSubCategoryNames = ["CCTV Cameras", "Voice Logger", "HPC"];
   const fireSafetySubCategoryNames = ["Fire Extinguisher", "Fire Hydrant System", "Fire Alarm System", "Fire Suppression System"];
@@ -283,6 +270,8 @@ async function SolutionsPageInner({ searchParams }: { searchParams?: any }) {
           subCategories={[]}
           allCategories={mainCategoryNames}
           themeColor="bg-cyan-600 hover:bg-cyan-700"
+          setQuery={setQuery}
+          setSelectedCategory={setSelectedCategoryForFilter}
         />
         </Suspense>
         {/* Surveillance Systems Hero Banner */}
@@ -870,13 +859,5 @@ async function SolutionsPageInner({ searchParams }: { searchParams?: any }) {
         )}
       </div>
     </div>
-  );
-}
-
-export default function SolutionsPage(props: { searchParams?: any }) {
-  return (
-    <Suspense>
-      <SolutionsPageInner {...props} />
-    </Suspense>
   );
 }

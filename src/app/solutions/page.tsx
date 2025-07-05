@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, Suspense } from 'react';
+import React, { useState, Suspense, useEffect } from 'react';
 import { ProductCard } from '@/components/ProductCard';
 import { products, solutionCategoriesData } from '@/lib/data';
 import type { Metadata } from 'next';
@@ -7,7 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Search, Filter, Camera, Building2, CheckCircle, Settings, Users2, HelpCircle, AlertTriangle, Bell, Lock, Rss, Shield, ArrowRight, Radio, Radar, Target, Plane, Flame, ArrowLeft, Wifi, Presentation, Speaker } from "lucide-react";
 import Link from 'next/link';
-import { redirect } from 'next/navigation';
+import { redirect, useSearchParams } from 'next/navigation';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
@@ -34,8 +34,17 @@ const mainCategoryNames = [
 ];
 
 export default function SolutionsPage() {
+  const searchParams = useSearchParams();
   const [query, setQuery] = useState('');
   const [selectedCategoryForFilter, setSelectedCategoryForFilter] = useState('all');
+
+  // Read query parameter from URL on component mount
+  useEffect(() => {
+    const urlQuery = searchParams.get('query');
+    if (urlQuery) {
+      setQuery(urlQuery);
+    }
+  }, [searchParams]);
 
   const surveillanceSubCategoryNames = ["CCTV Cameras", "Voice Logger", "HPC"];
   const fireSafetySubCategoryNames = ["Fire Extinguisher", "Fire Hydrant System", "Fire Alarm System", "Fire Suppression System"];

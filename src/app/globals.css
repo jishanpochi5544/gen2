@@ -154,3 +154,11 @@ body {
     flex-grow: 1;
   }
 }
+
+/* Solution card gradient hover effect */
+.solution-gradient-hover {
+  transition: background 0.5s;
+}
+.solution-gradient-hover:hover {
+  background: linear-gradient(120deg, #fbc2eb 0%, #fff 50%, #a6c1ee 100%) !important;
+}

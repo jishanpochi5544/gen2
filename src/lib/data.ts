@@ -5451,19 +5451,23 @@ export const faqItems: FAQItem[] = [
 ];
 
 export const solutionCategoriesData: SolutionCategory[] = [
-  { id: 'cat_surveillance', name: 'Surveillance Systems', description: 'Comprehensive monitoring technologies including CCTV, Voice Loggers, and HPC for analytics.', icon: Video, dataAiHint: 'surveillance system overview' },
-  { id: 'cat_fire_emergency', name: 'Fire & Emergency System', description: 'Advanced systems for early fire detection, alerts, and emergency communication.', icon: Flame, dataAiHint: 'fire alarm system' },
-  { id: 'cat_access_control', name: 'Access Control', description: 'Manage and control entry with biometric scanners, card readers, and robust controllers.', icon: KeyRound, dataAiHint: 'access control security' },
-  { id: 'cat_intruder_detection', name: 'Intruder Detection System', description: 'Reliable sensors and alarms to detect and deter unauthorized access attempts.', icon: Siren, dataAiHint: 'intruder alarm system' },
+  { id: 'cat_surveillance', name: 'Surveillance Systems', description: 'Comprehensive monitoring technologies including CCTV, Voice Loggers, and HPC for analytics.', icon: Video, dataAiHint: 'surveillance system overview',slug: 'surveillance-systems' },
+  { id: 'cat_fire_emergency', name: 'Fire & Emergency System', description: 'Advanced systems for early fire detection, alerts, and emergency communication.', icon: Flame, dataAiHint: 'fire alarm system' ,slug: 'fire-safety'},
+  { id: 'cat_access_control', name: 'Access Control', description: 'Manage and control entry with biometric scanners, card readers, and robust controllers.', icon: KeyRound, dataAiHint: 'access control security' ,
+    slug: 'access-control'},
+  { id: 'cat_intruder_detection', name: 'Intruder Detection System', description: 'Reliable sensors and alarms to detect and deter unauthorized access attempts.', icon: Siren, dataAiHint: 'intruder alarm system',
+    slug: 'intruder-detection-system' },
   {
     id: 'cat_office_automation',
     name: 'Office & Home Automations',
     description: 'Smart automation solutions for offices and homes, including WiFi, conference room, and PA systems.',
     icon: Wifi, // or another relevant icon
-    dataAiHint: 'office home automation'
+    dataAiHint: 'office home automation',
+    slug: 'office-home-automations'
   },
   
-  { id: 'cat_command_control', name: 'Command Control Room', description: 'Integrated solutions for central monitoring, incident management, and operational command.', icon: ScreenShare, dataAiHint: 'control room console' },
+  { id: 'cat_command_control', name: 'Command Control Room', description: 'Integrated solutions for central monitoring, incident management, and operational command.', icon: ScreenShare, dataAiHint: 'control room console',
+    slug: 'command-control-room' },
   // Sub-categories for direct linking if needed, or just rely on product category filtering
   { id: 'cat_cctv', name: 'CCTV Cameras', description: 'Explore a wide range of high-definition cameras for comprehensive indoor and outdoor surveillance.', icon: Camera, dataAiHint: 'cctv camera stack' },
   { id: 'cat_dvr_nvr', name: 'DVRs/NVRs', description: 'Secure your footage with our reliable Digital and Network Video Recorders, offering extensive storage and smart features.', icon: HardDrive, dataAiHint: 'dvr nvr devices' },

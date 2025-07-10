@@ -248,20 +248,26 @@ function SolutionsPageContent() {
   }
 
   return (
-    <div className="relative min-h-screen">
-      {/* Conditionally apply the gradient background */}
+    <div className="relative min-h-screen overflow-hidden">
+      {/* Only the custom background image for All Solutions View, no overlay or gradient */}
+      {isAllCategoriesView && !query && (
+        <img
+          src="/Solutions/sol_page/back0.jpg"
+          alt="Solutions Background"
+          className="fixed inset-0 w-full h-full object-cover object-center z-0"
+          style={{ minHeight: '100vh', minWidth: '100vw' }}
+        />
+      )}
+      {/* Existing conditional backgrounds for other views remain unchanged */}
       {selectedCategoryForFilter === "Intruder Detection System" && !query ? (
         <div className="fixed inset-0 bg-gradient-to-b from-[#FFF2EB] to-[#F2F2F2] z-0" />
       ) : selectedCategoryForFilter === "Command Control Room" && !query ? (
         <div className="fixed inset-0 bg-gradient-to-b from-[#578FCA] to-[#F2F2F2] z-0" />
       ) : (isAccessControlView || isSurveillanceSystemView) ? (
         <div className="fixed inset-0 bg-gradient-to-b from-[#EAE4D5] to-[#F2F2F2] z-0" />
-      ) : (
-        <div className="absolute inset-0 bg-gradient-to-b from-background to-secondary/30 z-0" />
-      )}
-
+      ) : null}
       {/* Main content container */}
-      <div className="relative z-10">
+      <div className="relative z-20">
         <div className="text-center mb-8">
           <h1 className="text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-cyan-600 via-blue-500 to-purple-500 bg-clip-text text-transparent mb-3 drop-shadow-lg">
             All Solutions
@@ -271,7 +277,15 @@ function SolutionsPageContent() {
             Browse and filter all our security solutions by category or keyword.
           </p>
         </div>
-        <Suspense fallback={<div>Loading filters...</div>}>
+        <Suspense fallback={
+          <div className="min-h-screen flex items-center justify-center bg-white/80">
+            <div className="flex flex-col items-center">
+              {/* Gradient spinner */}
+              <div className="animate-spin rounded-full h-24 w-24 border-t-4 border-b-4 border-[conic-gradient(from_180deg_at_50%_50%,_#fbc2eb_0%,_#fff_50%,_#a6c1ee_100%)] border-solid mb-6" style={{ borderLeftColor: '#fbc2eb', borderRightColor: '#a6c1ee', borderTopColor: '#fff', borderBottomColor: '#fff' }} />
+              <p className="text-xl font-semibold text-blue-500">Loading solutions...</p>
+            </div>
+          </div>
+        }>
         <SolutionsFilter
           query={query}
           selectedCategory={selectedCategoryForFilter}
@@ -813,8 +827,8 @@ function SolutionsPageContent() {
                     key={category.id}
                     category={category}
                     href={
-                      category.name === 'Surveillance Systems' ? '/solutions/surveillance-systems' :
-                      category.name === 'Intruder Detection System' ? '/solutions/intruder-detection-system' :
+                      category.name === 'Surveillance Systems' ? '/solutions/surveillance-systems/' :
+                      category.name === 'Intruder Detection System' ? '/solutions/intruder-detection-system/' :
                       category.name === 'Command Control Room' ? '/solutions/command-control-room' :
                       category.name === 'Fire & Emergency System' ? '/solutions/fire-safety' :
                       category.name === 'Office & Home Automations' ? '/solutions/office-home-automations' :
@@ -874,10 +888,11 @@ function SolutionsPageContent() {
 export default function SolutionsPage() {
   return (
     <Suspense fallback={
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-primary mx-auto mb-4"></div>
-          <p className="text-lg text-muted-foreground">Loading solutions...</p>
+      <div className="min-h-screen flex items-center justify-center bg-white/80">
+        <div className="flex flex-col items-center">
+          {/* Gradient spinner */}
+          <div className="animate-spin rounded-full h-24 w-24 border-t-4 border-b-4 border-[conic-gradient(from_180deg_at_50%_50%,_#fbc2eb_0%,_#fff_50%,_#a6c1ee_100%)] border-solid mb-6" style={{ borderLeftColor: '#fbc2eb', borderRightColor: '#a6c1ee', borderTopColor: '#fff', borderBottomColor: '#fff' }} />
+          <p className="text-xl font-semibold text-blue-500">Loading solutions...</p>
         </div>
       </div>
     }>

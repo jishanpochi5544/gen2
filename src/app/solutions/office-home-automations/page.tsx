@@ -103,12 +103,14 @@ export default function OfficeHomeAutomationsPage({ searchParams }: OfficeHomeAu
                 <div className="w-24 h-1 bg-gradient-to-r from-cyan-500 to-cyan-400 mx-auto rounded-full"></div>
               </div>
               <div className="prose prose-lg max-w-none">
-                <p className="text-xl text-gray-700 mb-12 text-center font-light leading-relaxed">
+                {/* Desktop long description only */}
+                <p className="text-xl text-gray-700 mb-12 text-center font-light leading-relaxed hidden md:block">
                   Our comprehensive office and home automation solutions are designed to enhance productivity, 
                   comfort, and efficiency. From smart WiFi systems to advanced conference room setups and 
                   public address systems, we provide cutting-edge automation technology that transforms 
                   your space into a connected, intelligent environment.
                 </p>
+              </div>
                 <div className="grid md:grid-cols-2 gap-10 mt-12">
                   <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-8 shadow-lg transform hover:scale-105 transition-transform duration-300">
                     <h3 className="text-2xl font-bold mb-6 text-cyan-600 font-heading flex items-center">
@@ -188,7 +190,6 @@ export default function OfficeHomeAutomationsPage({ searchParams }: OfficeHomeAu
                     <div className="flex items-center space-x-3 text-cyan-700">
                       <HelpCircle className="h-5 w-5" />
                       <span className="font-semibold">Technical Support</span>
-                    </div>
                   </div>
                 </div>
               </div>
@@ -214,7 +215,7 @@ export default function OfficeHomeAutomationsPage({ searchParams }: OfficeHomeAu
             <h2 className="text-xl md:text-2xl font-semibold text-foreground mb-6 text-center">
               Available Automation Products
             </h2>
-            <div className="flex flex-wrap justify-center gap-4 md:gap-6">
+            <div className="grid grid-cols-2 md:flex md:flex-wrap justify-center gap-4 md:gap-6">
               {automationProducts.map((product) => {
                 const { icon, ...productFieldsForCard } = product;
                 return (

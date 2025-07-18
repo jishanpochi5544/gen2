@@ -123,27 +123,22 @@ export function HeroSection() {
       "relative bg-background py-16 md:py-24 lg:py-32 overflow-hidden transition-all duration-[2000ms] ease-out",
       mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
     )}>
-      {/* Background Image Slideshow Container */}
-      <div className="absolute inset-0 z-0">
-        {mainHeroBackgroundImages.map((image, index) => (
-          <Image
-            key={`bg-${image.src}`}
-            src={image.src}
-            alt={image.alt}
-            fill
-            className={cn(
-              "absolute inset-0 transition-opacity ease-in-out object-cover",
-              FADE_DURATION,
-              image.src === currentMainBgImage.src ? 'opacity-15' : 'opacity-0'
-            )}
-            priority={index === 0}
-            data-ai-hint={image.dataAiHint}
-          />
-        ))}
+      {/* Background Video Container */}
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        <video
+          src="/videos/backvid.mov"
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        {/* Semi-transparent white overlay for brightness */}
+        <div className="absolute inset-0 bg-white/70 z-10 pointer-events-none" />
       </div>
       
       {/* Gradient Overlay */}
-      <div className="absolute inset-0 z-10 bg-gradient-to-b from-[#9EC6F3]/40 via-[#9EC6F3]/20 to-[#F2F2F2]/10"></div>
+      <div className="absolute inset-0 z-20 bg-gradient-to-b from-[#9EC6F3]/40 via-[#9EC6F3]/20 to-[#F2F2F2]/10"></div>
 
       {/* Main content container with entrance animation. */}
       <div className={cn(
@@ -162,13 +157,19 @@ export function HeroSection() {
             Discover Excellence in <span className="text-primary">{typewriterText || '\u00A0'}</span>
             <span className="border-r-2 border-primary ml-1 animate-pulse" style={{height: '1em', display: 'inline-block', verticalAlign: 'middle'}}></span>
           </h1>
+          {/* Mobile short description */}
           <p className={cn(
-            "mt-4 text-base md:text-lg lg:text-xl font-serif text-muted-foreground w-full mx-auto leading-relaxed text-left hero-description-animate",
+            "mt-4 text-base font-serif text-muted-foreground w-full mx-auto leading-relaxed text-left block md:hidden hero-description-animate",
             showDescription ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           )}>
-            At Gen X Secure, we specialize in delivering tailored, cutting-edge solutions for modern security and automation needs. Our expertise spans a wide range of domains, including access control, surveillance, fire safety, and intelligent automation—each designed to protect, empower, and streamline your environment. <br className="hidden md:block" />
-            With a commitment to innovation and reliability, we ensure every client receives not just technology, but a partnership built on trust, support, and a deep understanding of your unique requirements. Experience the future of security and automation, crafted for your peace of mind and operational excellence. <br className="hidden md:block" />
-            From initial consultation to ongoing support, our dedicated team works closely with you to design, implement, and maintain solutions that evolve with your needs. We leverage the latest advancements in technology to deliver seamless integration, intuitive control, and robust protection—so you can focus on what matters most, knowing your assets and people are secure. Join the growing community of businesses and homeowners who trust Gen-X Secure to deliver excellence, every step of the way.
+            GenX Secure is dedicated to protecting what matters most to you, whether at home or in your business. We offer a full range of advanced security and automation solutions, including surveillance systems, access control, fire safety, and smart automation. Our expert team works closely with you to design systems that fit seamlessly into your daily life, providing both safety and convenience. With a focus on trust, innovation, and personalized support, we help you create environments where people and ideas can thrive. Discover a new standard of security—one that adapts, evolves, and grows with you.
+          </p>
+          {/* Desktop/Tablet long description */}
+          <p className={cn(
+            "mt-4 text-base md:text-lg lg:text-xl font-serif text-muted-foreground w-full mx-auto leading-relaxed text-left hidden md:block hero-description-animate",
+            showDescription ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+          )}>
+            Welcome to GenX Secure, where your safety and success are our highest priorities. We are passionate about empowering individuals and organizations with advanced security and automation solutions that go beyond technology—they deliver trust, simplicity, and lasting value. Our expert team works closely with you to understand your unique challenges, designing systems that seamlessly integrate into your daily life or business operations. From intelligent surveillance and access control to fire safety and smart automation, we offer a comprehensive suite of services backed by years of experience and a relentless commitment to innovation. At every step, you can count on personalized support, transparent communication, and a partnership built on integrity. Join the growing community of clients who rely on GenX Secure to protect what matters most, enhance efficiency, and create environments where people and ideas can thrive. Discover a new standard of security—one that adapts, evolves, and grows with you.
           </p>
           <div className={cn(
             "flex flex-col sm:flex-row gap-4 justify-start mt-10 w-full hero-buttons-animate",

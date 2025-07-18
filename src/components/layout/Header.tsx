@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { ShieldCheck, Menu, X, ChevronDown, LucideIcon, Video, HardDrive, KeyRound, ListChecks, Info, Layers, Palette, Mail as MailIconSvg, ArrowUpRight, Grid, Camera, Award, Building2, Settings, ArrowRight, House, Mic, Cpu, Flame, Siren, SignalZero, ScreenShare, Search } from 'lucide-react';
 import { SparkleButton } from '@/components/ui/SparkleButton';
 import { Button } from '@/components/ui/button';
-import { Sheet, SheetContent, SheetTrigger, SheetClose, SheetTitle } from '@/components/ui/sheet';
+import { Sheet, SheetContent, SheetTrigger, SheetClose, SheetTitle, SheetHeader } from '@/components/ui/sheet';
 import { navItems } from '@/lib/data';
 import type { NavItem, MegaMenuCardItem } from '@/types';
 import { usePathname, useRouter } from 'next/navigation';
@@ -400,6 +400,9 @@ export function Header() {
               </Button>
             </SheetTrigger>
             <SheetContent side="left" className="w-[90vw] max-w-sm p-0">
+              <SheetHeader>
+                <SheetTitle className="sr-only">Main Navigation</SheetTitle>
+              </SheetHeader>
               <div className="p-4 border-b flex items-center justify-between">
                 <Link href="/" className="flex items-center" onClick={() => setIsMobileMenuOpen(false)}>
                   <Image src="/genx-logo.png" alt="GenX Secure Logo" width={180} height={36} className="object-contain" />
@@ -426,7 +429,7 @@ export function Header() {
                   />
                 </div>
               </form>
-              <div className="flex flex-col space-y-5 flex-grow">
+              <div className="flex flex-col space-y-5 flex-grow pl-6">
                 {navItems.map((item) => (
                   <NavLink
                     key={item.href}

@@ -5,9 +5,11 @@ import Link from "next/link";
 import { ArrowLeft, ArrowRight, Video, CheckCircle, Building2, Settings, Users2, HelpCircle } from "lucide-react";
 import { ProductCard } from "@/components/ProductCard";
 import { products } from "@/lib/data";
+import { partnerLogos } from "@/lib/data2";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { Metadata } from 'next';
+import { CCTVPartnersCarousel } from '@/components/PartnersCarousel';
 
 const surveillanceCategories = [
   "CCTV Cameras",
@@ -43,6 +45,9 @@ export default function SurveillanceSystemsPage({ searchParams }: SurveillanceSy
   const surveillanceProducts = products.filter(product => 
     surveillanceCategories.includes(product.category)
   );
+
+  // Filter CCTV partner logos
+  const cctvPartners = partnerLogos.filter(partner => partner.category === 'CCTV');
 
   return (
     <div className="relative min-h-screen">
@@ -95,7 +100,7 @@ export default function SurveillanceSystemsPage({ searchParams }: SurveillanceSy
         </div>
 
         {/* Surveillance Systems Description Section */}
-        <section className="relative py-20 bg-gradient-to-b from-white/90 to-white/70 backdrop-blur-sm">
+        <section className="relative py-20 bg-gradient-to-b from-white/90 to-white/70 backdrop-blur-sm hidden md:block">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-12">
@@ -197,6 +202,23 @@ export default function SurveillanceSystemsPage({ searchParams }: SurveillanceSy
           </div>
         </section>
 
+        {/* CCTV Partner Logos Section */}
+        <section className="py-16 bg-gradient-to-br from-slate-100 via-blue-50 to-indigo-50">
+          <div className="container mx-auto px-4 md:px-6">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-cyan-600 via-blue-500 to-purple-500 bg-clip-text text-transparent mb-3 drop-shadow-lg">
+                Trusted CCTV Partners
+              </h2>
+              <div className="w-24 h-1 mx-auto bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 rounded-full mb-4"></div>
+              <p className="mt-4 text-lg text-foreground font-semibold max-w-2xl mx-auto">
+                We partner with leading manufacturers to provide you with the highest quality CCTV surveillance equipment.
+              </p>
+            </div>
+            {/* CCTV Partners Carousel */}
+            <CCTVPartnersCarousel />
+          </div>
+        </section>
+
         <div className="container mx-auto px-4 md:px-6 py-12">
           <Button variant="outline" asChild className="mb-8 group hover:bg-primary/10 hover:border-primary">
             <Link href="/solutions">
@@ -218,7 +240,7 @@ export default function SurveillanceSystemsPage({ searchParams }: SurveillanceSy
               <h2 className="text-xl md:text-2xl font-semibold text-foreground mb-6 text-center">
                 {selectedCategory === 'all' ? 'Available Surveillance Products' : `Available ${selectedCategory} Products`}
               </h2>
-              <div className="flex flex-wrap justify-center gap-4 md:gap-6">
+              <div className="grid grid-cols-2 md:flex md:flex-wrap justify-center gap-4 md:gap-6">
                 {surveillanceProducts.map((product) => {
                   const { icon, ...productFieldsForCard } = product;
                   return (

@@ -67,3 +67,199 @@ export const PartnersCarousel = () => {
     </section>
   );
 }; 
+
+export const CCTVPartnersCarousel = () => {
+  const partnersRef = useRef<HTMLDivElement>(null);
+  const isPartnersVisible = useIntersectionObserver(partnersRef, { threshold: 0.1, triggerOnce: true });
+  const cctvPartners = partnerLogos.filter((partner) => partner.category === 'CCTV');
+
+  return (
+    <section ref={partnersRef} className="py-0 bg-transparent">
+      {cctvPartners.length > 0 ? (
+        <div 
+          className="group w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]"
+        >
+          <ul className="flex items-center justify-center animate-infinite-scroll-reverse-slow group-hover:pause gap-10">
+            {cctvPartners.map((partner, index) => (
+              <li key={`${partner.id}-${index}`} className="shrink-0">
+                <div className="relative w-32 h-32 md:w-36 md:h-36 rounded-full bg-card shadow-md border flex items-center justify-center p-2 transition-transform duration-300 ease-out hover:scale-110 hover:shadow-lg">
+                  <Image
+                    src={partner.logoUrl}
+                    alt={partner.name}
+                    width={120}
+                    height={120}
+                    className="object-contain filter grayscale transition-all duration-300 ease-out hover:filter-none"
+                    data-ai-hint={partner.dataAiHint || 'CCTV partner logo'}
+                  />
+                </div>
+              </li>
+            ))}
+            {cctvPartners.map((partner, index) => (
+              <li key={`${partner.id}-clone-${index}`} className="shrink-0" aria-hidden="true">
+                <div className="relative w-32 h-32 md:w-36 md:h-36 rounded-full bg-card shadow-md border flex items-center justify-center p-2 transition-transform duration-300 ease-out hover:scale-110 hover:shadow-lg">
+                  <Image
+                    src={partner.logoUrl}
+                    alt={partner.name}
+                    width={120}
+                    height={120}
+                    className="object-contain filter grayscale transition-all duration-300 ease-out hover:filter-none"
+                    data-ai-hint={partner.dataAiHint || 'CCTV partner logo'}
+                  />
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ) : (
+        <p className="text-center text-muted-foreground">CCTV partner logos will be displayed here soon.</p>
+      )}
+    </section>
+  );
+}; 
+
+export const AccessControlPartnersCarousel = () => {
+  const partnersRef = useRef<HTMLDivElement>(null);
+  const isPartnersVisible = useIntersectionObserver(partnersRef, { threshold: 0.1, triggerOnce: true });
+  const accessControlPartners = partnerLogos.filter((partner) => partner.category === 'Access Control');
+
+  return (
+    <section ref={partnersRef} className="py-0 bg-transparent">
+      {accessControlPartners.length > 0 ? (
+        <div 
+          className="group w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]"
+        >
+          <ul className="flex items-center justify-center animate-infinite-scroll-reverse-fast group-hover:pause gap-10">
+            {accessControlPartners.map((partner, index) => (
+              <li key={`${partner.id}-${index}`} className="shrink-0">
+                <div className="relative w-32 h-32 md:w-36 md:h-36 rounded-full bg-card shadow-md border flex items-center justify-center p-2 transition-transform duration-300 ease-out hover:scale-110 hover:shadow-lg">
+                  <Image
+                    src={partner.logoUrl}
+                    alt={partner.name}
+                    width={120}
+                    height={120}
+                    className="object-contain filter grayscale transition-all duration-300 ease-out hover:filter-none"
+                    data-ai-hint={partner.dataAiHint || 'Access Control partner logo'}
+                  />
+                </div>
+              </li>
+            ))}
+            {accessControlPartners.map((partner, index) => (
+              <li key={`${partner.id}-clone-${index}`} className="shrink-0" aria-hidden="true">
+                <div className="relative w-32 h-32 md:w-36 md:h-36 rounded-full bg-card shadow-md border flex items-center justify-center p-2 transition-transform duration-300 ease-out hover:scale-110 hover:shadow-lg">
+                  <Image
+                    src={partner.logoUrl}
+                    alt={partner.name}
+                    width={120}
+                    height={120}
+                    className="object-contain filter grayscale transition-all duration-300 ease-out hover:filter-none"
+                    data-ai-hint={partner.dataAiHint || 'Access Control partner logo'}
+                  />
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ) : (
+        <p className="text-center text-muted-foreground">Access Control partner logos will be displayed here soon.</p>
+      )}
+    </section>
+  );
+}; 
+
+export const OfficeAutomationPartnersCarousel = () => {
+  const partnersRef = useRef<HTMLDivElement>(null);
+  const isPartnersVisible = useIntersectionObserver(partnersRef, { threshold: 0.1, triggerOnce: true });
+  const networkingPartners = partnerLogos.filter((partner) => partner.category === 'Networking');
+
+  return (
+    <section ref={partnersRef} className="py-0 bg-transparent">
+      {networkingPartners.length > 0 ? (
+        <div 
+          className="group w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]"
+        >
+          <ul className="flex items-center justify-center animate-infinite-scroll-reverse-fast group-hover:pause gap-10">
+            {networkingPartners.map((partner, index) => (
+              <li key={`${partner.id}-${index}`} className="shrink-0">
+                <div className="relative w-32 h-32 md:w-36 md:h-36 rounded-full bg-card shadow-md border flex items-center justify-center p-2 transition-transform duration-300 ease-out hover:scale-110 hover:shadow-lg">
+                  <Image
+                    src={partner.logoUrl}
+                    alt={partner.name}
+                    width={120}
+                    height={120}
+                    className="object-contain filter grayscale transition-all duration-300 ease-out hover:filter-none"
+                    data-ai-hint={partner.dataAiHint || 'Networking partner logo'}
+                  />
+                </div>
+              </li>
+            ))}
+            {networkingPartners.map((partner, index) => (
+              <li key={`${partner.id}-clone-${index}`} className="shrink-0" aria-hidden="true">
+                <div className="relative w-32 h-32 md:w-36 md:h-36 rounded-full bg-card shadow-md border flex items-center justify-center p-2 transition-transform duration-300 ease-out hover:scale-110 hover:shadow-lg">
+                  <Image
+                    src={partner.logoUrl}
+                    alt={partner.name}
+                    width={120}
+                    height={120}
+                    className="object-contain filter grayscale transition-all duration-300 ease-out hover:filter-none"
+                    data-ai-hint={partner.dataAiHint || 'Networking partner logo'}
+                  />
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ) : (
+        <p className="text-center text-muted-foreground">Networking partner logos will be displayed here soon.</p>
+      )}
+    </section>
+  );
+}; 
+
+export const CommandControlRoomPartnersCarousel = () => {
+  const partnersRef = useRef<HTMLDivElement>(null);
+  const isPartnersVisible = useIntersectionObserver(partnersRef, { threshold: 0.1, triggerOnce: true });
+  const controlRoomPartners = partnerLogos.filter((partner) => partner.category === 'Control-Room');
+
+  return (
+    <section ref={partnersRef} className="py-0 bg-transparent">
+      {controlRoomPartners.length > 0 ? (
+        <div 
+          className="group w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]"
+        >
+          <ul className="flex items-center justify-center animate-infinite-scroll-reverse-fast group-hover:pause gap-10">
+            {controlRoomPartners.map((partner, index) => (
+              <li key={`${partner.id}-${index}`} className="shrink-0">
+                <div className="relative w-32 h-32 md:w-36 md:h-36 rounded-full bg-card shadow-md border flex items-center justify-center p-2 transition-transform duration-300 ease-out hover:scale-110 hover:shadow-lg">
+                  <Image
+                    src={partner.logoUrl}
+                    alt={partner.name}
+                    width={120}
+                    height={120}
+                    className="object-contain filter grayscale transition-all duration-300 ease-out hover:filter-none"
+                    data-ai-hint={partner.dataAiHint || 'Control Room partner logo'}
+                  />
+                </div>
+              </li>
+            ))}
+            {controlRoomPartners.map((partner, index) => (
+              <li key={`${partner.id}-clone-${index}`} className="shrink-0" aria-hidden="true">
+                <div className="relative w-32 h-32 md:w-36 md:h-36 rounded-full bg-card shadow-md border flex items-center justify-center p-2 transition-transform duration-300 ease-out hover:scale-110 hover:shadow-lg">
+                  <Image
+                    src={partner.logoUrl}
+                    alt={partner.name}
+                    width={120}
+                    height={120}
+                    className="object-contain filter grayscale transition-all duration-300 ease-out hover:filter-none"
+                    data-ai-hint={partner.dataAiHint || 'Control Room partner logo'}
+                  />
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ) : (
+        <p className="text-center text-muted-foreground">Control Room partner logos will be displayed here soon.</p>
+      )}
+    </section>
+  );
+}; 

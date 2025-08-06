@@ -53,7 +53,7 @@ export default function PASystemPage() {
               <h2 className="text-2xl md:text-3xl font-semibold text-foreground mb-8 text-center">
                 Available {category.title} Products
               </h2>
-              <div className="flex flex-wrap justify-center gap-4 md:gap-6">
+              <div className="grid grid-cols-2 md:flex md:flex-wrap justify-center gap-4 md:gap-6">
                 {categoryProducts.map((product) => {
                   const { icon, ...productFieldsForCard } = product;
                   return (

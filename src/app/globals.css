@@ -29,6 +29,10 @@
     animation: infinite-scroll 50s linear infinite;
   }
 
+  .animate-infinite-scroll-reverse-fast {
+    animation: infinite-scroll-reverse 15s linear infinite;
+  }
+
   .pause {
     animation-play-state: paused;
   }

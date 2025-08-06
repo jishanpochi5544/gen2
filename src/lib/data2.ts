@@ -74,7 +74,7 @@ export const partnerLogos: ClientLogo[] = [
     category: 'CCTV'
   },
   {
-    id: 'partner-10',
+    id: 'partner-33',
     name: ' eSSL',
     logoUrl: '/images/Partners/essl.png',
     dataAiHint: 'eSSL logo',
@@ -82,12 +82,21 @@ export const partnerLogos: ClientLogo[] = [
     category: 'CCTV'
   },
   {
+    id: 'partner-10',
+    name: ' eSSL',
+    logoUrl: '/images/Partners/essl.png',
+    dataAiHint: 'eSSL logo',
+    description: 'A description for Partner Ten.',
+    category: 'Access Control'
+  },
+  {
     id: 'partner-11',
     name: ' Biomax',
     logoUrl: '/images/Partners/biomax.png',
     dataAiHint: 'Biomax logo',
     description: 'A description for Partner Eleven.',
-    category: 'CCTV'
+    category: 'Access Control'
+
   },
   {
     id: 'partner-13',
@@ -95,7 +104,16 @@ export const partnerLogos: ClientLogo[] = [
     logoUrl: '/images/Partners/realtime2.png',
     dataAiHint: 'Realtime logo',
     description: 'A description for Partner Thirteen.',
-    category: 'CCTV'
+    category: 'Access Control'
+
+  },
+  {
+    id: 'partner-35',
+    name: ' Matrix',
+    logoUrl: '/images/Partners/matrix.png',
+    dataAiHint: 'Matrix logo',
+    description: 'A description for Partner Two.',
+    category: 'Access Control'
   },
   {
     id: 'partner-14',
@@ -103,7 +121,8 @@ export const partnerLogos: ClientLogo[] = [
     logoUrl: '/images/Partners/mantra.png',
     dataAiHint: 'Mantra logo',
     description: 'A description for Partner Fourteen.',
-    category: 'CCTV'
+    category: 'Access Control'
+
   },
   {
     id: 'partner-15',
@@ -155,6 +174,42 @@ export const partnerLogos: ClientLogo[] = [
     category: 'Networking'
   },
   {
+    id: 'partner-22',
+    name: ' Elixir',
+    logoUrl: '/images/Partners/elixir.png',
+    dataAiHint: 'Elixir logo',
+    description: 'A description for Partner Twenty-Two.',
+    category: 'Networking'
+  },
+  {
+    id: 'partner-23',
+    name: ' Valrack',
+    logoUrl: '/images/Partners/valrack.png',
+    dataAiHint: 'Valrack logo',
+    description: 'A description for Partner Twenty-Three.',
+    category: 'Networking'
+  },
+  {
+    id: 'partner-24',
+    name: ' Legrand',
+    logoUrl: '/images/Partners/legrand.png',
+    dataAiHint: 'Legrand logo',
+    description: 'A description for Partner Twenty-Four.',
+    category: 'Networking'
+  },
+  {
+    id: 'partner-25',
+    name: ' Policom',
+    logoUrl: '/images/Partners/polycom.png',
+    dataAiHint: 'Policom logo',
+    description: 'A description for Partner Twenty-Five.',
+    category: 'Networking'
+  },
+
+
+
+
+  {
     id: 'partner-26',
     name: ' Life Safety',
     logoUrl: '/images/Partners/lifesafety.png',
@@ -178,38 +233,7 @@ export const partnerLogos: ClientLogo[] = [
     description: 'A description for Partner Twenty-Eight.',
     category: 'Life Safety'
   },
-  {
-    id: 'partner-22',
-    name: ' Elixir',
-    logoUrl: '/images/Partners/elixir.png',
-    dataAiHint: 'Elixir logo',
-    description: 'A description for Partner Twenty-Two.',
-    category: 'Rack & Cabling'
-  },
-  {
-    id: 'partner-23',
-    name: ' Valrack',
-    logoUrl: '/images/Partners/valrack.png',
-    dataAiHint: 'Valrack logo',
-    description: 'A description for Partner Twenty-Three.',
-    category: 'Rack & Cabling'
-  },
-  {
-    id: 'partner-24',
-    name: ' Legrand',
-    logoUrl: '/images/Partners/legrand.png',
-    dataAiHint: 'Legrand logo',
-    description: 'A description for Partner Twenty-Four.',
-    category: 'Rack & Cabling'
-  },
-  {
-    id: 'partner-25',
-    name: ' Policom',
-    logoUrl: '/images/Partners/polycom.png',
-    dataAiHint: 'Policom logo',
-    description: 'A description for Partner Twenty-Five.',
-    category: 'Rack & Cabling'
-  },
+
   {
     id: 'partner-29',
     name: ' LG',

@@ -9,7 +9,7 @@ export const products: Product[] = [
   {
     id: '1',
     slug: 'panasonic-dua5mwa-5mp-ip-camera',
-    name: 'Panasonic DUA5MWA 5MP IP Dome Camera',
+    name: ' DUA5MWA 5MP IP Dome Camera',
     category: 'CCTV Cameras',
     shortDescription: '5MP wireless dome camera with motion detection and night vision.',
     longDescription: 'Panasonic DUA5MWA offers reliable 5MP surveillance for both indoor and outdoor environments. With features like motion detection, night vision, and local storage, it supports smart analysis and multiple communication protocols, ensuring secure and efficient monitoring.',
@@ -39,7 +39,7 @@ export const products: Product[] = [
   {
     id: '2',
     slug: 'hikvision-4mp-ip-camera',
-    name: 'HIKVISION 4MP Wireless IP Camera',
+    name: ' 4MP Wireless IP Camera',
     category: 'CCTV Cameras',
     shortDescription: 'Robust 4MP wireless camera with varifocal lens and night vision.',
     longDescription: 'The HIKVISION 4MP IP Camera is built for both indoor and outdoor surveillance. With advanced H.265+ compression, WDR for backlight clarity, and a motorized varifocal lens, it offers efficient and flexible monitoring. Its IP67 and IK10 ratings ensure durability in harsh environments.',
@@ -67,7 +67,7 @@ export const products: Product[] = [
   {
     id: '3',
     slug: 'cp-plus-2-4mp-hd-camera',
-    name: 'CP PLUS 2.4MP HD Outdoor Camera',
+    name: ' 2.4MP HD Outdoor Camera',
     category: 'CCTV Cameras',
     shortDescription: 'Wired 2.4MP HD camera with night vision and robust outdoor protection.',
     longDescription: 'The CP PLUS 2.4MP HD Camera delivers clear full HD video with a 3.6mm fixed lens and enhanced night vision. Designed for outdoor usage, it features smart IR, DWDR, and IP67 weatherproofing for reliable surveillance in varying conditions.',
@@ -97,7 +97,7 @@ export const products: Product[] = [
   {
     id: '120',
     slug: 'cpplus-4ch-dvr-2mp-kit',
-    name: 'CP PLUS 4 Channel DVR Kit with 2MP Color Night Vision Cameras',
+    name: ' 4 Channel DVR Kit with 2MP Color Night Vision Cameras',
     category: 'CCTV Cameras',
   
     shortDescription: 'Complete CP PLUS DVR kit with 2 outdoor 2MP color night vision cameras, built-in audio, and 500GB HDD.',
@@ -146,7 +146,7 @@ export const products: Product[] = [
   {
     id: '121',
     slug: 'honeywell-4ch-5mp-ahd-dvr',
-    name: 'Honeywell 4 Channel 5MP AHD DVR (HA-DVR-5104-L)',
+    name: ' 4 Channel 5MP AHD DVR (HA-DVR-5104-L)',
     category: 'CCTV Cameras',
   
     shortDescription: '4 Channel 5MP AHD DVR with H.265 compression, face detection, tripwire, and metal housing.',
@@ -197,7 +197,7 @@ export const products: Product[] = [
   {
     id: '122',
     slug: 'tp-link-vigi-nvr1008h',
-    name: 'TP-Link VIGI NVR1008H 8 Channel NVR',
+    name: ' VIGI NVR1008H 8 Channel NVR',
     category: 'CCTV Cameras',
   
     shortDescription: '8-Channel NVR with H.265+ compression, 80 Mbps bandwidth, 10TB storage support, and remote monitoring via VIGI app.',
@@ -251,7 +251,7 @@ export const products: Product[] = [
 {
   id: '123',
   slug: 'cpplus-32ch-dvr-20x-camera',
-  name: 'CP PLUS 32 Channel DVR with 20x 2MP Outdoor Cameras',
+  name: ' 32 Channel DVR with 20x 2MP Outdoor Cameras',
   category: 'CCTV Cameras',
 
   shortDescription: '32 Channel DVR kit with 2MP outdoor cameras, built-in mics, color night vision, and 4TB storage.',
@@ -302,7 +302,7 @@ export const products: Product[] = [
 {
   id: '124',
   slug: 'cpplus-4ch-nvr-2in-2out-kit',
-  name: 'CP PLUS 4 Channel NVR with 2x Outdoor & 2x Indoor IP Cameras',
+  name: ' 4 Channel NVR with 2x Outdoor & 2x Indoor IP Cameras',
   category: 'CCTV Cameras',
 
 
@@ -354,7 +354,7 @@ export const products: Product[] = [
   {
     id: '4',
     slug: 'ramex-5mp-outdoor-camera',
-    name: 'RAMEX 5MP Outdoor Security Camera',
+    name: ' 5MP Outdoor Security Camera',
     category: 'CCTV Cameras',
     shortDescription: '5MP wired outdoor camera with motorized vari-focal lens and HD imaging.',
     longDescription: 'The RAMEX 5MP Outdoor Camera is designed for high-performance security monitoring. With advanced H.265 compression, 5X motorized vari-focal lens, and support for both 2D/3D noise reduction, it delivers clear visuals and flexible installation. Ideal for outdoor security with CMS and SDK support.',
@@ -683,7 +683,7 @@ export const products: Product[] = [
 {
   id: '118',
   slug: 'cpplus-8ch-dvr-cp-uvr-0801e1-cs',
-  name: 'CP Plus 8 Channel 1080P Lite DVR (CP-UVR-0801E1-CS)',
+  name: ' 8 Channel 1080P Lite DVR (CP-UVR-0801E1-CS)',
   category: 'CCTV Cameras',
 
 
@@ -780,7 +780,7 @@ export const products: Product[] = [
   {
     id: '6',
     slug: 'hikvision-indoor-outdoor-camera',
-    name: 'HIKVISION Indoor/Outdoor Night Vision Camera',
+    name: ' Indoor/Outdoor Night Vision Camera',
     category: 'CCTV Cameras',
     shortDescription: 'Wireless night vision camera suitable for both indoor and outdoor use.',
     longDescription: 'The HIKVISION Indoor/Outdoor Camera offers flexible security coverage with high-quality imaging and built-in night vision. Its weather-resistant design ensures durability, while remote access via mobile app allows for seamless monitoring from anywhere.',
@@ -811,7 +811,7 @@ export const products: Product[] = [
   {
     id: '7',
     slug: 'trueview-4mp-smart-dual-lens-camera',
-    name: 'Trueview 4MP Smart Dual Lens 4G Pan/Tilt Camera',
+    name: ' 4MP Smart Dual Lens 4G Pan/Tilt Camera',
     category: 'CCTV Cameras',
     shortDescription: 'Dual-lens 4MP smart surveillance camera with pan/tilt, color vision, and motion tracking.',
     longDescription: 'The Trueview 4MP Smart Dual Lens Camera offers intelligent, full-color surveillance with 4G support, motion tracking, and pan/tilt control. Its dual lenses allow wide-angle and zoomed-in views, while features like strobe siren, two-way audio, and real-time alerts make it ideal for both indoor and outdoor monitoring, including homes, farms, and pet security.',
@@ -1423,7 +1423,7 @@ category: 'Fire Hydrant System',
 {
   id: '26',
   slug: 'zkteco-lx50-biometric-attendance',
-  name: 'ZKTeco LX50 Biometric Fingerprint Time Attendance Clock',
+  name: ' LX50 Biometric Fingerprint Time Attendance Clock',
   category: 'Attendance System',
 
   shortDescription: 'Compact fingerprint attendance recorder with built-in SSR Excel software and 500-user capacity.',
@@ -1587,7 +1587,7 @@ category: 'Fire Hydrant System',
 {
   id: '30',
   slug: 'zkteco-minita-face-attendance-access',
-  name: 'ZKTeco MiniTA Touchless Face Recognition Terminal',
+  name: ' MiniTA Touchless Face Recognition Terminal',
   category: 'Attendance System',
 
   shortDescription: 'Compact face recognition terminal with WiFi, mobile app, and access control integration — ideal for modern office attendance.',
@@ -1722,7 +1722,7 @@ category: 'Fire Hydrant System',
 {
   id: '33',
   slug: 'hawkvision-hv-sr-602a-rfid-door-access-control',
-  name: 'HAWKVISION RFID Door Access Control Lock System Kit (HV-SR-602A)',
+  name: ' RFID Door Access Control Lock System Kit (HV-SR-602A)',
   category: 'Attendance System',
 
   shortDescription: 'Compact RFID-based access control system with card and PIN authentication – ideal for doors, gates, and cabinets.',
@@ -1762,7 +1762,7 @@ category: 'Fire Hydrant System',
 {
   id: '34',
   slug: 'godrej-advantis-rimtronic-smart-lock',
-  name: 'Godrej Smart Lock | Advantis Rimtronic Digital Lock',
+  name: ' Smart Lock | Advantis Rimtronic Digital Lock',
   category: 'Attendance System',
 
 
@@ -1853,7 +1853,7 @@ category: 'Fire Hydrant System',
 {
   id: '36',
   slug: 'lavna-la44-smart-door-lock-camera',
-  name: 'LAVNA 7-Way Premium Smart Door Lock with Camera & Screen (LA44)',
+  name: ' 7-Way Premium Smart Door Lock with Camera & Screen (LA44)',
   category: 'Attendance System',
 
   shortDescription: 'Smart Biometric Door Lock with 7 Access Modes – Fingerprint, WiFi, Bluetooth, Camera, OTP, PIN & Manual Key with 5-Bolt Security',
@@ -2203,7 +2203,7 @@ category: 'Fire Hydrant System',
 {
   id: '51',
   slug: 'dorma-xl-c4100-automatic-sliding-door',
-  name: 'Dorma XL-C 4100 Automatic Sliding Door Operator',
+  name: ' XL-C 4100 Automatic Sliding Door Operator',
   category: 'Door Automation',
 
   shortDescription: 'High-performance automatic sliding door operator for interior office use, supports single and double panel doors.',
@@ -2280,7 +2280,7 @@ category: 'Fire Hydrant System',
 {
   id: '53',
   slug: 'qubo-video-doorbell-pro-tab',
-  name: 'Qubo Instaview Video Doorbell Pro 2K + Home Tab',
+  name: ' Instaview Video Doorbell Pro 2K + Home Tab',
   category: 'Door Automation',
   shortDescription: 'Smart video doorbell and tab combo by Qubo with 2K resolution, 2-way talk, Alexa/Google support, and full-head visibility.',
   longDescription: 'The Qubo Instaview Video Doorbell Pro 2K with Home Tab redefines home security and convenience. Featuring an 8-inch HD touch display, wireless installation, and full-body visibility, it offers real-time video calling from visitors to your tablet or smartphone. Supports two-way audio, tamper detection, night vision, and integration with Alexa and Google Assistant. Ideal for modern households seeking smart entry monitoring.',
@@ -2322,7 +2322,7 @@ category: 'Fire Hydrant System',
 {
   id: '54',
   slug: 'hikvision-ip-video-doorbell-ds-kis602',
-  name: 'HIKVISION IP Video Door Phone | DS-KIS602 VDP Bundle',
+  name: ' IP Video Door Phone | DS-KIS602 VDP Bundle',
   category: 'Door Automation',
 
   shortDescription: '7-inch IP video door phone with TFT LCD, Wi-Fi, 2-way audio, night vision, and noise cancellation from HIKVISION.',
@@ -2364,7 +2364,7 @@ category: 'Fire Hydrant System',
 {
   id: '55',
   slug: 'godrej-seethru-re7-lite-video-door-phone',
-  name: 'Godrej Seethru RE7 Lite Video Door Phone',
+  name: ' Seethru RE7 Lite Video Door Phone',
   category: 'Door Automation',
 
   shortDescription: 'Smart video door phone from Godrej with 7-inch display, door unlock control, photo storage, and indoor-outdoor camera integration.',
@@ -2405,7 +2405,7 @@ category: 'Fire Hydrant System',
 {
   id: '56',
   slug: 'panasonic-vl-sa72-video-door-phone',
-  name: 'Panasonic VL-SA72 Video Door Phone with Memory',
+  name: ' VL-SA72 Video Door Phone with Memory',
   category: 'Door Automation',
 
   shortDescription: 'Panasonic VL-SA72 is a smart, weatherproof video door phone with SD card support, electric lock integration, and hands-free intercom.',
@@ -2533,7 +2533,7 @@ category: 'Fire Hydrant System',
 {
   id: '59',
   slug: 'godrej-metal-detector-gscan-9z',
-  name: 'Godrej GSCAN-9Z Door Frame Metal Detector',
+  name: ' GSCAN-9Z Door Frame Metal Detector',
   category: 'Door Automation',
 
   shortDescription: '9-zone intelligent door frame metal detector by Godrej with high throughput, interference immunity, and uniform detection.',
@@ -2576,7 +2576,7 @@ category: 'Fire Hydrant System',
 {
   id: '60',
   slug: 'siddhi-hhmd-metal-detector',
-  name: 'Siddhi Hand Held Metal Detector (HHMD)',
+  name: ' Hand Held Metal Detector (HHMD)',
   category: 'Door Automation',
 
   shortDescription: 'High-sensitivity hand held metal detector by Siddhi Equipments for detecting all types of metals with rugged ABS design.',
@@ -2627,7 +2627,7 @@ category: 'Fire Hydrant System',
 {
   id: '61',
   slug: 'excluzo-wifi-touch-panel-switch-1gang',
-  name: 'Excluzo 1-Gang WiFi Touch Panel Switch (Set of 2)',
+  name: ' 1-Gang WiFi Touch Panel Switch (Set of 2)',
   category: 'Wifi solutions',
   shortDescription: 'Smart 1-Gang WiFi Touch Switch with timing, remote control, and family sharing for home or office automation.',
   longDescription: 'The Excluzo 1-Gang WiFi Touch Panel Switch is designed to bring modern convenience to your home or office. This smart switch supports WiFi connectivity, allowing remote control via smartphone apps and voice assistants. With features like scheduling, family device sharing, and a sleek glass touch panel, it enhances both functionality and aesthetics. Perfect for controlling lights or appliances from anywhere, it fits standard electrical boxes and is easy to install.',
@@ -2745,7 +2745,7 @@ category: 'Fire Hydrant System',
   
   id: '62',
   slug: 'cisco-isr-4331-router',
-  name: 'Cisco ISR 4331 Router',
+  name: ' ISR 4331 Router',
   category: 'Wifi solutions',
   shortDescription: 'High-performance enterprise-grade router with integrated security, scalable throughput, and advanced Cisco IOS XE software.',
   longDescription: 'The Cisco ISR 4331 Router is a powerful and flexible network solution designed for enterprise branches. Featuring a multi-core Cisco proprietary processor, this router delivers up to 100 Mbps of scalable performance, with options to upgrade. It supports advanced services such as secure boot, hardware encryption, and integrated threat defense, all powered by Cisco IOS XE. With its compact rack-mountable form factor and multiple interface options including Gigabit Ethernet and NIM slots, the ISR 4331 is ideal for secure, high-availability networking in modern infrastructures.',
@@ -2787,7 +2787,7 @@ category: 'Fire Hydrant System',
 {
   id: '63',
   slug: 'ubiquiti-u6-plus-wireless-access-point',
-  name: 'Ubiquiti Networks U6+ Dual-Band Wireless Access Point',
+  name: ' Networks U6+ Dual-Band Wireless Access Point',
   category: 'Wifi solutions',
   shortDescription: 'High-speed dual-band WiFi 6 access point with 3 Gbit/s throughput, PoE+, and robust security features for business or home networks.',
   longDescription: 'The Ubiquiti U6+ is a powerful dual-band wireless access point supporting the latest WiFi 6 (802.11ax) standard. Ideal for enterprise or high-performance home networks, it delivers up to 3 Gbit/s wireless transmission speed. With features like WPA3 encryption, PoE+ support, and wall/ceiling mountability, this access point ensures easy installation and secure, high-speed connectivity. Its compact form factor and low power usage make it suitable for dense wireless environments and modern office setups.',
@@ -2832,7 +2832,7 @@ category: 'Fire Hydrant System',
 {
   id: '64',
   slug: 'tplink-archer-ax73-ax5400-wifi6-router',
-  name: 'TP-Link Archer AX73 AX5400 Dual Band Wi-Fi 6 Router',
+  name: ' Archer AX73 AX5400 Dual Band Wi-Fi 6 Router',
   category: 'Wifi solutions',
   shortDescription: 'High-performance AX5400 dual-band Wi-Fi 6 router with MU-MIMO, OFDMA, USB sharing, and 8K streaming support for up to 200+ devices.',
   longDescription: 'The TP-Link Archer AX73 is a powerful Wi-Fi 6 router delivering blazing speeds up to 5400 Mbps, ideal for heavy tasks like 8K streaming, gaming, and smart home connectivity. Featuring MU-MIMO, OFDMA, Beamforming, and a 1.5 GHz triple-core CPU, it ensures fast, stable connections for over 200 devices. With enhanced cooling, six antennas, HomeShield security, USB 3.0 sharing, and Alexa compatibility, it offers a complete wireless solution for modern homes and offices.',
@@ -2877,7 +2877,7 @@ category: 'Fire Hydrant System',
 {
   id: '65',
   slug: 'tplink-er605-v2-gigabit-vpn-router',
-  name: 'TP-Link ER605 V2 Gigabit Wired VPN Router with Omada SDN',
+  name: ' ER605 V2 Gigabit Wired VPN Router with Omada SDN',
   category: 'Wifi solutions',
 
   shortDescription: 'Professional-grade VPN router with 3 WAN ports, USB WAN, Omada SDN integration, advanced SPI firewall, and load balancing for SMB networks.',
@@ -2920,7 +2920,7 @@ category: 'Fire Hydrant System',
 {
   id: '67',
   slug: 'christie-core-series-iii',
-  name: 'Christie Core Series III LED Video Wall',
+  name: ' Core Series III LED Video Wall',
   category: 'Conference room solutions',
 
   shortDescription: 'Award-winning LED video wall solution with high reliability, energy efficiency, and flexible installation options – ideal for corporate and signage applications.',
@@ -3020,7 +3020,7 @@ category: 'Fire Hydrant System',
 {
   "id": "115",
   "slug": "samsung-video-wall-display-8mm",
-  "name": "Samsung 8mm Pixel Pitch Outdoor Video Wall Display (46\"/55\")",
+  "name": " 8mm Pixel Pitch Outdoor Video Wall Display (46\"/55\")",
   category: 'Conference room solutions',
 
 
@@ -3143,7 +3143,7 @@ category: 'Fire Hydrant System',
 {
   id: '70',
   slug: 'logitech-meetup-video-conferencing',
-  name: 'Logitech MeetUp ConferenceCam',
+  name: ' MeetUp ConferenceCam',
   category: 'Conference room solutions',
 
   shortDescription: 'All-in-one conference camera for small meeting rooms with 4K optics, beamforming mics, and wide field-of-view.',

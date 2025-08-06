@@ -8,6 +8,7 @@ import { products } from "@/lib/data";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { Metadata } from 'next';
+import { AccessControlPartnersCarousel } from '@/components/PartnersCarousel';
 
 const accessControlCategories = [
   "Attendance System",
@@ -105,7 +106,7 @@ export default function AccessControlPage({ searchParams }: AccessControlPagePro
         </div>
 
         {/* Access Control Description Section */}
-        <section className="relative py-20 bg-gradient-to-b from-white/90 to-white/70 backdrop-blur-sm">
+        <section className="relative py-20 bg-gradient-to-b from-white/90 to-white/70 backdrop-blur-sm  md:block">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-12">
@@ -207,6 +208,23 @@ export default function AccessControlPage({ searchParams }: AccessControlPagePro
           </div>
         </section>
 
+        {/* Access Control Partner Logos Section */}
+        <section className="py-16 bg-gradient-to-br from-slate-100 via-blue-50 to-indigo-50">
+          <div className="container mx-auto px-4 md:px-6">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-cyan-600 via-blue-500 to-purple-500 bg-clip-text text-transparent mb-3 drop-shadow-lg">
+                Trusted Access Control Partners
+              </h2>
+              <div className="w-24 h-1 mx-auto bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 rounded-full mb-4"></div>
+              <p className="mt-4 text-lg text-foreground font-semibold max-w-2xl mx-auto">
+                We partner with leading manufacturers to provide you with the highest quality access control equipment.
+              </p>
+            </div>
+            {/* Access Control Partners Carousel */}
+            <AccessControlPartnersCarousel />
+          </div>
+        </section>
+
         <div className="container mx-auto px-4 md:px-6 py-12">
           <Button variant="outline" asChild className="mb-8 group hover:bg-primary/10 hover:border-primary">
             <Link href="/solutions">
@@ -228,7 +246,7 @@ export default function AccessControlPage({ searchParams }: AccessControlPagePro
               <h2 className="text-xl md:text-2xl font-semibold text-foreground mb-6 text-center">
                 {selectedCategory === 'all' ? 'Available Access Control Products' : `Available ${selectedCategory} Products`}
               </h2>
-              <div className="flex flex-wrap justify-center gap-4 md:gap-6">
+              <div className="grid grid-cols-2 md:flex md:flex-wrap justify-center gap-4 md:gap-6">
                 {accessControlProducts.map((product) => {
                   const { icon, ...productFieldsForCard } = product;
                   return (

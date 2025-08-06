@@ -8,6 +8,7 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { Metadata } from 'next';
 import { OfficeAutomationCategories } from "@/components/OfficeAutomationCategories";
+import { OfficeAutomationPartnersCarousel } from '@/components/PartnersCarousel';
 
 const automationCategories = [
   "Wifi solutions",
@@ -93,7 +94,7 @@ export default function OfficeHomeAutomationsPage({ searchParams }: OfficeHomeAu
         </div>
 
         {/* Office & Home Automation Description Section */}
-        <section className="relative py-20 bg-gradient-to-b from-white/90 to-white/70 backdrop-blur-sm">
+        <section className="relative py-20 bg-gradient-to-b from-white/90 to-white/70 backdrop-blur-sm hidden md:block">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-12">
@@ -194,6 +195,23 @@ export default function OfficeHomeAutomationsPage({ searchParams }: OfficeHomeAu
                 </div>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* Networking Partner Logos Section */}
+        <section className="py-16 bg-gradient-to-br from-slate-100 via-blue-50 to-indigo-50">
+          <div className="container mx-auto px-4 md:px-6">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-cyan-600 via-blue-500 to-purple-500 bg-clip-text text-transparent mb-3 drop-shadow-lg">
+                Trusted Networking Partners
+              </h2>
+              <div className="w-24 h-1 mx-auto bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 rounded-full mb-4"></div>
+              <p className="mt-4 text-lg text-foreground font-semibold max-w-2xl mx-auto">
+                We partner with leading manufacturers to provide you with the highest quality networking and automation equipment.
+              </p>
+            </div>
+            {/* Networking Partners Carousel */}
+            <OfficeAutomationPartnersCarousel />
           </div>
         </section>
 
